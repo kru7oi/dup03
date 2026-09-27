@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Анализ базового программного обеспечения ПК · ДУП.03</title>
+    <link rel="stylesheet" href="../styles.css">
+</head>
+<body class="lesson-page">
+    <div class="lesson-topbar">
+        <div class="container lt-inner">
+            <a href="../index.html" class="back-link">← К программе</a>
+            <span style="font-size:.88rem;color:var(--c-mut);font-family:Consolas,Monaco,monospace">Раздел 02 · Тема 2.1 · Анализ базового ПО ПК</span>
+        </div>
+    </div>
+
+    <div class="lesson-layout">
+        <aside class="lesson-aside">
+            <div class="toc">
+                <div class="toc-title">Разделы</div>
+                <a href="#setup">Подготовка</a>
+                <a href="#theory">Теория</a>
+                <a href="#practice">Практика</a>
+                <a href="#result">Результат</a>
+            </div>
+        </aside>
+
+        <div class="lesson-main">
+            <div class="lesson-bcr">
+                <span>Блок 02</span><span class="sep">/</span>
+                <span>Тема 2.1</span><span class="sep">/</span>
+                <span>Анализ базового ПО ПК</span>
+            </div>
+            <h1>Проведение анализа базового программного обеспечения ПК</h1>
+            <div class="lesson-meta">
+                <span class="meta-tag">⏱ 45 мин</span>
+                <span class="meta-tag">📘 ПЗ</span>
+                <span class="meta-tag">🎯 Детальный анализ СПО</span>
+            </div>
+
+            <section class="lsec" id="setup">
+                <h2>Подготовка</h2>
+                <p>Перед занятием вспомни:</p>
+                <ul class="result-list">
+                    <li>Состав системного ПО (с предыдущего занятия)</li>
+                    <li>Как открыть сведения о системе в Windows</li>
+                    <li>Что такое автозагрузка и системные службы</li>
+                </ul>
+                <div class="info-box">
+                    <strong>Аббревиатуры занятия</strong>
+                    <p style="margin-top:8px;font-size:.92rem;">
+                        <b>ПО</b> — программное обеспечение ·
+                        <b>СПО</b> — системное программное обеспечение ·
+                        <b>ОС</b> — операционная система ·
+                        <b>АРМ</b> — автоматизированное рабочее место ·
+                        <b>ПС</b> — пожарно-спасательное подразделение ·
+                        <b>ПК</b> — персональный компьютер ·
+                        <b>BIOS</b> — базовая система ввода-вывода ·
+                        <b>UEFI</b> — Unified Extensible Firmware Interface ·
+                        <b>DLL</b> — Dynamic Link Library (динамическая библиотека) ·
+                        <b>API</b> — интерфейс прикладного программирования ·
+                        <b>GUI</b> — графический пользовательский интерфейс ·
+                        <b>CLI</b> — командная строка ·
+                        <b>CPU</b> — центральный процессор ·
+                        <b>RAM</b> — оперативная память ·
+                        <b>HDD</b> — жёсткий диск ·
+                        <b>SSD</b> — твердотельный накопитель ·
+                        <b>LAN</b> — локальная вычислительная сеть ·
+                        <b>IP</b> — Internet Protocol ·
+                        <b>DNS</b> — Domain Name System ·
+                        <b>DHCP</b> — Dynamic Host Configuration Protocol ·
+                        <b>TCP/IP</b> — Transmission Control Protocol / Internet Protocol ·
+                        <b>HTTP/HTTPS</b> — протоколы передачи данных
+                    </p>
+                </div>
+            </section>
+
+            <section class="lsec" id="theory">
+                <h2>Теория</h2>
+
+                <h3>Цель детального анализа базового ПО</h3>
+                <p>В отличие от ПЗ 1, где мы рассматривали общие понятия, здесь мы проводим <b>детальный анализ</b> базового ПО конкретного компьютера с использованием системных утилит. Это позволяет:</p>
+                <ul>
+                    <li>выявить проблемы в работе системы;</li>
+                    <li>оптимизировать автозагрузку и службы;</li>
+                    <li>обеспечить информационную безопасность;</li>
+                    <li>спланировать модернизацию АРМ.</li>
+                </ul>
+
+                <h3>Инструменты анализа базового ПО</h3>
+                <div class="table-wrap">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Инструмент</th>
+                                <th>Команда / Запуск</th>
+                                <th>Что показывает</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><b>Сведения о системе</b></td>
+                                <td><code>msinfo32</code></td>
+                                <td>Полная информация об ОС, железе, драйверах</td>
+                            </tr>
+                            <tr>
+                                <td><b>Версия Windows</b></td>
+                                <td><code>winver</code></td>
+                                <td>Версия и сборка ОС</td>
+                            </tr>
+                            <tr>
+                                <td><b>Диагностика DirectX</b></td>
+                                <td><code>dxdiag</code></td>
+                                <td>Видеокарта, звук, устройства ввода</td>
+                            </tr>
+                            <tr>
+                                <td><b>Диспетчер задач</b></td>
+                                <td><code>Ctrl+Shift+Esc</code></td>
+                                <td>Процессы, автозагрузка, производительность</td>
+                            </tr>
+                            <tr>
+                                <td><b>Конфигурация системы</b></td>
+                                <td><code>msconfig</code></td>
+                                <td>Автозагрузка, службы, параметры загрузки</td>
+                            </tr>
+                            <tr>
+                                <td><b>Командная строка</b></td>
+                                <td><code>cmd</code> / <code>PowerShell</code></td>
+                                <td>Сетевые настройки, диагностика</td>
+                            </tr>
+                            <tr>
+                                <td><b>Параметры → Приложения</b></td>
+                                <td>GUI</td>
+                                <td>Список установленных программ</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <h3>Что анализировать</h3>
+                <ul>
+                    <li><b>Версия и сборка ОС:</b> актуальна ли, есть ли обновления безопасности</li>
+                    <li><b>Драйверы устройств:</b> все ли установлены, нет ли конфликтов</li>
+                    <li><b>Автозагрузка:</b> какие программы запускаются при старте (можно отключить лишнее)</li>
+                    <li><b>Службы:</b> какие системные службы работают, нужны ли все</li>
+                    <li><b>Сетевые настройки:</b> IP-адрес, DNS, состояние сетевых адаптеров</li>
+                    <li><b>Средства безопасности:</b> антивирус, брандмауэр, обновления</li>
+                </ul>
+
+                <div class="warn-box">
+                    <strong>Важно для специалиста ПС</strong>
+                    На АРМ в пожарной охране часто возникают проблемы: устаревшие драйверы, лишние программы в автозагрузке, неактуальные обновления безопасности. Специалист, умеющий проводить базовый анализ СПО, может самостоятельно выявить и устранить многие проблемы до приезда IT-специалиста.
+                </div>
+            </section>
+
+            <section class="lsec" id="practice">
+                <h2>Практика</h2>
+
+                <h3>Задание 1. Детальный анализ базового ПО</h3>
+                <p>С помощью системных утилит собери информацию о базовом ПО своего компьютера и заполни таблицу.</p>
+
+                <div class="table-wrap">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Параметр</th>
+                                <th>Инструмент</th>
+                                <th>Значение</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><b>Версия ОС</b></td>
+                                <td><code>winver</code></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td><b>Полное имя компьютера</b></td>
+                                <td><code>msinfo32</code></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td><b>Версия BIOS/UEFI</b></td>
+                                <td><code>msinfo32</code></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td><b>Модель процессора</b></td>
+                                <td><code>msinfo32</code></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td><b>Объём ОЗУ</b></td>
+                                <td><code>msinfo32</code></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td><b>Видеокарта</b></td>
+                                <td><code>dxdiag</code></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td><b>Сетевой адаптер</b></td>
+                                <td><code>ipconfig</code> в cmd</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td><b>IP-адрес</b></td>
+                                <td><code>ipconfig</code></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td><b>Количество программ в автозагрузке</b></td>
+                                <td>Диспетчер задач</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td><b>Антивирус</b></td>
+                                <td>Параметры → Обновление и безопасность</td>
+                                <td></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <h3>Задание 2. Анализ автозагрузки</h3>
+                <p>Открой Диспетчер задач (<code>Ctrl+Shift+Esc</code>) → вкладка «Автозагрузка». Выпиши 5 программ из автозагрузки и определи, какие из них можно отключить без ущерба для работы.</p>
+
+                <div class="table-wrap">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Программа</th>
+                                <th>Влияние на запуск</th>
+                                <th>Можно отключить?</th>
+                                <th>Обоснование</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr><td></td><td></td><td></td><td></td></tr>
+                            <tr><td></td><td></td><td></td><td></td></tr>
+                            <tr><td></td><td></td><td></td><td></td></tr>
+                            <tr><td></td><td></td><td></td><td></td></tr>
+                            <tr><td></td><td></td><td></td><td></td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <section class="lsec" id="result">
+                <h2>Результат занятия</h2>
+                <ul class="result-list">
+                    <li>Знаю 7 инструментов анализа базового ПО Windows</li>
+                    <li>Умею собирать подробные сведения о системе</li>
+                    <li>Понимаю, как анализировать автозагрузку и службы</li>
+                    <li>Могу выявить проблемы в работе базового ПО</li>
+                </ul>
+
+                <h3>Домашнее задание</h3>
+                <p>Проведи анализ базового ПО на домашнем компьютере (или в компьютерном классе). Подготовь краткий отчёт (1 страница), в котором укажи: версию ОС, количество установленных программ, 3 программы в автозагрузке, которые можно отключить, и рекомендации по оптимизации работы системы.</p>
+            </section>
+
+            <div class="lesson-nav">
+                <a href="tema2_1_pz2.html" class="nav-btn prev">← Предыдущее</a>
+                <a href="tema2_1_pz4.html" class="nav-btn">Следующее →</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
