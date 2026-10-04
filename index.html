@@ -12,16 +12,7 @@
         <div class="container topbar-inner">
             <a href="index.html" class="topbar-logo">
                 <span class="logo-mchs">🔥</span>
-                ДУП<span class="dot">·</span>03
-            </a>
-            <nav class="topbar-nav">
-                <a href="#program">Программа</a>
-                <a href="#stack">Стек</a>
-                <a href="#results">Результаты</a>
-            </nav>
-            <a href="Lessons/" class="btn-live btn-live-sm">
-                <span class="live-dot"></span>
-                К занятиям
+                ДУП<span class="dot">·</span>03<span class="dot">·</span>Информационные системы управления в ЧС
             </a>
         </div>
     </div>
@@ -29,26 +20,9 @@
     <!-- HERO -->
     <section class="hero">
         <div class="container">
-            <span class="hero-badge">⚡ Учебная дисциплина · 144 часа · 2026</span>
+            <span class="hero-badge">Учебная дисциплина · 144 часа · 2026</span>
             <h1>Информационные системы<br><strong>управления в ЧС</strong></h1>
-            <p>Изучаем <strong>автоматизированные системы</strong>, которые спасают жизни. От АРМ диспетчера до космического мониторинга пожаров. Работаем с реальным ПО: <strong>MS Office, Access, Visio, Компас-график</strong>, ГИС-системами.</p>
-            <div class="hero-stats">
-                <div class="stat">
-                    <div class="stat-val">144</div>
-                    <div class="stat-lbl">часа</div>
-                </div>
-                <div class="stat">
-                    <div class="stat-val">10</div>
-                    <div class="stat-lbl">разделов</div>
-                </div>
-                <div class="stat">
-                    <div class="stat-val">2</div>
-                    <div class="stat-lbl">семестра</div>
-                </div>
-                <div class="stat">
-                    <div class="stat-val">20.02.04</div>
-                    <div class="stat-lbl">ПБ</div>
-                </div>
+            <p>Изучаем <strong>автоматизированные системы</strong>, которые спасают жизни. От АРМ диспетчера до космического мониторинга пожаров.</p>
             </div>
         </div>
     </section>
@@ -56,10 +30,34 @@
     <!-- MAIN -->
     <main>
         <div class="container">
+        
+
             <!-- ПРОГРАММА -->
             <section id="program">
                 <h2 class="section-title">Программа дисциплины</h2>
                 <p class="lead"><strong>10 разделов</strong>, каждый — со своей тематикой. Начинаем с базовых АРМ и заканчиваем разработкой собственного решения для управления ЧС. Каждое занятие — <strong>45 минут</strong> с теорией и практикой.</p>
+
+    <section id="search">
+
+    <div class="search-box">
+        <div class="search-field">
+            <input
+                id="topic-search"
+                class="search-input"
+                type="search"
+                placeholder="Например: модернизация, Excel, план эвакуации, сеть, ЧС"
+                autocomplete="off"
+                aria-label="Поиск по темам занятий">
+            <button id="search-clear" class="search-clear" type="button" hidden aria-label="Очистить поиск">×</button>
+        </div>
+        <div id="search-status" class="search-status" role="status" aria-live="polite"></div>
+    </div>
+
+    <div id="search-empty" class="search-empty" hidden>
+        <p><strong>Ничего не найдено.</strong></p>
+        <p class="search-empty-hint">Попробуйте другое слово: например, «Word», «Excel», «сканер», «безопасность», «мониторинг».</p>
+    </div>
+</section>
 
                 <div class="modules">
                     <!-- РАЗДЕЛ 1 -->
@@ -397,50 +395,6 @@
                     </div>
                 </div>
             </section>
-
-            <!-- СТЕК -->
-            <section id="stack">
-                <h2 class="section-title">Стек технологий</h2>
-                <p class="lead">Реальный профессиональный софт, который используется в пожарной охране и МЧС России.</p>
-                <div class="stack-grid">
-                    <div class="stack-item"><span>📝</span>MS Word</div>
-                    <div class="stack-item"><span>📊</span>MS Excel</div>
-                    <div class="stack-item"><span>🗄️</span>MS Access</div>
-                    <div class="stack-item"><span>🎨</span>MS Visio</div>
-                    <div class="stack-item"><span>📐</span>Компас-график</div>
-                    <div class="stack-item"><span>🗺️</span>ГИС</div>
-                    <div class="stack-item"><span>🔍</span>КонсультантПлюс</div>
-                    <div class="stack-item"><span>🌐</span>Система-112</div>
-                </div>
-            </section>
-
-            <!-- РЕЗУЛЬТАТЫ -->
-            <section id="results">
-                <h2 class="section-title">Формируемые компетенции</h2>
-                <p class="lead">Что ты будешь уметь после освоения дисциплины.</p>
-                <div class="features">
-                    <div class="feature">
-                        <div class="fi">🎯</div>
-                        <h4>ОК.01</h4>
-                        <p>Выбирать способы решения задач профессиональной деятельности</p>
-                    </div>
-                    <div class="feature">
-                        <div class="fi">🔍</div>
-                        <h4>ОК.02</h4>
-                        <p>Использовать современные средства поиска и анализа информации</p>
-                    </div>
-                    <div class="feature">
-                        <div class="fi">👥</div>
-                        <h4>ОК.04</h4>
-                        <p>Эффективно работать в коллективе и команде</p>
-                    </div>
-                    <div class="feature">
-                        <div class="fi">💻</div>
-                        <h4>ДПК.3.1</h4>
-                        <p>Работать с ПО, установленным в пожарно-спасательных подразделениях</p>
-                    </div>
-                </div>
-            </section>
         </div>
     </main>
 
@@ -450,6 +404,8 @@
             © 2026 · <strong>ГБПОУ ТПСК им. В.М. Максимчука</strong> · ДУП.03 Информационные системы управления в ЧС
         </div>
     </footer>
+
+    <script src="search.js"></script>
 
     <script>
         // Раскрытие модулей
