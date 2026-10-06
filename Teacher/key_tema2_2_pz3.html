@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>КЛЮЧ · Обработка графической информации · ДУП.03</title>
+    <link rel="stylesheet" href="../styles.css">
+</head>
+<body class="lesson-page">
+
+    <div class="lesson-topbar">
+        <div class="container lt-inner">
+            <a href="../Lessons/tema2_2_pz3.html" class="back-link">← К занятию для студентов</a>
+            <span style="font-weight:700;color:var(--c-pri);font-size:.9rem;">Ключ преподавателя · ПЗ 9</span>
+        </div>
+    </div>
+
+    <div class="container lesson-layout">
+
+        <aside class="lesson-aside">
+            <nav class="toc">
+                <div class="toc-title">Содержание</div>
+                <a href="#opros">Опрос в начале занятия</a>
+                <a href="#etalon">Эталон практической работы</a>
+                <a href="#kriterii">Критерии оценивания</a>
+                <a href="#metod">Методические указания</a>
+            </nav>
+        </aside>
+
+        <main class="lesson-main">
+
+            <div class="lesson-bcr">
+                Раздел 2 <span class="sep">/</span> Тема 2.2 <span class="sep">/</span> ПЗ 9 <span class="sep">/</span> Ключ
+            </div>
+
+            <h1>Материалы для проверки и проведения занятия</h1>
+
+            <div class="lesson-meta">
+                <span class="meta-tag">Для служебного пользования</span>
+                <span class="meta-tag">Не распространять среди обучающихся</span>
+            </div>
+
+            <section class="lsec" id="opros">
+                <h2>Опрос в начале занятия (5 минут)</h2>
+                <ol>
+                    <li>Из чего состоит растровое изображение?</li>
+                    <li>Что происходит с векторным изображением при сильном приближении?</li>
+                    <li>Какой формат лучше подходит для логотипа: JPG или SVG? Почему?</li>
+                    <li>Назовите две программы для работы с векторной графикой.</li>
+                </ol>
+                <div class="info-box">
+                    <strong>Ожидаемые ответы</strong>
+                    <ul>
+                        <li>Из пикселей.</li>
+                        <li>Остается четким, линии не рассыпаются.</li>
+                        <li>SVG, так как это векторный формат, позволяет бесконечно масштабировать без потери качества.</li>
+                        <li>CorelDRAW, Adobe Illustrator, Inkscape, MS Visio, Компас-3D.</li>
+                    </ul>
+                </div>
+            </section>
+
+            <section class="lsec" id="etalon">
+                <h2>Эталон выполнения практической работы</h2>
+                <p>Допускаются аналоги программ (например, GIMP вместо Photoshop, Inkscape вместо Illustrator), если они соответствуют типу графики.</p>
+                <div class="table-wrap">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Ситуация</th>
+                                <th>Тип графики</th>
+                                <th>Формат</th>
+                                <th>Программа</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>1.</strong> План эвакуации.</td>
+                                <td>Векторная.</td>
+                                <td>.dwg, .dxf, .vsdx или .pdf.</td>
+                                <td>AutoCAD, Компас-3D, MS Visio.</td>
+                            </tr>
+                            <tr>
+                                <td><strong>2.</strong> Эмблема ДПФ.</td>
+                                <td>Векторная.</td>
+                                <td>.ai, .cdr, .svg, .eps.</td>
+                                <td>CorelDRAW, Adobe Illustrator, Inkscape.</td>
+                            </tr>
+                            <tr>
+                                <td><strong>3.</strong> Снимок с дрона.</td>
+                                <td>Растровая.</td>
+                                <td>.tif, .png, .jpg.</td>
+                                <td>Adobe Photoshop, GIMP, QGIS (для геопривязки).</td>
+                            </tr>
+                            <tr>
+                                <td><strong>4.</strong> Блок-схема алгоритма.</td>
+                                <td>Векторная.</td>
+                                <td>.vsdx, .drawio, .pdf.</td>
+                                <td>MS Visio, Draw.io, Lucidchart.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="warn-box">
+                    <strong>Типичная ошибка</strong>
+                    Указание Paint или Word для создания плана эвакуации. Эти программы работают с растром или примитивной графикой, которая не обеспечивает точности размеров и возможности редактирования узлов, необходимой для нормативных документов.
+                </div>
+            </section>
+
+            <section class="lsec" id="kriterii">
+                <h2>Критерии выставления оценки</h2>
+                <div class="table-wrap">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Оценка</th>
+                                <th>Критерии</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>5</strong></td>
+                                <td>Во всех 4 ситуациях верно определен тип графики. Форматы соответствуют типу. Программы релевантны задаче.</td>
+                            </tr>
+                            <tr>
+                                <td><strong>4</strong></td>
+                                <td>Одна неточность: например, предложен растровый формат для векторной задачи (JPG для плана эвакуации), но тип графики указан верно.</td>
+                            </tr>
+                            <tr>
+                                <td><strong>3</strong></td>
+                                <td>Две ошибки в определении типа графики или выборе программы. Путаница между растром и вектором.</td>
+                            </tr>
+                            <tr>
+                                <td><strong>2</strong></td>
+                                <td>Более двух грубых ошибок. Полное непонимание различий между типами графики.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <section class="lsec" id="metod">
+                <h2>Методические указания</h2>
+                <ul>
+                    <li><strong>Наглядность:</strong> Перед заданием откройте на проекторе один и тот же рисунок в растре и векторе. Увеличьте оба. Пусть студенты увидят разницу своими глазами.</li>
+                    <li><strong>Профессиональный контекст:</strong> Акцентируйте внимание на том, что план эвакуации — это юридический документ. Он должен быть выполнен по ГОСТ. Растровый рисунок «от руки» в Paint не примет ни одна проверка.</li>
+                    <li><strong>Связь с будущими темами:</strong> Эта тема вводит базу для ПЗ 10–11 (Visio, Компас-3D), где студенты будут непосредственно работать в этих программах.</li>
+                </ul>
+            </section>
+
+            <div class="lesson-nav">
+                <a href="../Lessons/tema2_2_pz3.html" class="nav-btn prev">← Вернуться к занятию</a>
+                <a href="../index.html" class="nav-btn">К программе дисциплины →</a>
+            </div>
+
+        </main>
+    </div>
+
+</body>
+</html>

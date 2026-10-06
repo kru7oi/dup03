@@ -176,101 +176,147 @@ body {
     font-size: .85rem;
 }
 
-/* ========== HERO ========== */
+/* ========== HERO SECTION (Dark Theme Restored) ========== */
 
 .hero {
-    background: var(--c-dark);
-    color: #fff;
-    padding: 80px 0 100px;
     position: relative;
+    padding: 80px 0 60px;
+    /* Возвращаем темный фон МЧС или черный */
+    background-color: #0f172a; 
+    
+    color: white; /* Текст по умолчанию белый на темном фоне */
     overflow: hidden;
 }
 
+/* Декоративный элемент (опционально, чтобы не было скучно) */
 .hero::before {
-    content: '🔥';
-    position: absolute;
-    top: -80px;
-    right: -40px;
-    font-size: 18rem;
-    opacity: .08;
-    line-height: 1;
-}
-
-.hero::after {
     content: '';
     position: absolute;
-    bottom: -150px;
-    left: -100px;
+    top: -50%;
+    right: -10%;
     width: 500px;
     height: 500px;
-    background: var(--c-pri);
+    background: radial-gradient(circle, rgba(200, 16, 46, 0.15) 0%, transparent 70%);
     border-radius: 50%;
-    opacity: .10;
-    filter: blur(80px);
+    pointer-events: none;
+}
+
+.hero-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+    position: relative;
+    z-index: 1; /* Чтобы контент был поверх декорации */
+}
+
+.hero-content {
+    flex: 1;
+    max-width: 600px;
+}
+
+.hero h1 {
+    font-size: 2.5rem;
+    line-height: 1.2;
+    margin-bottom: 20px;
+    color: white; /* Явно белый заголовок */
+}
+
+.hero h1 strong {
+    color: var(--c-pri); /* Красный акцент в слове "управления" */
+}
+
+.hero p {
+    font-size: 1.125rem;
+    color: #cbd5e1; /* Светло-серый текст, хорошо читается на темном */
+    line-height: 1.6;
+    margin-bottom: 24px;
 }
 
 .hero-badge {
     display: inline-block;
-    background: var(--c-pri);
-    color: #fff;
-    padding: 6px 16px;
-    border-radius: 100px;
-    font-size: .85rem;
-    font-weight: 700;
+    padding: 6px 12px;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: #e2e8f0;
     margin-bottom: 20px;
-    box-shadow: 0 4px 12px rgba(200, 16, 46, .3);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
 }
 
-.hero h1 {
-    font-size: clamp(2rem, 5vw, 3.4rem);
-    font-weight: 800;
-    line-height: 1.1;
-    margin-bottom: 20px;
-    letter-spacing: -.02em;
+/* Контейнер для визуальной части (QR) */
+.hero-visual {
+    flex-shrink: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-.hero h1 strong {
-    color: var(--c-pri);
+.qr-card {
+    background: white; /* Карточка остается белой, чтобы QR кодировался контрастно */
+    padding: 16px;
+    border-radius: var(--r-l);
+    box-shadow: 0 10px 30px -5px rgba(0, 0, 0, 0.5); /* Темная тень для объема на черном фоне */
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.hero p {
-    font-size: clamp(1rem, 2vw, 1.15rem);
-    max-width: 720px;
-    opacity: .92;
-    line-height: 1.7;
-    margin-bottom: 40px;
+.qr-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 40px -5px rgba(200, 16, 46, 0.4); /* Красное свечение при ховере */
 }
 
-.hero p strong {
-    color: var(--c-pri);
+.qr-card img {
+    width: 280px;
+    height: auto;
+    display: block;
+    margin: 0 auto 12px;
 }
 
-.hero-stats {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
-    gap: 16px;
-    max-width: 640px;
+.qr-card figcaption {
+    font-size: 0.85rem;
+    color: var(--c-mut); /* Серый цвет подписи внутри белой карточки */
+    font-weight: 500;
+    line-height: 1.4;
 }
 
-.stat {
-    background: rgba(200, 16, 46, .08);
-    padding: 18px;
-    border-radius: var(--r-m);
-    backdrop-filter: blur(10px);
-    border: 1px solid rgba(200, 16, 46, .2);
-}
+/* Адаптивность для мобильных устройств */
+@media (max-width: 768px) {
+    .hero {
+        padding: 40px 0;
+        text-align: center;
+    }
 
-.stat-val {
-    font-size: 2rem;
-    font-weight: 800;
-    line-height: 1;
-    margin-bottom: 4px;
-    color: var(--c-pri);
-}
+    .hero-inner {
+        flex-direction: column;
+        gap: 30px;
+    }
 
-.stat-lbl {
-    font-size: .85rem;
-    opacity: .8;
+    .hero-content {
+        order: 1;
+        max-width: 100%;
+    }
+
+    .hero-visual {
+        order: 2;
+        width: 100%;
+    }
+
+    .hero h1 {
+        font-size: 1.8rem;
+    }
+    
+    .qr-card {
+        margin: 0 auto;
+        max-width: 220px;
+    }
+    
+    .qr-card img {
+        width: 140px;
+    }
 }
 
 /* ========== SEARCH ========== */
@@ -704,7 +750,7 @@ section {
 /* ========== FOOTER ========== */
 
 .footer {
-    background: var(--c-dark);
+        background-color: #0f172a; 
     color: #a1a1aa;
     padding: 24px 0;
     text-align: center;
