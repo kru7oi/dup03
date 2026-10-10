@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>КЛЮЧ · ПЗ 8 · Оценка характеристик ЦП · ДУП.03</title>
+    <link rel="stylesheet" href="../styles.css">
+    <style>
+        /* Специфичные стили для ключа */
+        .teacher-banner {
+            background: #fef2f2;
+            color: #991b1b;
+            padding: 12px 20px;
+            text-align: center;
+            font-weight: bold;
+            border-bottom: 2px solid #fecaca;
+            font-size: 1rem;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+        }
+        .answer-cell {
+            background-color: #f0fdf4 !important; /* Светло-зеленый фон для эталонов */
+        }
+    </style>
+</head>
+<body class="lesson-page">
+
+    <div class="teacher-banner">
+        Только для преподавателя · Не распространять среди обучающихся
+    </div>
+
+    <!-- ШАПКА -->
+    <div class="lesson-topbar">
+        <div class="container lt-inner">
+            <a href="../Lessons/tema1_2_pz5.html" class="back-link">← Версия для студентов</a>
+            <span style="font-weight:700;color:var(--c-pri);font-size:.9rem;">Ключ · ПЗ 8</span>
+        </div>
+    </div>
+
+    <div class="container lesson-layout">
+
+        <!-- БОКОВОЕ ОГЛАВЛЕНИЕ -->
+        <aside class="lesson-aside">
+            <nav class="toc">
+                <div class="toc-title">Содержание</div>
+                <a href="#etalon-task1">Эталон: Задание 1</a>
+                <a href="#etalon-task2">Эталон: Задание 2</a>
+                <a href="#method">Методические рекомендации</a>
+                <a href="#criteria">Критерии оценки</a>
+            </nav>
+        </aside>
+
+        <!-- ОСНОВНОЙ КОНТЕНТ -->
+        <main class="lesson-main">
+
+            <div class="lesson-bcr">
+                Раздел 1 <span class="sep">/</span> Тема 1.2 <span class="sep">/</span> ПЗ 8 <span class="sep">/</span> Ключ
+            </div>
+
+            <h1>Материалы для проверки и проведения занятия</h1>
+
+            <div class="lesson-meta">
+                <span class="meta-tag">Для служебного пользования</span>
+            </div>
+
+            <!-- ЭТАЛОН ЗАДАНИЕ 1 -->
+            <section class="lsec" id="etalon-task1">
+                <h2>Эталон ответов: Задание 1 (Анализ спецификаций)</h2>
+                <div class="table-wrap">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Критерий</th>
+                                <th>i3-12100</th>
+                                <th>i5-13600K</th>
+                                <th>i9-13900KS</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>Макс. кол-во потоков</strong></td>
+                                <td class="answer-cell">8</td>
+                                <td class="answer-cell">20</td>
+                                <td class="answer-cell">32</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Макс. турбо-частота (ГГц)</strong></td>
+                                <td class="answer-cell">4.3</td>
+                                <td class="answer-cell">5.1</td>
+                                <td class="answer-cell">6.0</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Размер L3 кэша (МБ)</strong></td>
+                                <td class="answer-cell">12</td>
+                                <td class="answer-cell">24</td>
+                                <td class="answer-cell">32</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Тепловыделение (Вт)</strong></td>
+                                <td class="answer-cell">60 (низкое)</td>
+                                <td class="answer-cell">125–181 (высокое)</td>
+                                <td class="answer-cell">150–253 (очень высокое)</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Нужна мощная система охлаждения?</strong></td>
+                                <td class="answer-cell">Нет (башенный кулер)</td>
+                                <td class="answer-cell">Да (жидкостное или топ-воздух)</td>
+                                <td class="answer-cell">Да (обязательно жидкостное S-class)</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <!-- ЭТАЛОН ЗАДАНИЕ 2 -->
+            <section class="lsec" id="etalon-task2">
+                <h2>Эталон ответов: Задание 2 (Выбор под задачу)</h2>
+                <div class="table-wrap">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Задача</th>
+                                <th>Верный выбор</th>
+                                <th>Обоснование</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>1.</strong> Инспектор ГПН (офис, бюджет)</td>
+                                <td class="answer-cell"><strong>i3-12100</strong></td>
+                                <td class="answer-cell">Достаточно 4 ядер и высокой частоты для офисных задач. Низкий TDP экономит электроэнергию и не требует дорогого охлаждения. Самый дешевый вариант.</td>
+                            </tr>
+                            <tr>
+                                <td><strong>2.</strong> Видеомонтаж 4K</td>
+                                <td class="answer-cell"><strong>i5-13600K</strong></td>
+                                <td class="answer-cell">Монтаж видео использует многопоточность. 14 ядер и 20 потоков ускоряют рендеринг. i3 будет слишком медленно обрабатывать эффекты. i9 избыточен и перегреется в обычной сборке.</td>
+                            </tr>
+                            <tr>
+                                <td><strong>3.</strong> Сервер аналитики (Big Data)</td>
+                                <td class="answer-cell"><strong>i9-13900KS</strong></td>
+                                <td class="answer-cell">Обработка больших массивов данных требует максимума ядер (24) и большого кэша L3 (32 МБ) для снижения задержек при обращении к RAM. Цена оправдана скоростью расчетов.</td>
+                            </tr>
+                            <tr>
+                                <td><strong>4.</strong> Ноутбук начальника караула</td>
+                                <td class="answer-cell"><strong>i3-12100 (или мобильный аналог U-series)</strong></td>
+                                <td class="answer-cell">Главный критерий — автономность. Низкий TDP (15–28 Вт для мобильных версий) позволяет батарее работать весь день. Мощные i5/i9 в ноутбуках живут 2–3 часа.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <!-- МЕТОДИЧЕСКИЕ РЕКОМЕНДАЦИИ -->
+            <section class="lsec" id="method">
+                <h2>Методические рекомендации по обсуждению</h2>
+                <ul>
+                    <li><strong>По гибридному ядру:</strong> Объясните, что P-cores (Performance) работают на максимальной частоте для сложных задач, а E-cores (Efficient) берут на себя фоновые процессы (антивирус, обновления), освобождая мощные ядра. Это повышает общую эффективность.</li>
+                    <li><strong>По TDP и охлаждению:</strong> Покажите, что мощный процессор без хорошего кулера будет сбрасывать частоты (троттлинг) и работать медленнее слабого, но хорошо охлаждаемого. Для servers это критично.</li>
+                    <li><strong>По маркетингу:</strong> Предупредите студентов, что надпись «Core i7» ничего не гарантирует. Старый i7 7-го поколения может быть слабее нового i3 12-го поколения. Всегда смотрите на поколение и конкретную модель.</li>
+                    <li><strong>Типичная ошибка:</strong> Студенты путают «частоту» и «производительность». Высокая частота ≠ быстрый компьютер, если мало ядер или маленький кэш.</li>
+                </ul>
+            </section>
+
+            <!-- КРИТЕРИИ ОЦЕНКИ -->
+            <section class="lsec" id="criteria">
+                <h2>Критерии выставления оценки</h2>
+                <p>Максимальный балл за работу — 12.</p>
+
+                <div class="table-wrap">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Критерий</th>
+                                <th>Баллы (макс.)</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>Задание 1: Корректно заполнены все ячейки таблицы</td><td>5</td></tr>
+                            <tr><td>Задание 2: Верно выбран процессор для всех 4 задач</td><td>4</td></tr>
+                            <tr><td>Задание 2: Обоснование учитывает баланс цены, мощности и теплоотвода</td><td>3</td></tr>
+                            <tr><td><strong>ИТОГО</strong></td><td><strong>12</strong></td></tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="warn-box">
+                    <strong>Шкала перевода баллов в оценку:</strong>
+                    <ul style="margin-left:20px; margin-top:8px;">
+                        <li><b>11–12 баллов</b> → «5» (отлично)</li>
+                        <li><b>9–10 баллов</b> → «4» (хорошо)</li>
+                        <li><b>6–8 баллов</b> → «3» (удовлетворительно)</li>
+                        <li><b>менее 6 баллов</b> → «2» (неудовлетворительно)</li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- НАВИГАЦИЯ -->
+            <div class="lesson-nav">
+                <a href="../Lessons/tema1_2_pz5.html" class="nav-btn prev">← Вернуться к занятию</a>
+                <a href="../index.html" class="nav-btn next">К программе дисциплины →</a>
+            </div>
+
+        </main>
+    </div>
+
+</body>
+</html>

@@ -3,175 +3,175 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Тема 1.2 · ПЗ 3 — Оценка технических характеристик материнской платы ПК | ДУП.03</title>
-    <link rel="stylesheet" href="../style.css">
+    <title>ПЗ 6 · Оценка технических характеристик материнской платы ПК · ДУП.03</title>
+    <link rel="stylesheet" href="../styles.css">
 </head>
-<body>
-    <header class="main-header">
-        <div class="header-content">
-            <div class="logo-block">
-                <div class="emblem">🔥</div>
-                <div class="header-text">
-                    <h1>ГБПОУ ТПСК им. В.М. Максимчука</h1>
-                    <p class="subtitle">Дисциплина ДУП.03 · Информационные системы управления в ЧС</p>
-                </div>
-            </div>
+<body class="lesson-page">
+
+    <!-- ШАПКА -->
+    <div class="lesson-topbar">
+        <div class="container lt-inner">
+            <a href="../index.html" class="back-link">← К программе дисциплины</a>
+            <span style="font-weight:700;color:var(--c-pri);font-size:.9rem;">ДУП.03 · Раздел 1</span>
         </div>
-    </header>
+    </div>
 
-    <nav class="breadcrumb">
-        <div class="container">
-            <a href="../index.html">🏠 Главная</a> /
-            <a href="../index.html">Раздел 1</a> /
-            <span>Тема 1.2 · ПЗ 3</span>
-        </div>
-    </nav>
+    <div class="container lesson-layout">
 
-    <main class="container">
-        <div class="lesson-page">
-            <div class="lesson-nav">
-                <a href="tema1_2_pz2.html" class="nav-btn">← Предыдущее занятие</a>
-                <a href="../index.html" class="nav-btn home">К оглавлению</a>
-                <a href="tema1_2_pz4.html" class="nav-btn">Следующее занятие →</a>
+        <!-- БОКОВОЕ ОГЛАВЛЕНИЕ -->
+        <aside class="lesson-aside">
+            <nav class="toc">
+                <div class="toc-title">Содержание</div>
+                <a href="#goal">Цель занятия</a>
+                <a href="#abbrev">Аббревиатуры</a>
+                <a href="#plan">План занятия</a>
+                <a href="#theory">Характеристики МП</a>
+                <a href="#practice">Практическая работа</a>
+                <a href="#boards">Спецификации плат</a>
+                <a href="#tasks">Задания для анализа</a>
+                <a href="#discuss">Вопросы для обсуждения</a>
+                <a href="#hw">Домашнее задание</a>
+            </nav>
+        </aside>
+
+        <!-- ОСНОВНОЙ КОНТЕНТ -->
+        <main class="lesson-main">
+
+            <div class="lesson-bcr">
+                Раздел 1 <span class="sep">/</span> Тема 1.2 <span class="sep">/</span> ПЗ 6
             </div>
 
-            <div class="lesson-header">
-                <span class="lesson-number">Раздел 1 · Тема 1.2 · Практическое занятие 3</span>
-                <h1>Проведение оценки технических характеристик материнской платы ПК</h1>
-                <div class="lesson-meta">
-                    <span>📚 Вид: Практическое занятие (ПЗ)</span>
-                    <span>⏱️ Объём: 1 ак. час (45 мин)</span>
-                    <span>📍 Формат: очный</span>
-                </div>
+            <h1>Проведение оценки технических характеристик материнской платы ПК</h1>
+
+            <div class="lesson-meta">
+                <span class="meta-tag">Тема 1.2</span>
+                <span class="meta-tag">Практическое занятие</span>
+                <span class="meta-tag">1 ак. час</span>
+                <span class="meta-tag">ОК.02 · ДПК.3.1 · МР.03 · ПР.02</span>
             </div>
 
-            <div class="lesson-content">
-                <h2>🎯 Цели и задачи занятия</h2>
-                <div class="info-box definition">
-                    <div class="info-box-title">🎯 Цель:</div>
-                    <p>Научить обучающихся читать и анализировать спецификации материнских плат, понимать ключевые технические характеристики, оценивать совместимость компонентов и определять возможности для модернизации ПК.</p>
-                </div>
-
-                <h3>Формируемые результаты (согласно РП):</h3>
-                <div class="comp-badges">
-                    <span class="badge ok">ОК.02</span>
-                    <span class="badge pk">ДПК.3.1</span>
-                    <span class="badge lr">ЛР.03</span>
-                    <span class="badge lr">ЦО.02</span>
-                    <span class="badge pr">МР.03</span>
-                    <span class="badge pr">ПР.01–07</span>
-                </div>
-
-                <h2>🔤 Аббревиатуры занятия</h2>
-                <div class="info-box definition">
-                    <div class="info-box-title">Ключевые сокращения, используемые в материале:</div>
-                    <ul style="columns: 2; column-gap: 20px; margin-top: 8px;">
-                        <li><strong>МП</strong> – Материнская плата</li>
-                        <li><strong>ЦП</strong> – Центральный процессор</li>
-                        <li><strong>ОЗУ</strong> – Оперативное запоминающее устройство</li>
-                        <li><strong>СО</strong> – Сокет (разъем процессора)</li>
-                        <li><strong>Чипсет</strong> – Набор микросхем системной логики</li>
-                        <li><strong>PCIe</strong> – Peripheral Component Interconnect Express</li>
-                        <li><strong>DDR</strong> – Double Data Rate (тип памяти)</li>
-                        <li><strong>SATA</strong> – Serial Advanced Technology Attachment</li>
-                        <li><strong>M.2</strong> – Форм-фактор для SSD</li>
-                        <li><strong>BIOS/UEFI</strong> – Базовая система ввода-вывода</li>
+            <!-- ЦЕЛЬ -->
+            <section class="lsec" id="goal">
+                <h2>Цель занятия</h2>
+                <p><strong>Научиться читать и анализировать спецификации материнских плат, понимать ключевые технические характеристики, оценивать совместимость компонентов и определять возможности модернизации компьютера.</strong></p>
+                
+                <div class="info-box">
+                    <strong>Формируемые компетенции:</strong>
+                    <ul style="margin-left:20px; margin-top:8px;">
+                        <li><b>ОК.02</b> — использовать современные средства поиска и анализа информации;</li>
+                        <li><b>ДПК.3.1</b> — работать с программным обеспечением и аппаратными средствами ПС;</li>
+                        <li><b>ПР.02</b> — понимать принципы устройства и функционирования современных компьютеров.</li>
                     </ul>
                 </div>
+            </section>
 
-                <h2>📋 План занятия (45 минут)</h2>
-                <div class="timeline">
-                    <div class="timeline-item">
-                        <span class="timeline-time">0–5 мин</span>
-                        <h4>I. Вводный инструктаж</h4>
-                        <p>Почему материнская плата — это "фундамент" компьютера? Как она влияет на совместимость и возможности модернизации?</p>
-                    </div>
-                    <div class="timeline-item">
-                        <span class="timeline-time">5–20 мин</span>
-                        <h4>II. Ключевые характеристики материнской платы</h4>
-                        <p>Разбор основных параметров: сокет, чипсет, форм-фактор, слоты памяти, слоты расширения, порты.</p>
-                    </div>
-                    <div class="timeline-item">
-                        <span class="timeline-time">20–35 мин</span>
-                        <h4>III. Практическая работа: анализ спецификаций</h4>
-                        <p>Работа с реальными спецификациями материнских плат. Определение характеристик, оценка совместимости.</p>
-                    </div>
-                    <div class="timeline-item">
-                        <span class="timeline-time">35–45 мин</span>
-                        <h4>IV. Проверка результатов и обсуждение</h4>
-                        <p>Сравнение ответов, разбор типичных ошибок, выводы.</p>
-                    </div>
+            <!-- АББРЕВИАТУРЫ -->
+            <section class="lsec" id="abbrev">
+                <h2>Ключевые сокращения</h2>
+                <div class="table-wrap">
+                    <table>
+                        <tbody>
+                            <tr><td><strong>МП</strong></td><td>Материнская плата</td></tr>
+                            <tr><td><strong>ЦП</strong></td><td>Центральный процессор</td></tr>
+                            <tr><td><strong>ОЗУ</strong></td><td>Оперативное запоминающее устройство</td></tr>
+                            <tr><td><strong>СО</strong></td><td>Сокет (разъем процессора)</td></tr>
+                            <tr><td><strong>Чипсет</strong></td><td>Набор микросхем системной логики</td></tr>
+                            <tr><td><strong>PCIe</strong></td><td>Peripheral Component Interconnect Express</td></tr>
+                            <tr><td><strong>DDR</strong></td><td>Double Data Rate (тип памяти)</td></tr>
+                            <tr><td><strong>SATA</strong></td><td>Serial Advanced Technology Attachment</td></tr>
+                            <tr><td><strong>M.2</strong></td><td>Форм-фактор для SSD</td></tr>
+                            <tr><td><strong>BIOS/UEFI</strong></td><td>Базовая система ввода-вывода</td></tr>
+                        </tbody>
+                    </table>
                 </div>
+            </section>
 
-                <h2>📐 Ключевые характеристики материнской платы</h2>
+            <!-- ПЛАН ЗАНЯТИЯ -->
+            <section class="lsec" id="plan">
+                <h2>План занятия (45 минут)</h2>
+                <ol>
+                    <li><strong>0–5 мин.</strong> Вводный инструктаж: роль материнской платы как «фундамента» системы.</li>
+                    <li><strong>5–20 мин.</strong> Теория: разбор ключевых характеристик (сокет, чипсет, форм-фактор, слоты).</li>
+                    <li><strong>20–35 мин.</strong> Практическая работа: анализ спецификаций трех реальных плат.</li>
+                    <li><strong>35–45 мин.</strong> Проверка результатов, обсуждение типичных ошибок, домашнее задание.</li>
+                </ol>
+            </section>
+
+            <!-- ТЕОРИЯ -->
+            <section class="lsec" id="theory">
+                <h2>Ключевые характеристики материнской платы</h2>
                 <p>При оценке материнской платы необходимо обращать внимание на следующие параметры:</p>
 
-                <table>
-                    <thead>
-                        <tr>
-                            <th>Характеристика</th>
-                            <th>Что означает</th>
-                            <th>На что влияет</th>
-                            <th>Примеры значений</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td><strong>1. Сокет (Socket)</strong></td>
-                            <td>Разъем для установки процессора</td>
-                            <td>Совместимость с ЦП</td>
-                            <td>LGA 1700 (Intel 12-14 поколение), AM5 (AMD Ryzen 7000+)</td>
-                        </tr>
-                        <tr>
-                            <td><strong>2. Чипсет</strong></td>
-                            <td>Набор микросхем, определяющий функциональность</td>
-                            <td>Поддержка PCIe, USB, разгон, количество портов</td>
-                            <td>Intel Z790 (топовый), B760 (средний), H610 (бюджетный)</td>
-                        </tr>
-                        <tr>
-                            <td><strong>3. Форм-фактор</strong></td>
-                            <td>Размер и расположение крепежных отверстий</td>
-                            <td>Совместимость с корпусом</td>
-                            <td>ATX (стандарт), Micro-ATX (компактный), Mini-ITX (минимальный)</td>
-                        </tr>
-                        <tr>
-                            <td><strong>4. Слоты памяти (DIMM)</strong></td>
-                            <td>Разъемы для установки ОЗУ</td>
-                            <td>Максимальный объем и тип памяти</td>
-                            <td>4 слота DDR5, поддержка до 128 ГБ, частота 5600 МГц</td>
-                        </tr>
-                        <tr>
-                            <td><strong>5. Слоты расширения (PCIe)</strong></td>
-                            <td>Разъемы для видеокарт, сетевых карт и др.</td>
-                            <td>Возможности расширения</td>
-                            <td>1x PCIe 5.0 x16 (для видеокарты), 2x PCIe 4.0 x1</td>
-                        </tr>
-                        <tr>
-                            <td><strong>6. Разъемы для накопителей</strong></td>
-                            <td>Подключение HDD, SSD</td>
-                            <td>Количество и тип накопителей</td>
-                            <td>4x SATA III, 2x M.2 NVMe PCIe 4.0</td>
-                        </tr>
-                        <tr>
-                            <td><strong>7. Порты ввода-вывода</strong></td>
-                            <td>Внешние разъемы на задней панели</td>
-                            <td>Подключение периферии</td>
-                            <td>USB 3.2, USB-C, HDMI, DisplayPort, Ethernet, аудио</td>
-                        </tr>
-                        <tr>
-                            <td><strong>8. Встроенные компоненты</strong></td>
-                            <td>Интегрированные устройства</td>
-                            <td>Необходимость покупки дополнительных карт</td>
-                            <td>Видео (HDMI), звук (7.1), сеть (2.5 Гбит/с), Wi-Fi 6E</td>
-                        </tr>
-                    </tbody>
-                </table>
+                <div class="table-wrap">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Характеристика</th>
+                                <th>Что означает</th>
+                                <th>На что влияет</th>
+                                <th>Примеры значений</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>1. Сокет (Socket)</strong></td>
+                                <td>Разъем для установки процессора</td>
+                                <td>Совместимость с ЦП</td>
+                                <td>LGA 1700 (Intel), AM5 (AMD)</td>
+                            </tr>
+                            <tr>
+                                <td><strong>2. Чипсет</strong></td>
+                                <td>Набор микросхем системной логики</td>
+                                <td>Поддержка PCIe, USB, разгон, количество портов</td>
+                                <td>Z790 (топ), B760 (середина), H610 (бюджет)</td>
+                            </tr>
+                            <tr>
+                                <td><strong>3. Форм-фактор</strong></td>
+                                <td>Размер и расположение крепежных отверстий</td>
+                                <td>Совместимость с корпусом</td>
+                                <td>ATX, Micro-ATX, Mini-ITX</td>
+                            </tr>
+                            <tr>
+                                <td><strong>4. Слоты памяти (DIMM)</strong></td>
+                                <td>Разъемы для установки ОЗУ</td>
+                                <td>Максимальный объем и тип памяти</td>
+                                <td>4x DDR5, макс. 128 ГБ, до 5600 МГц</td>
+                            </tr>
+                            <tr>
+                                <td><strong>5. Слоты расширения (PCIe)</strong></td>
+                                <td>Разъемы для видеокарт, звуковых карт и др.</td>
+                                <td>Возможности расширения</td>
+                                <td>1x PCIe 5.0 x16, 2x PCIe 4.0 x1</td>
+                            </tr>
+                            <tr>
+                                <td><strong>6. Разъемы накопителей</strong></td>
+                                <td>Подключение HDD, SSD</td>
+                                <td>Количество и скорость дисков</td>
+                                <td>4x SATA III, 2x M.2 NVMe</td>
+                            </tr>
+                            <tr>
+                                <td><strong>7. Порты ввода-вывода</strong></td>
+                                <td>Внешние разъемы на задней панели</td>
+                                <td>Подключение периферии</td>
+                                <td>USB-C, HDMI, DisplayPort, Ethernet, Wi-Fi</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
 
-                <h2>💼 Практическая работа: Анализ спецификаций</h2>
-                <p>Изучите спецификации трех материнских плат и ответьте на вопросы.</p>
+            <!-- ПРАКТИКА -->
+            <section class="lsec" id="practice">
+                <h2>Практическая работа: Анализ спецификаций</h2>
+                <p>Изучите данные трех материнских плат и выполните задания ниже. Работа выполняется в тетради или файле .docx.</p>
+            </section>
 
-                <div class="info-box example">
-                    <div class="info-box-title">🔹 Материнская плата №1: ASUS Prime B760M-A D4</div>
+            <!-- СПЕЦИФИКАЦИИ ПЛАТ -->
+            <section class="lsec" id="boards">
+                <h3>Карточки плат</h3>
+
+                <div class="info-box">
+                    <strong>Плата №1: ASUS Prime B760M-A D4</strong>
                     <ul>
                         <li><strong>Сокет:</strong> LGA 1700</li>
                         <li><strong>Чипсет:</strong> Intel B760</li>
@@ -184,8 +184,8 @@
                     </ul>
                 </div>
 
-                <div class="info-box example">
-                    <div class="info-box-title">🔹 Материнская плата №2: MSI MPG Z790 Carbon WiFi</div>
+                <div class="info-box">
+                    <strong>Плата №2: MSI MPG Z790 Carbon WiFi</strong>
                     <ul>
                         <li><strong>Сокет:</strong> LGA 1700</li>
                         <li><strong>Чипсет:</strong> Intel Z790</li>
@@ -198,8 +198,8 @@
                     </ul>
                 </div>
 
-                <div class="info-box example">
-                    <div class="info-box-title">🔹 Материнская плата №3: Gigabyte A620M Gaming X</div>
+                <div class="info-box">
+                    <strong>Плата №3: Gigabyte A620M Gaming X</strong>
                     <ul>
                         <li><strong>Сокет:</strong> AM5</li>
                         <li><strong>Чипсет:</strong> AMD A620</li>
@@ -211,12 +211,15 @@
                         <li><strong>Особенности:</strong> Бюджетная плата для AMD Ryzen 7000, нет поддержки разгона</li>
                     </ul>
                 </div>
+            </section>
 
-                <h2>📝 Задания для анализа</h2>
+            <!-- ЗАДАНИЯ -->
+            <section class="lsec" id="tasks">
+                <h3>Задания для анализа</h3>
                 <ol>
                     <li><strong>Определите совместимость процессоров:</strong>
                         <ul>
-                            <li>Какой процессор Intel можно установить в плату №1? (Подсказка: 12, 13 или 14 поколение Core)</li>
+                            <li>Какой процессор Intel можно установить в плату №1? (Подсказка: поколение Core)</li>
                             <li>Можно ли установить процессор AMD Ryzen 5 7600 в плату №1? Почему?</li>
                             <li>Какой сокет у платы №3 и какие процессоры AMD она поддерживает?</li>
                         </ul>
@@ -236,35 +239,37 @@
                         </ul>
                     </li>
                 </ol>
+            </section>
 
-                <h2>💬 Вопросы для обсуждения</h2>
+            <!-- ОБСУЖДЕНИЕ -->
+            <section class="lsec" id="discuss">
+                <h2>Вопросы для обсуждения</h2>
                 <ol>
                     <li>Почему материнская плата с сокетом LGA 1700 не подойдет для процессора AMD?</li>
                     <li>Что важнее при выборе материнской платы: чипсет или количество слотов расширения?</li>
                     <li>Почему для сервера или рабочей станции важнее надежность материнской платы, чем для домашнего ПК?</li>
                     <li>Как форм-фактор материнской платы влияет на выбор корпуса?</li>
                 </ol>
+            </section>
 
-                <h2>📝 Домашнее задание</h2>
-                <div class="info-box example">
-                    <div class="info-box-title">📌 Задание:</div>
-                    <p>Найдите на сайте производителя (ASUS, MSI, Gigabyte, ASRock) или в интернет-магазине подробную спецификацию любой материнской платы. Выпишите все ключевые характеристики (сокет, чипсет, форм-фактор, память, слоты PCIe, накопители, порты). Определите, для каких задач эта плата подходит и какие процессоры/память с ней совместимы.</p>
+            <!-- ДОМАШНЕЕ ЗАДАНИЕ -->
+            <section class="lsec" id="hw">
+                <h2>Домашнее задание</h2>
+                <div class="warn-box">
+                    <strong>Задание:</strong>
+                    <p>Найдите на сайте производителя (ASUS, MSI, Gigabyte, ASRock) или в интернет-магазине подробную спецификацию любой материнской платы.</p>
+                    <p>Выпишите все ключевые характеристики (сокет, чипсет, форм-фактор, память, слоты PCIe, накопители, порты). Определите, для каких задач эта плата подходит и какие процессоры/память с ней совместимы.</p>
                 </div>
-            </div>
+            </section>
 
+            <!-- НАВИГАЦИЯ -->
             <div class="lesson-nav">
-                <a href="tema1_2_pz2.html" class="nav-btn">← Предыдущее занятие</a>
-                <a href="../index.html" class="nav-btn home">К оглавлению</a>
-                <a href="tema1_2_pz4.html" class="nav-btn">Следующее занятие →</a>
+                <a href="tema1_2_pz2.html" class="nav-btn prev">← ПЗ 5. Анализ комплектации АРМ</a>
+                <a href="tema1_2_pz4.html" class="nav-btn next">ПЗ 7. Обзор операционных систем →</a>
             </div>
-        </div>
-    </main>
 
-    <footer class="main-footer">
-        <div class="container">
-            <p>© 2025 ГБПОУ ТПСК им. В.М. Максимчука · Департамент образования и науки города Москвы</p>
-            <p>Дисциплина ДУП.03 «Информационные системы управления в чрезвычайных ситуациях»</p>
-        </div>
-    </footer>
+        </main>
+    </div>
+
 </body>
 </html>

@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>КЛЮЧ · ПЗ 7 · Оценка характеристик ПЗУ · ДУП.03</title>
+    <link rel="stylesheet" href="../styles.css">
+    <style>
+        /* Специфичные стили для ключа */
+        .teacher-banner {
+            background: #fef2f2;
+            color: #991b1b;
+            padding: 12px 20px;
+            text-align: center;
+            font-weight: bold;
+            border-bottom: 2px solid #fecaca;
+            font-size: 1rem;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+        }
+        .answer-cell {
+            background-color: #f0fdf4 !important; /* Светло-зеленый фон для эталонов */
+        }
+    </style>
+</head>
+<body class="lesson-page">
+
+    <div class="teacher-banner">
+        Только для преподавателя · Не распространять среди обучающихся
+    </div>
+
+    <!-- ШАПКА -->
+    <div class="lesson-topbar">
+        <div class="container lt-inner">
+            <a href="../Lessons/tema1_2_pz4.html" class="back-link">← Версия для студентов</a>
+            <span style="font-weight:700;color:var(--c-pri);font-size:.9rem;">Ключ · ПЗ 7</span>
+        </div>
+    </div>
+
+    <div class="container lesson-layout">
+
+        <!-- БОКОВОЕ ОГЛАВЛЕНИЕ -->
+        <aside class="lesson-aside">
+            <nav class="toc">
+                <div class="toc-title">Содержание</div>
+                <a href="#etalon-task1">Эталон: Задание 1</a>
+                <a href="#etalon-task2">Эталон: Задание 2</a>
+                <a href="#method">Методические рекомендации</a>
+                <a href="#criteria">Критерии оценки</a>
+            </nav>
+        </aside>
+
+        <!-- ОСНОВНОЙ КОНТЕНТ -->
+        <main class="lesson-main">
+
+            <div class="lesson-bcr">
+                Раздел 1 <span class="sep">/</span> Тема 1.2 <span class="sep">/</span> ПЗ 7 <span class="sep">/</span> Ключ
+            </div>
+
+            <h1>Материалы для проверки и проведения занятия</h1>
+
+            <div class="lesson-meta">
+                <span class="meta-tag">Для служебного пользования</span>
+            </div>
+
+            <!-- ЭТАЛОН ЗАДАНИЕ 1 -->
+            <section class="lsec" id="etalon-task1">
+                <h2>Эталон ответов: Задание 1 (Сравнение дисков)</h2>
+                <div class="table-wrap">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Критерий</th>
+                                <th>Диск А (HDD)</th>
+                                <th>Диск Б (SSD SATA)</th>
+                                <th>Диск В (SSD NVMe)</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>Скорость чтения (МБ/с)</strong></td>
+                                <td class="answer-cell">~210</td>
+                                <td class="answer-cell">560</td>
+                                <td class="answer-cell">7300</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Устойчивость к вибрации</strong></td>
+                                <td class="answer-cell">Низкая (механика)</td>
+                                <td class="answer-cell">Высокая (нет движущихся частей)</td>
+                                <td class="answer-cell">Высокая (нет движущихся частей)</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Стоимость за 1 ГБ (руб.)</strong></td>
+                                <td class="answer-cell">~4 руб./ГБ (самая дешевая)</td>
+                                <td class="answer-cell">~9.5 руб./ГБ</td>
+                                <td class="answer-cell">~14 руб./ГБ (самая дорогая)</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Подходит для мобильной работы</strong></td>
+                                <td class="answer-cell">Нет</td>
+                                <td class="answer-cell">Да</td>
+                                <td class="answer-cell">Да</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Лучший выбор для БД (IOPS)</strong></td>
+                                <td class="answer-cell">Нет (низкие IOPS)</td>
+                                <td class="answer-cell">Средне</td>
+                                <td class="answer-cell">Да (высокие IOPS, быстрый отклик)</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <!-- ЭТАЛОН ЗАДАНИЕ 2 -->
+            <section class="lsec" id="etalon-task2">
+                <h2>Эталон ответов: Задание 2 (Выбор под задачу)</h2>
+                <div class="table-wrap">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Ситуация</th>
+                                <th>Верный выбор</th>
+                                <th>Обоснование</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>1.</strong> Архив видео (50 ТБ)</td>
+                                <td class="answer-cell"><strong>Диск А (HDD)</strong></td>
+                                <td class="answer-cell">Требуется огромный объем по низкой цене. Скорость не важна, так как доступ редкий. HDD дешевле всего за гигабайт.</td>
+                            </tr>
+                            <tr>
+                                <td><strong>2.</strong> Системный диск инспектора</td>
+                                <td class="answer-cell"><strong>Диск Б (SSD SATA)</strong></td>
+                                <td class="answer-cell">Нужна быстрая загрузка ОС и программ. SATA SSD достаточно быстр для офиса и доступен по цене. NVMe избыточен для таких задач.</td>
+                            </tr>
+                            <tr>
+                                <td><strong>3.</strong> Планшет РТП на пожаре</td>
+                                <td class="answer-cell"><strong>Диск В (SSD NVMe)</strong></td>
+                                <td class="answer-cell">Критичны скорость открытия чертежей и устойчивость к ударам/vибрации. NVMe обеспечивает максимальную производительность и надежность в экстремальных условиях.</td>
+                            </tr>
+                            <tr>
+                                <td><strong>4.</strong> Сервер БД рисков</td>
+                                <td class="answer-cell"><strong>Диск В (SSD NVMe)</strong></td>
+                                <td class="answer-cell">Высокая нагрузка требует больших IOPS и низкой задержки. NVMe справляется с тысячами одновременных запросов лучше SATA и несопоставимо лучше HDD.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <!-- МЕТОДИЧЕСКИЕ РЕКОМЕНДАЦИИ -->
+            <section class="lsec" id="method">
+                <h2>Методические рекомендации по обсуждению</h2>
+                <ul>
+                    <li><strong>По стоимости:</strong> Покажите математику. HDD 2 ТБ за 8000 руб. = 4 руб./ГБ. SSD NVMe 1 ТБ за 14000 руб. = 14 руб./ГБ. Разница в 3.5 раза. Для архива это решающий фактор.</li>
+                    <li><strong>По надежности:</strong> Объясните, что HDD ломается от падения головки на диск. SSD ломается от выгорания ячеек памяти (ограничен TBW). Но в реальных условиях эксплуатации SSD живёт дольше из-за отсутствия механики.</li>
+                    <li><strong>По IOPS:</strong> Приведите аналогию с библиотекой. HDD — библиотекарь бегает между стеллажами (медленно). SSD — робот-курьер, который знает точный адрес книги (быстро). NVMe — несколько курьеров одновременно.</li>
+                    <li><strong>Типичная ошибка:</strong> Студенты часто думают, что «больше объем = лучше». Нужно подчеркнуть, что для системного диска важнее скорость, а для архива — объем и цена.</li>
+                </ul>
+            </section>
+
+            <!-- КРИТЕРИИ ОЦЕНКИ -->
+            <section class="lsec" id="criteria">
+                <h2>Критерии выставления оценки</h2>
+                <p>Максимальный балл за работу — 12.</p>
+
+                <div class="table-wrap">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Критерий</th>
+                                <th>Баллы (макс.)</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>Задание 1: Корректно заполнены все ячейки таблицы сравнения</td><td>5</td></tr>
+                            <tr><td>Задание 2: Верно выбран тип диска для всех 4 ситуаций</td><td>4</td></tr>
+                            <tr><td>Задание 2: Логичное обоснование выбора (не просто «потому что быстрый»)</td><td>3</td></tr>
+                            <tr><td><strong>ИТОГО</strong></td><td><strong>12</strong></td></tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="warn-box">
+                    <strong>Шкала перевода баллов в оценку:</strong>
+                    <ul style="margin-left:20px; margin-top:8px;">
+                        <li><b>11–12 баллов</b> → «5» (отлично)</li>
+                        <li><b>9–10 баллов</b> → «4» (хорошо)</li>
+                        <li><b>6–8 баллов</b> → «3» (удовлетворительно)</li>
+                        <li><b>менее 6 баллов</b> → «2» (неудовлетворительно)</li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- НАВИГАЦИЯ -->
+            <div class="lesson-nav">
+                <a href="../Lessons/tema1_2_pz4.html" class="nav-btn prev">← Вернуться к занятию</a>
+                <a href="../index.html" class="nav-btn next">К программе дисциплины →</a>
+            </div>
+
+        </main>
+    </div>
+
+</body>
+</html>

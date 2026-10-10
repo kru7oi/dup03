@@ -3,333 +3,217 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>КЛЮЧ: ПЗ 2 — Анализ комплектации АРМ | ДУП.03</title>
-    <link rel="stylesheet" href="../style.css">
+    <title>КЛЮЧ · ПЗ 5 · Анализ комплектации АРМ · ДУП.03</title>
+    <link rel="stylesheet" href="../styles.css">
     <style>
+        /* Специфичные стили для ключа */
         .teacher-banner {
-            background: #fff3cd;
-            color: #856404;
+            background: #fef2f2;
+            color: #991b1b;
             padding: 12px 20px;
             text-align: center;
             font-weight: bold;
-            border-bottom: 2px solid #ffeeba;
-            font-size: 16px;
+            border-bottom: 2px solid #fecaca;
+            font-size: 1rem;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+        }
+        .answer-cell {
+            background-color: #f0fdf4 !important; /* Светло-зеленый фон для эталонов */
         }
     </style>
 </head>
-<body>
-    <div class="teacher-banner">⚠️ ВНИМАНИЕ: ЭТОТ МАТЕРИАЛ ПРЕДНАЗНАЧЕН ТОЛЬКО ДЛЯ ПРЕПОДАВАТЕЛЯ</div>
+<body class="lesson-page">
 
-    <header class="main-header" style="background: linear-gradient(135deg, #6f42c1 0%, #5a32a3 100%);">
-        <div class="header-content">
-            <div class="logo-block">
-                <div class="emblem">🔑</div>
-                <div class="header-text">
-                    <h1>Методические материалы и ключи</h1>
-                    <p class="subtitle">ДУП.03 · Тема 1.2 · ПЗ 2</p>
+    <div class="teacher-banner">
+        Только для преподавателя · Не распространять среди обучающихся
+    </div>
+
+    <!-- ШАПКА -->
+    <div class="lesson-topbar">
+        <div class="container lt-inner">
+            <a href="../Lessons/tema1_2_pz2.html" class="back-link">← Версия для студентов</a>
+            <span style="font-weight:700;color:var(--c-pri);font-size:.9rem;">Ключ · ПЗ 5</span>
+        </div>
+    </div>
+
+    <div class="container lesson-layout">
+
+        <!-- БОКОВОЕ ОГЛАВЛЕНИЕ -->
+        <aside class="lesson-aside">
+            <nav class="toc">
+                <div class="toc-title">Содержание</div>
+                <a href="#etalon-v1">Эталон: Вариант 1 (Инспектор)</a>
+                <a href="#etalon-v2">Эталон: Вариант 2 (РТП)</a>
+                <a href="#etalon-v3">Эталон: Вариант 3 (Аналитик)</a>
+                <a href="#etalon-v4">Эталон: Вариант 4 (Проектировщик)</a>
+                <a href="#method">Методические рекомендации</a>
+                <a href="#criteria">Критерии оценки</a>
+            </nav>
+        </aside>
+
+        <!-- ОСНОВНОЙ КОНТЕНТ -->
+        <main class="lesson-main">
+
+            <div class="lesson-bcr">
+                Раздел 1 <span class="sep">/</span> Тема 1.2 <span class="sep">/</span> ПЗ 5 <span class="sep">/</span> Ключ
+            </div>
+
+            <h1>Материалы для проверки и проведения занятия</h1>
+
+            <div class="lesson-meta">
+                <span class="meta-tag">Для служебного пользования</span>
+            </div>
+
+            <!-- ЭТАЛОН ВАРИАНТ 1 -->
+            <section class="lsec" id="etalon-v1">
+                <h2>Эталон ответов: Вариант 1 (АРМ инспектора ГПН)</h2>
+                <p><em>Допускаются вариации моделей, если класс мощности соответствует офисным задачам.</em></p>
+                <div class="table-wrap">
+                    <table>
+                        <thead>
+                            <tr><th>Компонент</th><th>Рекомендуемая конфигурация</th><th>Обоснование</th></tr>
+                        </thead>
+                        <tbody>
+                            <tr><td><strong>Тип устройства</strong></td><td class="answer-cell">Стационарный ПК</td><td class="answer-cell">Работа привязана к кабинету, мобильность не требуется.</td></tr>
+                            <tr><td><strong>Процессор</strong></td><td class="answer-cell">Intel Core i3 / AMD Ryzen 3</td><td class="answer-cell">Офисные приложения и браузер не требуют высокой вычислительной мощности.</td></tr>
+                            <tr><td><strong>ОЗУ</strong></td><td class="answer-cell">8–16 ГБ</td><td class="answer-cell">Достаточно для одновременной работы АИС, Word, Excel и нескольких вкладок браузера.</td></tr>
+                            <tr><td><strong>Накопитель</strong></td><td class="answer-cell">SSD 256–512 ГБ</td><td class="answer-cell">Быстрая загрузка системы и документов, снижение времени ожидания.</td></tr>
+                            <tr><td><strong>Видеокарта</strong></td><td class="answer-cell">Встроенная (Integrated Graphics)</td><td class="answer-cell">Отсутствуют задачи по 3D-графике или сложному видеомонтажу.</td></tr>
+                            <tr><td><strong>Монитор</strong></td><td class="answer-cell">24" Full HD, IPS-матрица</td><td class="answer-cell">Критично для зрения при длительной работе с текстом (8 часов).</td></tr>
+                            <tr><td><strong>Доп. оборудование</strong></td><td class="answer-cell">ИБП, МФУ (сканер/принтер)</td><td class="answer-cell">Защита от потери данных при скачках напряжения; оцифровка бумажных дел.</td></tr>
+                            <tr><td><strong>ПО</strong></td><td class="answer-cell">Windows/Linux, MS Office/Astra Linux, Антивирус</td><td class="answer-cell">Стандартный набор для государственного служащего.</td></tr>
+                            <tr><td><strong>Стоимость</strong></td><td class="answer-cell">~60 000 – 80 000 руб.</td><td class="answer-cell">Бюджетное решение, соответствующее функционалу.</td></tr>
+                        </tbody>
+                    </table>
                 </div>
-            </div>
-        </div>
-    </header>
+            </section>
 
-    <nav class="breadcrumb">
-        <div class="container">
-            <a href="../index.html">🏠 Главная</a> /
-            <span>Teacher / key_tema1_2_pz2.html</span>
-        </div>
-    </nav>
+            <!-- ЭТАЛОН ВАРИАНТ 2 -->
+            <section class="lsec" id="etalon-v2">
+                <h2>Эталон ответов: Вариант 2 (АРМ РТП)</h2>
+                <div class="table-wrap">
+                    <table>
+                        <thead>
+                            <tr><th>Компонент</th><th>Рекомендуемая конфигурация</th><th>Обоснование</th></tr>
+                        </thead>
+                        <tbody>
+                            <tr><td><strong>Тип устройства</strong></td><td class="answer-cell">Защищенный планшет / Ультрабук (IP65+)</td><td class="answer-cell">Работа в агрессивной среде (вода, пыль, удары).</td></tr>
+                            <tr><td><strong>Процессор</strong></td><td class="answer-cell">Intel Core i5 / AMD Ryzen 5</td><td class="answer-cell">Необходим для плавной работы тяжелых ГИС-приложений и связи.</td></tr>
+                            <tr><td><strong>ОЗУ</strong></td><td class="answer-cell">16 ГБ</td><td class="answer-cell">Многозадачность: карты + радиосвязь + база данных объектов.</td></tr>
+                            <tr><td><strong>Накопитель</strong></td><td class="answer-cell">SSD 512 ГБ</td><td class="answer-cell">Хранение офлайн-карт местности и паспортов зданий.</td></tr>
+                            <tr><td><strong>Видеокарта</strong></td><td class="answer-cell">Встроенная или слабая дискретная</td><td class="answer-cell">Достаточно для отрисовки 2D/3D карт без сложного рендеринга.</td></tr>
+                            <tr><td><strong>Монитор</strong></td><td class="answer-cell">13–15", яркость 500+ нит, сенсорный</td><td class="answer-cell">Читаемость на солнце, управление в перчатках.</td></tr>
+                            <tr><td><strong>Доп. оборудование</strong></td><td class="answer-cell">GPS/ГЛОНАСС модуль, 4G/LTE модем, PowerBank</td><td class="answer-cell">Геолокация объекта, связь с штабом, автономность питания.</td></tr>
+                            <tr><td><strong>ПО</strong></td><td class="answer-cell">Android/Windows Mobile, ГИС-клиенты, VoIP</td><td class="answer-cell">Мобильные версии профессиональных систем.</td></tr>
+                            <tr><td><strong>Стоимость</strong></td><td class="answer-cell">~150 000 – 250 000 руб.</td><td class="answer-cell">Высокая цена обусловлена военной/полевой защитой корпуса.</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
 
-    <main class="container">
-        <div class="lesson-page">
-            <div class="lesson-nav">
-                <a href="../Lessons/tema1_2_pz2.html" class="nav-btn">👁️ Посмотреть версию для студентов</a>
-                <a href="../index.html" class="nav-btn home">К оглавлению</a>
-            </div>
+            <!-- ЭТАЛОН ВАРИАНТ 3 -->
+            <section class="lsec" id="etalon-v3">
+                <h2>Эталон ответов: Вариант 3 (АРМ Аналитика)</h2>
+                <div class="table-wrap">
+                    <table>
+                        <thead>
+                            <tr><th>Компонент</th><th>Рекомендуемая конфигурация</th><th>Обоснование</th></tr>
+                        </thead>
+                        <tbody>
+                            <tr><td><strong>Тип устройства</strong></td><td class="answer-cell">Мощный стационарный ПК</td><td class="answer-cell">Стационарная работа с большими данными.</td></tr>
+                            <tr><td><strong>Процессор</strong></td><td class="answer-cell">Intel Core i7 / AMD Ryzen 7</td><td class="answer-cell">Ускорение расчетов статистики и запросов к БД.</td></tr>
+                            <tr><td><strong>ОЗУ</strong></td><td class="answer-cell">32–64 ГБ</td><td class="answer-cell">Загрузка больших выборок данных в память для быстрой обработки.</td></tr>
+                            <tr><td><strong>Накопитель</strong></td><td class="answer-cell">SSD 1 ТБ (система) + HDD 2–4 ТБ (архив)</td><td class="answer-cell">SSD для скорости, HDD для хранения истории пожаров.</td></tr>
+                            <tr><td><strong>Видеокарта</strong></td><td class="answer-cell">Встроенная или начальный уровень</td><td class="answer-cell">Графики строятся силами CPU/GPU интегрированной графики.</td></tr>
+                            <tr><td><strong>Монитор</strong></td><td class="answer-cell">Два монитора 24" или один 27" 2K</td><td class="answer-cell">Сравнение исходных данных и результата одновременно.</td></tr>
+                            <tr><td><strong>Доп. оборудование</strong></td><td class="answer-cell">ИБП</td><td class="answer-cell">Сохранение незавершенных расчетов.</td></tr>
+                            <tr><td><strong>ПО</strong></td><td class="answer-cell">MS Excel (Power Query), SQL Client, Python/R</td><td class="answer-cell">Инструменты глубокого анализа данных.</td></tr>
+                            <tr><td><strong>Стоимость</strong></td><td class="answer-cell">~120 000 – 180 000 руб.</td><td class="answer-cell">Акцент на производительность вычислений и объем памяти.</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
 
-            <div class="lesson-content">
-                <h2>✅ Эталонные конфигурации АРМ (для проверки работ студентов)</h2>
-                <p><em>Допускаются вариации в выборе конкретных моделей, если обоснование логично и соответствует профессиональным задачам.</em></p>
+            <!-- ЭТАЛОН ВАРИАНТ 4 -->
+            <section class="lsec" id="etalon-v4">
+                <h2>Эталон ответов: Вариант 4 (АРМ Проектировщика)</h2>
+                <div class="table-wrap">
+                    <table>
+                        <thead>
+                            <tr><th>Компонент</th><th>Рекомендуемая конфигурация</th><th>Обоснование</th></tr>
+                        </thead>
+                        <tbody>
+                            <tr><td><strong>Тип устройства</strong></td><td class="answer-cell">Рабочая станция (Workstation)</td><td class="answer-cell">Стабильность при длительных нагрузках (рендеринг).</td></tr>
+                            <tr><td><strong>Процессор</strong></td><td class="answer-cell">Intel Core i7/i9 / Xeon</td><td class="answer-cell">Расчет физических свойств газов/дыма, геометрия BIM.</td></tr>
+                            <tr><td><strong>ОЗУ</strong></td><td class="answer-cell">32–64 ГБ</td><td class="answer-cell">Большие сборки чертежей и 3D-моделей зданий.</td></tr>
+                            <tr><td><strong>Накопитель</strong></td><td class="answer-cell">NVMe SSD 1–2 ТБ</td><td class="answer-cell">Мгновенное открытие тяжелых файлов проектов.</td></tr>
+                            <tr><td><strong>Видеокарта</strong></td><td class="answer-cell">NVIDIA Quadro / RTX A-series / Radeon Pro</td><td class="answer-cell">Сертифицированное железо для CAD-систем, драйверы Studio.</td></tr>
+                            <tr><td><strong>Монитор</strong></td><td class="answer-cell">27–32" 4K, sRGB 100%, IPS</td><td class="answer-cell">Точность линий и цветов для печати чертежей.</td></tr>
+                            <tr><td><strong>Доп. оборудование</strong></td><td class="answer-cell">Графический планшет, плоттер А1</td><td class="answer-cell">Ручное черчение и печать крупноформатных схем.</td></tr>
+                            <tr><td><strong>ПО</strong></td><td class="answer-cell">AutoCAD, Компас-3D, Revit, Navisworks</td><td class="answer-cell">Профессиональное САПР.</td></tr>
+                            <tr><td><strong>Стоимость</strong></td><td class="answer-cell">~200 000 – 350 000+ руб.</td><td class="answer-cell">Самая дорогая конфигурация из-за специализированной GPU.</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
 
-                <h3>🔹 Вариант 1: АРМ инспектора ГПН</h3>
-                <table>
-                    <thead>
-                        <tr>
-                            <th>Компонент</th>
-                            <th>Рекомендуемая конфигурация</th>
-                            <th>Обоснование</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td><strong>Тип устройства</strong></td>
-                            <td>Стационарный ПК</td>
-                            <td>Работа в офисе, не требуется мобильность</td>
-                        </tr>
-                        <tr>
-                            <td><strong>Процессор</strong></td>
-                            <td>Intel Core i3 / AMD Ryzen 3 (средний уровень)</td>
-                            <td>Работа с офисными приложениями не требует высокой производительности</td>
-                        </tr>
-                        <tr>
-                            <td><strong>ОЗУ</strong></td>
-                            <td>8–16 ГБ</td>
-                            <td>Достаточно для АИС «Электронный инспектор», браузера, Word/Excel</td>
-                        </tr>
-                        <tr>
-                            <td><strong>Накопитель</strong></td>
-                            <td>SSD 256–512 ГБ</td>
-                            <td>Быстрая загрузка ОС и приложений, хранение документов</td>
-                        </tr>
-                        <tr>
-                            <td><strong>Видеокарта</strong></td>
-                            <td>Встроенная</td>
-                            <td>Не требуется для офисных задач</td>
-                        </tr>
-                        <tr>
-                            <td><strong>Монитор</strong></td>
-                            <td>24" Full HD, IPS-матрица</td>
-                            <td>Комфортное чтение текста, работа 8 часов в день</td>
-                        </tr>
-                        <tr>
-                            <td><strong>Доп. оборудование</strong></td>
-                            <td>Сканер, принтер, ИБП</td>
-                            <td>Сканирование документов, резервное питание</td>
-                        </tr>
-                        <tr>
-                            <td><strong>ПО</strong></td>
-                            <td>Windows 10/11, MS Office, АИС «Электронный инспектор», антивирус</td>
-                            <td>Стандартный набор для работы инспектора</td>
-                        </tr>
-                        <tr>
-                            <td><strong>Стоимость</strong></td>
-                            <td>60 000 – 80 000 руб.</td>
-                            <td>Бюджетная конфигурация для офисных задач</td>
-                        </tr>
-                    </tbody>
-                </table>
-
-                <h3>🔹 Вариант 2: АРМ руководителя тушения пожара (РТП)</h3>
-                <table>
-                    <thead>
-                        <tr>
-                            <th>Компонент</th>
-                            <th>Рекомендуемая конфигурация</th>
-                            <th>Обоснование</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td><strong>Тип устройства</strong></td>
-                            <td>Защищенный планшет или ноутбук (IP65+)</td>
-                            <td>Мобильность, работа в экстремальных условиях</td>
-                        </tr>
-                        <tr>
-                            <td><strong>Процессор</strong></td>
-                            <td>Intel Core i5 / AMD Ryzen 5 (средне-высокий)</td>
-                            <td>Обработка ГИС-карт, прием данных с датчиков</td>
-                        </tr>
-                        <tr>
-                            <td><strong>ОЗУ</strong></td>
-                            <td>16 ГБ</td>
-                            <td>Многозадачность: карты, связь, базы данных</td>
-                        </tr>
-                        <tr>
-                            <td><strong>Накопитель</strong></td>
-                            <td>SSD 512 ГБ</td>
-                            <td>Быстрый доступ к картам и базам данных</td>
-                        </tr>
-                        <tr>
-                            <td><strong>Видеокарта</strong></td>
-                            <td>Встроенная или дискретная (средняя)</td>
-                            <td>Рендеринг ГИС-карт</td>
-                        </tr>
-                        <tr>
-                            <td><strong>Монитор</strong></td>
-                            <td>13–15" сенсорный, яркость 500+ нит</td>
-                            <td>Работа на улице, управление пальцами в перчатках</td>
-                        </tr>
-                        <tr>
-                            <td><strong>Доп. оборудование</strong></td>
-                            <td>Защищенный чехол, GPS-модуль, 4G/5G модем, внешний аккумулятор</td>
-                            <td>Работа в полевых условиях, связь на месте ЧС</td>
-                        </tr>
-                        <tr>
-                            <td><strong>ПО</strong></td>
-                            <td>Windows 10/11 или Android, ГИС-приложения, мессенджеры для связи</td>
-                            <td>Мобильные версии профессиональных систем</td>
-                        </tr>
-                        <tr>
-                            <td><strong>Стоимость</strong></td>
-                            <td>150 000 – 250 000 руб.</td>
-                            <td>Высокая стоимость из-за защищенного исполнения</td>
-                        </tr>
-                    </tbody>
-                </table>
-
-                <h3>🔹 Вариант 3: АРМ аналитика МЧС России</h3>
-                <table>
-                    <thead>
-                        <tr>
-                            <th>Компонент</th>
-                            <th>Рекомендуемая конфигурация</th>
-                            <th>Обоснование</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td><strong>Тип устройства</strong></td>
-                            <td>Мощный стационарный ПК</td>
-                            <td>Обработка больших массивов данных</td>
-                        </tr>
-                        <tr>
-                            <td><strong>Процессор</strong></td>
-                            <td>Intel Core i7 / AMD Ryzen 7 (высокий уровень)</td>
-                            <td>Быстрые вычисления, работа с СУБД</td>
-                        </tr>
-                        <tr>
-                            <td><strong>ОЗУ</strong></td>
-                            <td>32–64 ГБ</td>
-                            <td>Обработка больших данных, многозадачность</td>
-                        </tr>
-                        <tr>
-                            <td><strong>Накопитель</strong></td>
-                            <td>SSD 1 ТБ + HDD 2 ТБ</td>
-                            <td>SSD для ОС и ПО, HDD для архивов данных</td>
-                        </tr>
-                        <tr>
-                            <td><strong>Видеокарта</strong></td>
-                            <td>Встроенная или начальная дискретная</td>
-                            <td>Построение графиков не требует мощной видеокарты</td>
-                        </tr>
-                        <tr>
-                            <td><strong>Монитор</strong></td>
-                            <td>27" 2K или два монитора 24"</td>
-                            <td>Одновременная работа с таблицами и графиками</td>
-                        </tr>
-                        <tr>
-                            <td><strong>Доп. оборудование</strong></td>
-                            <td>ИБП, дополнительный монитор</td>
-                            <td>Защита данных, расширение рабочего пространства</td>
-                        </tr>
-                        <tr>
-                            <td><strong>ПО</strong></td>
-                            <td>Windows 10/11 Pro, MS Excel (Power Query), СУБД (Access/PostgreSQL), Python/R</td>
-                            <td>Профессиональные инструменты анализа данных</td>
-                        </tr>
-                        <tr>
-                            <td><strong>Стоимость</strong></td>
-                            <td>120 000 – 180 000 руб.</td>
-                            <td>Высокая производительность для аналитических задач</td>
-                        </tr>
-                    </tbody>
-                </table>
-
-                <h3>🔹 Вариант 4: АРМ проектировщика систем противопожарной защиты</h3>
-                <table>
-                    <thead>
-                        <tr>
-                            <th>Компонент</th>
-                            <th>Рекомендуемая конфигурация</th>
-                            <th>Обоснование</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td><strong>Тип устройства</strong></td>
-                            <td>Мощная рабочая станция</td>
-                            <td>Рендеринг 3D-моделей, работа в САПР</td>
-                        </tr>
-                        <tr>
-                            <td><strong>Процессор</strong></td>
-                            <td>Intel Core i7/i9 / AMD Ryzen 7/9 (топовый уровень)</td>
-                            <td>Быстрый рендеринг, сложные расчеты</td>
-                        </tr>
-                        <tr>
-                            <td><strong>ОЗУ</strong></td>
-                            <td>32–64 ГБ</td>
-                            <td>Большие графические файлы, многозадачность</td>
-                        </tr>
-                        <tr>
-                            <td><strong>Накопитель</strong></td>
-                            <td>SSD 1 ТБ NVMe</td>
-                            <td>Быстрая загрузка САПР, работа с большими файлами</td>
-                        </tr>
-                        <tr>
-                            <td><strong>Видеокарта</strong></td>
-                            <td>NVIDIA Quadro / AMD Radeon Pro (профессиональная)</td>
-                            <td>Аппаратное ускорение в САПР, точная цветопередача</td>
-                        </tr>
-                        <tr>
-                            <td><strong>Монитор</strong></td>
-                            <td>27" 4K, IPS, sRGB 100%</td>
-                            <td>Точная цветопередача для чертежей, высокое разрешение</td>
-                        </tr>
-                        <tr>
-                            <td><strong>Доп. оборудование</strong></td>
-                            <td>Графический планшет, ИБП, плоттер (опционально)</td>
-                            <td>Точное черчение, печать больших форматов</td>
-                        </tr>
-                        <tr>
-                            <td><strong>ПО</strong></td>
-                            <td>Windows 10/11 Pro, Компас-3D, AutoCAD, Revit</td>
-                            <td>Профессиональные САПР для проектирования</td>
-                        </tr>
-                        <tr>
-                            <td><strong>Стоимость</strong></td>
-                            <td>200 000 – 350 000 руб.</td>
-                            <td>Высокая стоимость из-за профессиональных компонентов</td>
-                        </tr>
-                    </tbody>
-                </table>
-
-                <h2>💬 Методические рекомендации по обсуждению</h2>
+            <!-- МЕТОДИЧЕСКИЕ РЕКОМЕНДАЦИИ -->
+            <section class="lsec" id="method">
+                <h2>Методические рекомендации по обсуждению</h2>
                 <ul>
                     <li><strong>По мобильности РТП:</strong> Акцентируйте внимание на том, что на месте ЧС важнее надежность и защищенность, чем максимальная производительность. Устройство должно работать в пыли, при вибрации, перепадах температур.</li>
                     <li><strong>По экономии для инспектора:</strong> Можно сэкономить на видеокарте (встроенная достаточно), но нельзя экономить на мониторе (работа 8 часов с текстом требует качественного экрана) и ИБП (защита данных проверок).</li>
                     <li><strong>По аналитику:</strong> Объясните, что большие данные требуют много ОЗУ и мощного процессора для быстрых вычислений. Два монитора позволяют одновременно видеть исходные данные и результаты анализа.</li>
-                    <li><strong>По проектировщику:</strong> Профессиональная видеокарта (Quadro/Radeon Pro) оптимизирована для САПР и дает значительный прирост производительности по сравнению с игровыми видеокартами.</li>
+                    <li><strong>По проектировщику:</strong> Профессиональная видеокарта (Quadro/Radeon Pro) оптимизирована для САПР и дает значительный прирост стабильности по сравнению с игровыми видеокартами, даже если их бенчмарки близки.</li>
                 </ul>
+            </section>
 
-                <h2>📊 Критерии оценки практического задания</h2>
-                <table>
-                    <thead>
-                        <tr>
-                            <th>Критерий</th>
-                            <th>Баллы (макс.)</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr><td>Правильно выбран тип устройства (стационарный/ноутбук/планшет)</td><td>2</td></tr>
-                        <tr><td>Обоснован выбор процессора (соответствует задачам)</td><td>2</td></tr>
-                        <tr><td>Обоснован выбор ОЗУ и накопителя</td><td>2</td></tr>
-                        <tr><td>Обоснован выбор видеокарты (или ее отсутствия)</td><td>2</td></tr>
-                        <tr><td>Обоснован выбор монитора и дополнительного оборудования</td><td>2</td></tr>
-                        <tr><td>Указано подходящее программное обеспечение</td><td>2</td></tr>
-                        <tr><td>Активное участие в обсуждении, аргументированные ответы</td><td>2</td></tr>
-                        <tr><td><strong>ИТОГО</strong></td><td><strong>14</strong></td></tr>
-                    </tbody>
-                </table>
+            <!-- КРИТЕРИИ ОЦЕНКИ -->
+            <section class="lsec" id="criteria">
+                <h2>Критерии выставления оценки</h2>
+                <p>Максимальный балл за работу — 14.</p>
 
-                <div class="info-box method">
-                    <div class="info-box-title">📌 Шкала перевода в оценку:</div>
-                    <p><strong>13–14 баллов</strong> → «5» (отлично)<br>
-                    <strong>10–12 баллов</strong> → «4» (хорошо)<br>
-                    <strong>7–9 баллов</strong> → «3» (удовлетворительно)<br>
-                    <strong>менее 7 баллов</strong> → «2» (неудовлетворительно)</p>
+                <div class="table-wrap">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Критерий</th>
+                                <th>Баллы (макс.)</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>Правильно выбран тип устройства (стационарный/ноутбук/планшет)</td><td>2</td></tr>
+                            <tr><td>Обоснован выбор процессора (соответствует задачам)</td><td>2</td></tr>
+                            <tr><td>Обоснован выбор ОЗУ и накопителя</td><td>2</td></tr>
+                            <tr><td>Обоснован выбор видеокарты (или ее отсутствия)</td><td>2</td></tr>
+                            <tr><td>Обоснован выбор монитора и дополнительного оборудования</td><td>2</td></tr>
+                            <tr><td>Указано подходящее программное обеспечение</td><td>2</td></tr>
+                            <tr><td>Активное участие в обсуждении, аргументированные ответы</td><td>2</td></tr>
+                            <tr><td><strong>ИТОГО</strong></td><td><strong>14</strong></td></tr>
+                        </tbody>
+                    </table>
                 </div>
-            </div>
 
+                <div class="warn-box">
+                    <strong>Шкала перевода баллов в оценку:</strong>
+                    <ul style="margin-left:20px; margin-top:8px;">
+                        <li><b>13–14 баллов</b> → «5» (отлично)</li>
+                        <li><b>10–12 баллов</b> → «4» (хорошо)</li>
+                        <li><b>7–9 баллов</b> → «3» (удовлетворительно)</li>
+                        <li><b>менее 7 баллов</b> → «2» (неудовлетворительно)</li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- НАВИГАЦИЯ -->
             <div class="lesson-nav">
-                <a href="../Lessons/tema1_2_pz2.html" class="nav-btn">👁️ Посмотреть версию для студентов</a>
-                <a href="../index.html" class="nav-btn home">К оглавлению</a>
+                <a href="../Lessons/tema1_2_pz2.html" class="nav-btn prev">← Вернуться к занятию</a>
+                <a href="../index.html" class="nav-btn next">К программе дисциплины →</a>
             </div>
-        </div>
-    </main>
 
-    <footer class="main-footer">
-        <div class="container">
-            <p>© 2025 ГБПОУ ТПСК им. В.М. Максимчука · Внутренний методический материал</p>
-        </div>
-    </footer>
+        </main>
+    </div>
+
 </body>
 </html>
