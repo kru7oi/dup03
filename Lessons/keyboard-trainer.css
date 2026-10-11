@@ -1,0 +1,574 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+/* =========================================
+   Клавиатурный тренажёр ДУП.03
+   Отдельный стиль, визуально близкий к основной LMS-теме
+   ========================================= */
+
+:root {
+    --bg-body: #f8fafc;
+    --bg-card: #ffffff;
+    --bg-hover: #f1f5f9;
+
+    --primary: #c8102e;
+    --primary-dark: #9b0a23;
+    --primary-light: #fee2e2;
+
+    --success: #16a34a;
+    --success-light: #dcfce7;
+
+    --warning: #f59e0b;
+    --warning-light: #fef3c7;
+
+    --info: #3b82f6;
+    --info-light: #dbeafe;
+
+    --text-main: #0f172a;
+    --text-muted: #64748b;
+    --border-color: #e2e8f0;
+
+    --font-ui: 'Inter', system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+    --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace;
+
+    --radius-md: 8px;
+    --radius-lg: 12px;
+    --radius-xl: 16px;
+
+    --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.05);
+    --shadow-md: 0 10px 30px rgba(15, 23, 42, 0.08);
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--font-ui);
+    background: var(--bg-body);
+    color: var(--text-main);
+    line-height: 1.6;
+    min-height: 100vh;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.trainer-wrap {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 24px 18px 60px;
+}
+
+/* ---------- Верхняя панель ---------- */
+
+.trainer-topbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+    flex-wrap: wrap;
+    margin-bottom: 18px;
+}
+
+.trainer-topbar a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    color: var(--text-muted);
+    font-weight: 600;
+    font-size: 0.95rem;
+    padding: 9px 14px;
+    border: 1px solid var(--border-color);
+    border-radius: 999px;
+    background: var(--bg-card);
+    transition: 0.2s ease;
+    box-shadow: var(--shadow-sm);
+}
+
+.trainer-topbar a:hover {
+    color: var(--primary-dark);
+    border-color: var(--primary);
+    background: var(--primary-light);
+}
+
+/* ---------- Шапка тренажёра ---------- */
+
+.trainer-hero {
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-xl);
+    padding: 24px;
+    box-shadow: var(--shadow-md);
+    margin-bottom: 18px;
+}
+
+.trainer-hero h1 {
+    font-size: 1.7rem;
+    line-height: 1.2;
+    font-weight: 700;
+    margin-bottom: 8px;
+    color: var(--text-main);
+}
+
+.trainer-subtitle {
+    margin: 0;
+    color: var(--text-muted);
+    font-size: 0.98rem;
+    line-height: 1.6;
+}
+
+.trainer-note {
+    margin-top: 16px;
+    padding: 14px 16px;
+    border-radius: var(--radius-lg);
+    background: var(--info-light);
+    color: #1e3a8a;
+    border-left: 4px solid var(--info);
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+.trainer-note strong {
+    font-weight: 700;
+}
+
+/* ---------- Кнопки упражнений ---------- */
+
+.lesson-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin: 18px 0;
+}
+
+.lesson-btn {
+    border: 1px solid var(--border-color);
+    background: var(--bg-card);
+    color: var(--text-main);
+    padding: 10px 14px;
+    border-radius: 999px;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 0.92rem;
+    font-family: var(--font-ui);
+    transition: 0.2s ease;
+    box-shadow: var(--shadow-sm);
+}
+
+.lesson-btn:hover {
+    border-color: var(--primary);
+    color: var(--primary-dark);
+    background: var(--primary-light);
+}
+
+.lesson-btn.active {
+    background: var(--primary);
+    color: #fff;
+    border-color: var(--primary);
+}
+
+/* ---------- Основная панель ---------- */
+
+.trainer-panel {
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-xl);
+    padding: 22px;
+    box-shadow: var(--shadow-md);
+}
+
+/* ---------- Текст для набора ---------- */
+
+.target {
+    font-family: var(--font-mono);
+    font-size: 1.35rem;
+    line-height: 2;
+    min-height: 96px;
+    padding: 16px;
+    border: 2px dashed var(--border-color);
+    border-radius: var(--radius-lg);
+    background: #f8fafc;
+    word-break: break-word;
+    transition: 0.15s ease;
+}
+
+.target.error-flash {
+    border-color: var(--primary);
+    background: #fff1f2;
+    animation: shake 0.15s linear 2;
+}
+
+@keyframes shake {
+    0% {
+        transform: translateX(0);
+    }
+    25% {
+        transform: translateX(-3px);
+    }
+    50% {
+        transform: translateX(3px);
+    }
+    75% {
+        transform: translateX(-2px);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+.char {
+    padding: 2px 1px;
+    border-radius: 4px;
+}
+
+.ok {
+    background: var(--success-light);
+    color: #14532d;
+}
+
+.next {
+    background: var(--warning-light);
+    outline: 2px solid var(--warning);
+}
+
+.wait {
+    color: #334155;
+}
+
+/* ---------- Виртуальная клавиатура ---------- */
+
+.keyboard {
+    margin-top: 18px;
+    overflow-x: auto;
+    padding-bottom: 6px;
+}
+
+.kb-row {
+    display: flex;
+    justify-content: center;
+    gap: 6px;
+    margin-bottom: 7px;
+    min-width: max-content;
+}
+
+.kb-key {
+    min-width: 42px;
+    height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid var(--border-color);
+    border-bottom-width: 3px;
+    border-radius: 9px;
+    background: #fff;
+    color: var(--text-main);
+    font-weight: 700;
+    font-size: 0.95rem;
+    user-select: none;
+    transition: 0.12s ease;
+    box-shadow: var(--shadow-sm);
+}
+
+.kb-key.special {
+    min-width: 78px;
+    background: var(--bg-hover);
+    color: var(--text-muted);
+    font-size: 0.88rem;
+}
+
+.kb-key.space {
+    min-width: 420px;
+}
+
+.kb-key.active {
+    background: var(--primary);
+    border-color: var(--primary-dark);
+    color: #fff;
+    transform: translateY(-1px);
+}
+
+.kb-key.shift-active {
+    background: var(--warning);
+    border-color: #b45309;
+    color: #fff;
+}
+
+/* ---------- Статистика ---------- */
+
+.stats {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 12px;
+    margin-top: 18px;
+}
+
+.stat {
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-lg);
+    padding: 14px;
+    background: var(--bg-card);
+    box-shadow: var(--shadow-sm);
+}
+
+.stat span {
+    display: block;
+    color: var(--text-muted);
+    font-size: 0.82rem;
+    margin-bottom: 4px;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    font-weight: 700;
+}
+
+.stat b {
+    display: block;
+    font-size: 1.25rem;
+    color: var(--primary-dark);
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+/* ---------- Кнопки управления ---------- */
+
+.controls {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 16px;
+}
+
+.action {
+    border: none;
+    border-radius: var(--radius-md);
+    padding: 11px 16px;
+    font-weight: 600;
+    cursor: pointer;
+    background: var(--primary);
+    color: #fff;
+    transition: 0.2s ease;
+    font-family: var(--font-ui);
+    font-size: 0.95rem;
+    box-shadow: var(--shadow-sm);
+}
+
+.action:hover {
+    background: var(--primary-dark);
+}
+
+.action.secondary {
+    background: var(--bg-card);
+    color: var(--text-main);
+    border: 1px solid var(--border-color);
+}
+
+.action.secondary:hover {
+    border-color: var(--primary);
+    color: var(--primary-dark);
+    background: var(--primary-light);
+}
+
+/* ---------- Предупреждения и результаты ---------- */
+
+.caps {
+    margin-top: 12px;
+    padding: 12px 14px;
+    border-radius: var(--radius-md);
+    background: var(--warning-light);
+    color: #92400e;
+    border-left: 4px solid var(--warning);
+    font-weight: 600;
+    font-size: 0.95rem;
+}
+
+.result {
+    margin-top: 16px;
+    padding: 16px;
+    border-radius: var(--radius-lg);
+    border-left: 4px solid var(--success);
+    background: var(--success-light);
+    color: #14532d;
+    font-size: 0.97rem;
+    line-height: 1.6;
+}
+
+.result.bad {
+    border-left-color: var(--primary);
+    background: var(--primary-light);
+    color: #881337;
+}
+
+.result.warn {
+    border-left-color: var(--warning);
+    background: var(--warning-light);
+    color: #92400e;
+}
+
+.help {
+    margin-top: 18px;
+    color: var(--text-muted);
+    font-size: 0.94rem;
+    line-height: 1.6;
+}
+
+.help p {
+    margin-bottom: 8px;
+}
+
+.help p:last-child {
+    margin-bottom: 0;
+}
+
+kbd {
+    background: var(--bg-hover);
+    border: 1px solid var(--border-color);
+    border-radius: 5px;
+    padding: 2px 6px;
+    font-family: var(--font-mono);
+    font-size: 0.9em;
+    color: var(--text-main);
+}
+
+/* ---------- Адаптивность ---------- */
+
+@media (max-width: 992px) {
+    .trainer-wrap {
+        padding: 20px 16px 50px;
+    }
+
+    .trainer-hero h1 {
+        font-size: 1.45rem;
+    }
+
+    .target {
+        font-size: 1.18rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .trainer-topbar {
+        gap: 10px;
+    }
+
+    .trainer-topbar a {
+        font-size: 0.88rem;
+        padding: 8px 12px;
+    }
+
+    .trainer-hero {
+        padding: 18px;
+    }
+
+    .trainer-hero h1 {
+        font-size: 1.3rem;
+    }
+
+    .trainer-subtitle {
+        font-size: 0.92rem;
+    }
+
+    .trainer-note {
+        font-size: 0.9rem;
+        padding: 12px;
+    }
+
+    .lesson-btn {
+        font-size: 0.86rem;
+        padding: 9px 12px;
+    }
+
+    .trainer-panel {
+        padding: 16px;
+    }
+
+    .target {
+        font-size: 1.05rem;
+        line-height: 1.8;
+        padding: 14px;
+        min-height: 88px;
+    }
+
+    .kb-key {
+        min-width: 34px;
+        height: 38px;
+        font-size: 0.82rem;
+        border-radius: 7px;
+    }
+
+    .kb-key.special {
+        min-width: 58px;
+        font-size: 0.78rem;
+    }
+
+    .kb-key.space {
+        min-width: 220px;
+    }
+
+    .stats {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 10px;
+    }
+
+    .stat {
+        padding: 12px;
+    }
+
+    .stat b {
+        font-size: 1.08rem;
+    }
+
+    .action {
+        width: 100%;
+        justify-content: center;
+        display: inline-flex;
+    }
+}
+
+@media (max-width: 480px) {
+    .trainer-wrap {
+        padding: 16px 12px 40px;
+    }
+
+    .trainer-topbar {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .trainer-topbar a {
+        width: 100%;
+    }
+
+    .stats {
+        grid-template-columns: 1fr;
+    }
+
+    .target {
+        font-size: 0.98rem;
+    }
+
+    .kb-row {
+        gap: 4px;
+        margin-bottom: 5px;
+    }
+
+    .kb-key {
+        min-width: 28px;
+        height: 34px;
+        font-size: 0.74rem;
+    }
+
+    .kb-key.special {
+        min-width: 48px;
+    }
+
+    .kb-key.space {
+        min-width: 160px;
+    }
+}

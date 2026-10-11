@@ -1,0 +1,829 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Клавиатурный тренажёр ЙЦУКЕН · ДУП.03</title>
+    <link rel="stylesheet" href="keyboard-trainer.css">
+</head>
+<body>
+
+<div class="trainer-wrap">
+
+    <div class="trainer-topbar">
+        <a href="tema2_2_pz7.html">← Вернуться к занятию</a>
+        <a href="../index.html">К программе дисциплины</a>
+    </div>
+
+    <section class="trainer-hero">
+        <h1>Клавиатурный тренажёр ЙЦУКЕН</h1>
+        <p class="trainer-subtitle">
+            Учебный модуль для отработки слепого десятипальцевого метода набора текста.
+            Считаются скорость, ошибки и точность. Работает локально, без интернета.
+        </p>
+
+        <div class="trainer-note">
+            <strong>Правила работы:</strong> включите русскую раскладку, выключите Caps Lock,
+            поставьте руки на домашний ряд и старайтесь не смотреть на клавиатуру.
+            Неверное нажатие не вставляется в текст, но засчитывается как ошибка.
+        </div>
+    </section>
+
+    <div class="lesson-buttons" id="lessonButtons"></div>
+
+    <section class="trainer-panel">
+        <div class="target" id="target"></div>
+
+        <div class="keyboard" id="keyboard"></div>
+
+        <div class="stats">
+            <div class="stat">
+                <span>Время</span>
+                <b id="time">0 сек</b>
+            </div>
+            <div class="stat">
+                <span>Скорость</span>
+                <b id="speed">0 зн./мин</b>
+            </div>
+            <div class="stat">
+                <span>Ошибки</span>
+                <b id="errors">0</b>
+            </div>
+            <div class="stat">
+                <span>Точность</span>
+                <b id="accuracy">100%</b>
+            </div>
+            <div class="stat">
+                <span>Прогресс</span>
+                <b id="progress">0 / 0</b>
+            </div>
+            <div class="stat">
+                <span>Лучший результат</span>
+                <b id="best">—</b>
+            </div>
+        </div>
+
+        <div class="controls">
+            <button class="action" id="resetBtn">Начать заново</button>
+            <button class="action secondary" id="newTextBtn" hidden>Новый служебный текст</button>
+        </div>
+
+        <div class="caps" id="capsWarning" hidden>
+            Внимание: включён Caps Lock. Для корректной работы с заглавными буквами используйте клавишу Shift.
+        </div>
+
+        <div class="result" id="resultBox" hidden></div>
+
+        <div class="help">
+            <p><strong>Управление:</strong> печатайте обычные символы. <kbd>Tab</kbd> — начать заново. <kbd>Backspace</kbd> — удалить последний правильный символ, но ошибка останется в счётчике.</p>
+            <p><strong>Оценка в тренажёре ориентировочная:</strong> она помогает понять уровень навыка, но итожную оценку выставляет преподаватель с учётом техники посадки и контроля на занятии.</p>
+        </div>
+    </section>
+
+</div>
+
+<script>
+    const lessons = [
+        {
+            id: "home",
+            title: "Домашний ряд",
+            text: "апы фы ва ол ры ло дэ жа эл папа рама лада дорога"
+        },
+        {
+            id: "top",
+            title: "Верхний ряд",
+            text: "йц ук ен гш щз хъ цуке наш щзхъ ёжик кит куст шарики"
+        },
+        {
+            id: "bottom",
+            title: "Нижний ряд",
+            text: "яч сми тьб юб ячуть мишка шуба чашка банка"
+        },
+        {
+            id: "signs",
+            title: "Заглавные и знаки",
+            text: "МЧС, ЦУКС, ЕДДС, ОКСИОН. Пожарная безопасность, вызов, адрес, объект."
+        },
+        {
+            id: "prof",
+            title: "Профессиональные слова",
+            text: "пожарный риск план эвакуации огнетушитель гидрант диспетчер дежурство оповещение тушение спасание"
+        },
+        {
+            id: "service",
+            title: "Служебный текст",
+            text: "",
+            random: true
+        }
+    ];
+
+    const serviceStreets = [
+        "Пожарная",
+        "Лесная",
+        "Центральная",
+        "Заводская",
+        "Гагарина",
+        "Мира",
+        "Советская",
+        "Набережная",
+        "Садовая",
+        "Промышленная",
+        "Строителей",
+        "Энергетиков",
+        "Ленина",
+        "Октябрьская",
+        "Молодежная"
+    ];
+
+    const serviceHouseNumbers = [
+        "один",
+        "два",
+        "три",
+        "четыре",
+        "пять",
+        "шесть",
+        "семь",
+        "восемь",
+        "девять",
+        "десять",
+        "двенадцать",
+        "пятнадцать",
+        "восемнадцать",
+        "двадцать",
+        "двадцать пять",
+        "тридцать"
+    ];
+
+    const serviceObjects = [
+        "склад",
+        "школа",
+        "магазин",
+        "офис",
+        "жилой дом",
+        "гараж",
+        "котельная",
+        "автомастерская",
+        "база",
+        "цех",
+        "ангар",
+        "общежитие",
+        "детский сад",
+        "больница",
+        "ресторан"
+    ];
+
+    const serviceIncidents = [
+        "задымлении",
+        "возгорании",
+        "открытом горении",
+        "замыкании электропроводки",
+        "запахе газа",
+        "затоплении",
+        "провале грунта",
+        "обрушении козырька",
+        "коротком замыкании",
+        "загорании мусора"
+    ];
+
+    const serviceUnits = [
+        "караул номер один",
+        "караул номер два",
+        "первое отделение",
+        "второе отделение",
+        "пожарный расчёт",
+        "дежурную смену",
+        "дополнительный расчёт",
+        "звено газодымозащитной службы"
+    ];
+
+    const serviceActions = [
+        "проверить гидранты",
+        "подать ствол на тушение",
+        "организовать эвакуацию",
+        "отключить электроэнергию",
+        "проверить наличие людей",
+        "установить причину вызова",
+        "организовать подачу воды",
+        "проверить пути эвакуации",
+        "известить руководителя тушения",
+        "направить звено газодымозащитной службы",
+        "проверить состояние подъездных путей",
+        "уточнить номер телефона заявителя",
+        "организовать встречу пожарных расчётов",
+        "проверить наличие огнетушителей",
+        "докладывать об обстановке"
+    ];
+
+    const serviceStatuses = [
+        "вызов подтвержден",
+        "обстановка уточняется",
+        "угроза распространения есть",
+        "угроза распространения отсутствует",
+        "людей внутри нет",
+        "люди внутри есть",
+        "эвакуация начата",
+        "эвакуация завершена",
+        "возгорание локализовано",
+        "возгорание ликвидировано",
+        "требуется проверка источников водоснабжения",
+        "необходима дополнительная разведка"
+    ];
+
+    const serviceClosings = [
+        "Информация передана дежурному.",
+        "Доклад по обстановке через десять минут.",
+        "Требуется уточнение адреса.",
+        "Необходима проверка источников водоснабжения.",
+        "Ожидается прибытие дополнительного расчёта.",
+        "Заявителю дана инструкция по эвакуации.",
+        "Сведения переданы в единую дежурно-диспетчерскую службу.",
+        "Обстановка на месте вызова остается напряженной."
+    ];
+
+    const serviceExtra = [
+        "Возможно наличие людей внутри объекта.",
+        "Требуется проверка автоматической пожарной сигнализации.",
+        "Необходимо уточнить наличие опасных веществ.",
+        "Требуется обеспечить подъезд для автолестницы.",
+        "Нужно проверить отключение электричества в зоне пожара.",
+        "Следует организовать оповещение людей по громкоговорящей связи.",
+        "Необходимо назначить место сбора после эвакуации.",
+        "Требуется передать сведения вышестоящей службе.",
+        "Нужно уточнить данные об источнике водоснабжения.",
+        "Требуется организовать контроль подъездных путей."
+    ];
+
+    const keyboardLayout = [
+        [
+            { label: "Ё", chars: ["ё", "Ё"] },
+            { label: "Й", chars: ["й", "Й"] },
+            { label: "Ц", chars: ["ц", "Ц"] },
+            { label: "У", chars: ["у", "У"] },
+            { label: "К", chars: ["к", "К"] },
+            { label: "Е", chars: ["е", "Е"] },
+            { label: "Н", chars: ["н", "Н"] },
+            { label: "Г", chars: ["г", "Г"] },
+            { label: "Ш", chars: ["ш", "Ш"] },
+            { label: "Щ", chars: ["щ", "Щ"] },
+            { label: "З", chars: ["з", "З"] },
+            { label: "Х", chars: ["х", "Х"] },
+            { label: "Ъ", chars: ["ъ", "Ъ"] }
+        ],
+        [
+            { label: "Ф", chars: ["ф", "Ф"] },
+            { label: "Ы", chars: ["ы", "Ы"] },
+            { label: "В", chars: ["в", "В"] },
+            { label: "А", chars: ["а", "А"] },
+            { label: "П", chars: ["п", "П"] },
+            { label: "Р", chars: ["р", "Р"] },
+            { label: "О", chars: ["о", "О"] },
+            { label: "Л", chars: ["л", "Л"] },
+            { label: "Д", chars: ["д", "Д"] },
+            { label: "Ж", chars: ["ж", "Ж"] },
+            { label: "Э", chars: ["э", "Э"] }
+        ],
+        [
+            { label: "Shift", special: "shift" },
+            { label: "Я", chars: ["я", "Я"] },
+            { label: "Ч", chars: ["ч", "Ч"] },
+            { label: "С", chars: ["с", "С"] },
+            { label: "М", chars: ["м", "М"] },
+            { label: "И", chars: ["и", "И"] },
+            { label: "Т", chars: ["т", "Т"] },
+            { label: "Ь", chars: ["ь", "Ь"] },
+            { label: "Б", chars: ["б", "Б"] },
+            { label: "Ю", chars: ["ю", "Ю"] },
+            { label: ". ,", chars: [".", ","] },
+            { label: "Shift", special: "shift" }
+        ],
+        [
+            { label: "Пробел", special: "space", chars: [" "] }
+        ]
+    ];
+
+    const shiftRequiredChars = new Set([
+        ",", "?", ":", ";", "\"", "(", ")", "!", "@", "#", "$", "%",
+        "^", "&", "*", "_", "+", "{", "}", "<", ">", "№"
+    ]);
+
+    let currentLesson = lessons[0];
+    let typed = [];
+    let mistakes = 0;
+    let startTime = null;
+    let timerId = null;
+    let finished = false;
+
+    const targetEl = document.getElementById("target");
+    const keyboardEl = document.getElementById("keyboard");
+    const lessonButtonsEl = document.getElementById("lessonButtons");
+    const timeEl = document.getElementById("time");
+    const speedEl = document.getElementById("speed");
+    const errorsEl = document.getElementById("errors");
+    const accuracyEl = document.getElementById("accuracy");
+    const progressEl = document.getElementById("progress");
+    const bestEl = document.getElementById("best");
+    const resultBox = document.getElementById("resultBox");
+    const capsWarning = document.getElementById("capsWarning");
+    const resetBtn = document.getElementById("resetBtn");
+    const newTextBtn = document.getElementById("newTextBtn");
+
+    function escapeHtml(text) {
+        return String(text).replace(/[&<>"']/g, function (match) {
+            const map = {
+                "&": "&amp;",
+                "<": "&lt;",
+                ">": "&gt;",
+                '"': "&quot;",
+                "'": "&#39;"
+            };
+            return map[match];
+        });
+    }
+
+    function isUpperCaseLetter(ch) {
+        return /[A-ZА-ЯЁ]/.test(ch);
+    }
+
+    function needsShift(ch) {
+        return isUpperCaseLetter(ch) || shiftRequiredChars.has(ch);
+    }
+
+    function randomItem(list) {
+        return list[Math.floor(Math.random() * list.length)];
+    }
+
+    function shuffle(list) {
+        const result = [...list];
+
+        for (let i = result.length - 1; i > 0; i--) {
+            const j = Math.floor(Math.random() * (i + 1));
+            const temp = result[i];
+            result[i] = result[j];
+            result[j] = temp;
+        }
+
+        return result;
+    }
+
+    function capitalizeFirst(string) {
+        if (!string) {
+            return "";
+        }
+
+        return string.charAt(0).toUpperCase() + string.slice(1);
+    }
+
+    function generateServiceText() {
+        const street = randomItem(serviceStreets);
+        const house = randomItem(serviceHouseNumbers);
+        const object = randomItem(serviceObjects);
+        const incident = randomItem(serviceIncidents);
+        const unit = randomItem(serviceUnits);
+
+        const sentences = [];
+
+        sentences.push("Вызов принят.");
+        sentences.push(`Адрес улица ${street} дом ${house}.`);
+
+        if (Math.random() < 0.5) {
+            sentences.push(`Этаж ${randomItem(serviceHouseNumbers)}.`);
+        }
+
+        if (Math.random() < 0.35) {
+            sentences.push(`Квартира ${randomItem(serviceHouseNumbers)}.`);
+        }
+
+        sentences.push(`Поступило сообщение о ${incident}.`);
+        sentences.push(`Тип объекта ${object}.`);
+        sentences.push(`Направить ${unit}.`);
+
+        const actions = shuffle(serviceActions);
+        const statuses = shuffle(serviceStatuses);
+        const closings = shuffle(serviceClosings);
+        const extras = shuffle(serviceExtra);
+
+        const actionCount = 2 + Math.floor(Math.random() * 2);
+        for (let i = 0; i < actionCount && actions.length > 0; i++) {
+            sentences.push(capitalizeFirst(actions.pop()) + ".");
+        }
+
+        const statusCount = 2 + Math.floor(Math.random() * 2);
+        for (let i = 0; i < statusCount && statuses.length > 0; i++) {
+            sentences.push(capitalizeFirst(statuses.pop()) + ".");
+        }
+
+        const closingCount = 1 + Math.floor(Math.random() * 2);
+        for (let i = 0; i < closingCount && closings.length > 0; i++) {
+            sentences.push(closings.pop());
+        }
+
+        let text = sentences.join(" ");
+        const targetLength = 550 + Math.floor(Math.random() * 151);
+
+        while (text.length < targetLength && (actions.length > 0 || statuses.length > 0 || extras.length > 0)) {
+            if (actions.length > 0) {
+                sentences.push(capitalizeFirst(actions.pop()) + ".");
+            } else if (statuses.length > 0) {
+                sentences.push(capitalizeFirst(statuses.pop()) + ".");
+            } else if (extras.length > 0) {
+                sentences.push(extras.pop());
+            }
+
+            text = sentences.join(" ");
+        }
+
+        const filler = [
+            "Обстановка уточняется.",
+            "Требуется дополнительная разведка.",
+            "Информация передана дежурному.",
+            "Необходимо контролировать источник водоснабжения.",
+            "Следует уточнить данные о людях внутри объекта."
+        ];
+
+        let fillerIndex = 0;
+
+        while (text.length < targetLength) {
+            sentences.push(filler[fillerIndex % filler.length]);
+            fillerIndex++;
+            text = sentences.join(" ");
+        }
+
+        return text;
+    }
+
+    function renderLessonButtons() {
+        lessonButtonsEl.innerHTML = lessons.map(function (lesson) {
+            return '<button class="lesson-btn" data-id="' + lesson.id + '">' + escapeHtml(lesson.title) + '</button>';
+        }).join("");
+
+        lessonButtonsEl.querySelectorAll(".lesson-btn").forEach(function (button) {
+            button.addEventListener("click", function () {
+                const lesson = lessons.find(function (item) {
+                    return item.id === button.dataset.id;
+                });
+
+                if (lesson) {
+                    selectLesson(lesson);
+                }
+
+                button.blur();
+            });
+        });
+    }
+
+    function updateLessonButtons() {
+        lessonButtonsEl.querySelectorAll(".lesson-btn").forEach(function (button) {
+            button.classList.toggle("active", button.dataset.id === currentLesson.id);
+        });
+    }
+
+    function renderTarget() {
+        const typedText = typed.join("");
+
+        targetEl.innerHTML = Array.from(currentLesson.text).map(function (char, index) {
+            let className = "wait";
+
+            if (index < typedText.length) {
+                className = "ok";
+            } else if (index === typedText.length) {
+                className = "next";
+            }
+
+            const visibleChar = char === " " ? "␣" : escapeHtml(char);
+            return '<span class="char ' + className + '">' + visibleChar + '</span>';
+        }).join("");
+    }
+
+    function renderKeyboard() {
+        keyboardEl.innerHTML = "";
+
+        keyboardLayout.forEach(function (row) {
+            const rowEl = document.createElement("div");
+            rowEl.className = "kb-row";
+
+            row.forEach(function (key) {
+                const keyEl = document.createElement("div");
+                keyEl.className = "kb-key";
+
+                if (key.special) {
+                    keyEl.classList.add("special");
+                    keyEl.dataset.special = key.special;
+                }
+
+                if (key.special === "space") {
+                    keyEl.classList.add("space");
+                }
+
+                keyEl.dataset.chars = (key.chars || []).join("|");
+                keyEl.textContent = key.label;
+
+                rowEl.appendChild(keyEl);
+            });
+
+            keyboardEl.appendChild(rowEl);
+        });
+    }
+
+    function highlightNextKey() {
+        const keys = keyboardEl.querySelectorAll(".kb-key");
+
+        keys.forEach(function (key) {
+            key.classList.remove("active", "shift-active");
+        });
+
+        if (finished) {
+            return;
+        }
+
+        const expected = currentLesson.text[typed.length];
+
+        if (!expected) {
+            return;
+        }
+
+        keys.forEach(function (key) {
+            const chars = key.dataset.chars ? key.dataset.chars.split("|") : [];
+
+            if (chars.includes(expected)) {
+                key.classList.add("active");
+            }
+
+            if (key.dataset.special === "space" && expected === " ") {
+                key.classList.add("active");
+            }
+
+            if (key.dataset.special === "shift" && needsShift(expected)) {
+                key.classList.add("shift-active");
+            }
+        });
+    }
+
+    function getElapsedMs() {
+        return startTime ? Date.now() - startTime : 0;
+    }
+
+    function calculateSpeed() {
+        const elapsedMs = getElapsedMs();
+
+        if (typed.length === 0) {
+            return 0;
+        }
+
+        const safeElapsed = Math.max(elapsedMs, 1000);
+        const minutes = safeElapsed / 60000;
+
+        return Math.round(typed.length / minutes);
+    }
+
+    function calculateAccuracy() {
+        const attempts = typed.length + mistakes;
+
+        if (attempts === 0) {
+            return 100;
+        }
+
+        return Math.round(typed.length / attempts * 100);
+    }
+
+    function updateStats() {
+        const seconds = Math.floor(getElapsedMs() / 1000);
+
+        timeEl.textContent = seconds + " сек";
+        speedEl.textContent = calculateSpeed() + " зн./мин";
+        errorsEl.textContent = mistakes;
+        accuracyEl.textContent = calculateAccuracy() + "%";
+        progressEl.textContent = typed.length + " / " + currentLesson.text.length;
+
+        const best = localStorage.getItem(getBestKey());
+        bestEl.textContent = best ? best + " зн./мин" : "—";
+    }
+
+    function getBestKey() {
+        return "dup03-keyboard-best-" + currentLesson.id;
+    }
+
+    function saveBest(speed, accuracy) {
+        if (accuracy < 90) {
+            return;
+        }
+
+        const key = getBestKey();
+        const previous = Number(localStorage.getItem(key) || 0);
+
+        if (speed > previous) {
+            localStorage.setItem(key, String(speed));
+        }
+    }
+
+    function estimateGrade(speed, accuracy) {
+        if (speed >= 80 && accuracy >= 98) {
+            return {
+                grade: "5",
+                className: "",
+                message: "Отличный результат. Скорость и точность соответствуют высокому уровню подготовки."
+            };
+        }
+
+        if (speed >= 60 && accuracy >= 95) {
+            return {
+                grade: "4",
+                className: "warn",
+                message: "Хороший результат. Навык сформирован, но требуется дальнейшая тренировка точности и скорости."
+            };
+        }
+
+        if (speed >= 40 && accuracy >= 90) {
+            return {
+                grade: "3",
+                className: "warn",
+                message: "Удовлетворительный результат. Базовый навык есть, но необходимо регулярно отрабатывать слепой метод."
+            };
+        }
+
+        return {
+            grade: "2",
+            className: "bad",
+            message: "Навык не сформирован. Требуется повторная отработка домашнего ряда и контроль постановки рук."
+        };
+    }
+
+    function finish() {
+        finished = true;
+        clearInterval(timerId);
+
+        const speed = calculateSpeed();
+        const accuracy = calculateAccuracy();
+        const evaluation = estimateGrade(speed, accuracy);
+
+        saveBest(speed, accuracy);
+        updateStats();
+        highlightNextKey();
+
+        resultBox.hidden = false;
+        resultBox.className = "result " + evaluation.className;
+        resultBox.innerHTML =
+            "<strong>Упражнение завершено.</strong><br>" +
+            "Скорость: " + speed + " зн./мин<br>" +
+            "Ошибки: " + mistakes + "<br>" +
+            "Точность: " + accuracy + "%<br>" +
+            "Ориентировочная оценка: " + evaluation.grade + "<br>" +
+            evaluation.message;
+    }
+
+    function reset() {
+        finished = false;
+        typed = [];
+        mistakes = 0;
+        startTime = null;
+
+        clearInterval(timerId);
+
+        resultBox.hidden = true;
+        resultBox.innerHTML = "";
+
+        renderTarget();
+        highlightNextKey();
+        updateStats();
+    }
+
+    function selectLesson(lesson) {
+        if (lesson.random) {
+            currentLesson = {
+                id: lesson.id,
+                title: lesson.title,
+                random: true,
+                text: generateServiceText()
+            };
+        } else {
+            currentLesson = lesson;
+        }
+
+        updateLessonButtons();
+        newTextBtn.hidden = !currentLesson.random;
+        reset();
+    }
+
+    function startTimerIfNeeded() {
+        if (!startTime) {
+            startTime = Date.now();
+            timerId = setInterval(updateStats, 250);
+        }
+    }
+
+    function flashError() {
+        targetEl.classList.remove("error-flash");
+
+        void targetEl.offsetWidth;
+
+        targetEl.classList.add("error-flash");
+
+        setTimeout(function () {
+            targetEl.classList.remove("error-flash");
+        }, 350);
+    }
+
+    function updateCapsLock(event) {
+        if (event && typeof event.getModifierState === "function") {
+            capsWarning.hidden = !event.getModifierState("CapsLock");
+        }
+    }
+
+    document.addEventListener("keydown", function (event) {
+        updateCapsLock(event);
+
+        if (event.key === "Tab") {
+            event.preventDefault();
+            reset();
+            return;
+        }
+
+        if (event.ctrlKey || event.metaKey || event.altKey) {
+            const lowered = event.key.toLowerCase();
+
+            if (["c", "v", "x", "a"].includes(lowered)) {
+                event.preventDefault();
+            }
+
+            return;
+        }
+
+        if (finished) {
+            return;
+        }
+
+        if (event.key === "Backspace") {
+            event.preventDefault();
+
+            if (typed.length > 0) {
+                typed.pop();
+                renderTarget();
+                highlightNextKey();
+                updateStats();
+            }
+
+            return;
+        }
+
+        if (event.key.length !== 1) {
+            return;
+        }
+
+        event.preventDefault();
+
+        startTimerIfNeeded();
+
+        const expected = currentLesson.text[typed.length];
+
+        if (event.key === expected) {
+            typed.push(event.key);
+            renderTarget();
+            highlightNextKey();
+            updateStats();
+
+            if (typed.length === currentLesson.text.length) {
+                finish();
+            }
+        } else {
+            mistakes++;
+            flashError();
+            updateStats();
+        }
+    });
+
+    document.addEventListener("keyup", updateCapsLock);
+
+    document.addEventListener("paste", function (event) {
+        event.preventDefault();
+    });
+
+    document.addEventListener("drop", function (event) {
+        event.preventDefault();
+    });
+
+    resetBtn.addEventListener("click", function (event) {
+        reset();
+        event.target.blur();
+    });
+
+    newTextBtn.addEventListener("click", function (event) {
+        if (currentLesson.random) {
+            currentLesson = {
+                id: currentLesson.id,
+                title: currentLesson.title,
+                random: true,
+                text: generateServiceText()
+            };
+
+            reset();
+        }
+
+        event.target.blur();
+    });
+
+    renderLessonButtons();
+    renderKeyboard();
+    selectLesson(lessons[0]);
+</script>
+
+</body>
+</html>
