@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>КЛЮЧ · ПЗ 22 · Формулы в MS Excel · ДУП.03</title>
+    <link rel="stylesheet" href="../styles.css">
+    <style>
+        .teacher-banner { background: #fef2f2; color: #991b1b; padding: 12px 20px; text-align: center; font-weight: bold; border-bottom: 2px solid #fecaca; }
+        .answer-cell { background-color: #f0fdf4 !important; }
+    </style>
+</head>
+<body class="lesson-page">
+    <div class="teacher-banner">Только для преподавателя · Не распространять среди обучающихся</div>
+    
+    <div class="lesson-topbar">
+        <div class="container lt-inner">
+            <a href="../Lessons/tema2_2_pz16.html" class="back-link">← Версия для студентов</a>
+            <span class="meta-tag">Ключ · ПЗ 22</span>
+        </div>
+    </div>
+
+    <div class="container lesson-layout">
+        <aside class="lesson-aside">
+            <nav class="toc">
+                <div class="toc-title">Содержание</div>
+                <a href="#opros">Опрос</a>
+                <a href="#checklist">Чек-лист проверки</a>
+                <a href="#kriterii">Критерии</a>
+                <a href="#metod">Методические указания</a>
+            </nav>
+        </aside>
+
+        <main class="lesson-main">
+            <div class="lesson-bcr">Раздел 2 / Тема 2.2 / ПЗ 22 / Ключ</div>
+            <h1>Материалы для проверки</h1>
+
+            <section class="lsec" id="opros">
+                <h2>Опрос в начале занятия</h2>
+                <ol>
+                    <li>Почему формула не работает, если начать ее без знака "="?</li>
+                    <li>Что означает знак "$" в адресе ячейки?</li>
+                    <li>Какая функция используется для подсчета среднего значения?</li>
+                </ol>
+                <div class="info-box">
+                    <strong>Ожидаемые ответы</strong>
+                    <ul>
+                        <li>Excel воспримет запись как текст или константу, а не как команду на вычисление.</li>
+                        <li>Знак "$" фиксирует ссылку (абсолютная ссылка), чтобы она не менялась при копировании.</li>
+                        <li>Функция СРЗНАЧ.</li>
+                    </ul>
+                </div>
+            </section>
+
+            <section class="lsec" id="checklist">
+                <h2>Чек-лист проверки</h2>
+                <div class="table-wrap">
+                    <table>
+                        <thead>
+                            <tr><th>Элемент</th><th>Да/Нет</th><th>Комментарий</th></tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>В ячейке E3 действительно находится формула (=C3*D3/100)</td><td class="answer-cell"></td><td></td></tr>
+                            <tr><td>Формула скопирована в E4 и E5 корректно (ссылки изменились на C4/D4 и C5/D5)</td><td class="answer-cell"></td><td></td></tr>
+                            <tr><td>В строке "Итого" использована функция =СУММ(...)</td><td class="answer-cell"></td><td></td></tr>
+                            <tr><td>Результаты соответствуют эталону (5,25; 8,8; 2,0; итого 16,05)</td><td class="answer-cell"></td><td></td></tr>
+                            <tr><td>Имя файла содержит ФИО студента</td><td class="answer-cell"></td><td></td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <section class="lsec" id="metod">
+                <h2>Методические указания</h2>
+                <ul>
+                    <li><strong>Проверка формул.</strong> Попросите студентов выделить ячейку с результатом и посмотреть в Строку формул. Там должен быть код, а не просто число. Это главный критерий отличия «пятерки» от «тройки».</li>
+                    <li><strong>Ошибки деления на ноль.</strong> Если студент случайно удалит данные в столбце D, появится ошибка #ДЕЛ!/0. Объясните, что это нормально, и как исправить (вернуть данные).</li>
+                    <li><strong>Автозаполнение.</strong> Покажите маркер заполнения (крестик в правом нижнем углу ячейки). Студенты часто пытаются копировать через Ctrl+C/Ctrl+V, что дольше и менее наглядно для понимания относительных ссылок.</li>
+                </ul>
+            </section>
+            
+             <div class="lesson-nav">
+                <a href="../Lessons/tema2_2_pz16.html" class="nav-btn prev">← Вернуться к занятию</a>
+                <a href="../index.html" class="nav-btn next">К программе дисциплины →</a>
+            </div>
+        </main>
+    </div>
+</body>
+</html>
