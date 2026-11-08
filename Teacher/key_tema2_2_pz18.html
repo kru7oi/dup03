@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>КЛЮЧ · ПЗ 24 · Диаграммы в MS Excel · ДУП.03</title>
+    <link rel="stylesheet" href="../styles.css">
+    <style>
+        .teacher-banner { background: #fef2f2; color: #991b1b; padding: 12px 20px; text-align: center; font-weight: bold; border-bottom: 2px solid #fecaca; }
+        .answer-cell { background-color: #f0fdf4 !important; }
+    </style>
+</head>
+<body class="lesson-page">
+    <div class="teacher-banner">Только для преподавателя · Не распространять среди обучающихся</div>
+    
+    <div class="lesson-topbar">
+        <div class="container lt-inner">
+            <a href="../Lessons/tema2_2_pz18.html" class="back-link">← Версия для студентов</a>
+            <span class="meta-tag">Ключ · ПЗ 24</span>
+        </div>
+    </div>
+
+    <div class="container lesson-layout">
+        <aside class="lesson-aside">
+            <nav class="toc">
+                <div class="toc-title">Содержание</div>
+                <a href="#opros">Опрос</a>
+                <a href="#checklist">Чек-лист проверки</a>
+                <a href="#common-errors">Типичные ошибки</a>
+                <a href="#kriterii">Критерии</a>
+            </nav>
+        </aside>
+
+        <main class="lesson-main">
+            <div class="lesson-bcr">Раздел 2 / Тема 2.2 / ПЗ 24 / Ключ</div>
+            <h1>Материалы для проверки</h1>
+
+            <section class="lsec" id="opros">
+                <h2>Опрос в начале занятия</h2>
+                <ol>
+                    <li>Какая диаграмма лучше всего показывает части целого?</li>
+                    <li>Что будет, если построить гистограмму по данным, где порядок категорий важен (месяцы), но категории перемешаны?</li>
+                    <li>Зачем нужен заголовок диаграммы?</li>
+                    <li>Чем диаграмма с областями полезна для отслеживания расхода ресурсов?</li>
+                </ol>
+                <div class="info-box">
+                    <strong>Ожидаемые ответы</strong>
+                    <ul>
+                        <li>Круговая диаграмма.</li>
+                        <li>Данные станут нечитаемыми, так как зрителю придется искать логику самому. Лучше сортировать по возрастанию дат перед построением.</li>
+                        <li>Без заголовка диаграмма теряет смысл, непонятно, что именно изображено.</li>
+                        <li>Она визуально показывает объем (площадь), позволяя быстро оценить масштаб накопленных затрат.</li>
+                    </ul>
+                </div>
+            </section>
+
+            <section class="lsec" id="checklist">
+                <h2>Чек-лист проверки</h2>
+                <div class="table-wrap">
+                    <table>
+                        <thead>
+                            <tr><th>Элемент</th><th>Да/Нет</th><th>Комментарий</th></tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>Гистограмма: выделен диапазон A1:C13</td><td class="answer-cell"></td><td></td></tr>
+                            <tr><td>Гистограмма: есть название и легенда</td><td class="answer-cell"></td><td></td></tr>
+                            <tr><td>Круговая: выделен диапазон E1:F7 (без лишних колонок)</td><td class="answer-cell"></td><td></td></tr>
+                            <tr><td>Круговая: видны доли секторов (подписи)</td><td class="answer-cell"></td><td></td></tr>
+                            <tr><td><strong>Области: в столбце J есть формулы накопления (=I2, =J2+I3...)</strong></td><td class="answer-cell"></td><td><strong>Проверить строку формул!</strong></td></tr>
+                            <tr><td><strong>Области: диаграмма построена по данным H1:H9 и J1:J9</strong></td><td class="answer-cell"></td><td></td></tr>
+                            <tr><td><strong>Области: тип диаграммы — Area (заливка под линией)</strong></td><td class="answer-cell"></td><td></td></tr>
+                            <tr><td>Все диаграммы размещены аккуратно, не наслаиваются</td><td class="answer-cell"></td><td></td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <section class="lsec" id="common-errors">
+                <h2>Типичные ошибки студентов</h2>
+                <ul>
+                    <li><strong>Ошибка выделения:</strong> Студент выделяет только числа (B2:B13), забывая заголовки (B1). Excel создает серию «Series1».</li>
+                    <li><strong>Ошибка типа диаграммы:</strong> Используют круговую диаграмму для временных рядов (месяцев). Это неправильно, так как месяцы — это последовательность, а не части целого.</li>
+                    <li><strong>Проблема формул в третьем задании:</strong> Студенты часто пишут в J3 просто `=SUM(I2:I3)` или копируют значение из I3, вместо того чтобы делать `=J2+I3`. Это нарушает логику накопления при копировании вниз. Нужно проверять, что ссылка на предыдущую ячейку (J2) является относительной.</li>
+                    <li><strong>Лишний столбец в диаграмме областей:</strong> Если выделить весь диапазон H1:J9, в диаграмму попадет столбец «Расход за час» (I), который исказит картину. Нужно учить выделять несмежные диапазоны через Ctrl.</li>
+                </ul>
+            </section>
+            
+             <div class="lesson-nav">
+                <a href="../Lessons/tema2_2_pz18.html" class="nav-btn prev">← Вернуться к занятию</a>
+                <a href="../index.html" class="nav-btn next">К программе дисциплины →</a>
+            </div>
+        </main>
+    </div>
+</body>
+</html>
