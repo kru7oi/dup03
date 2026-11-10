@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>КЛЮЧ · ПЗ 26 · Форма ввода данных в Эксель · ДУП.03</title>
+    <link rel="stylesheet" href="../styles.css">
+    <style>
+        .teacher-banner {
+            background: #fef2f2;
+            color: #991b1b;
+            padding: 12px 20px;
+            text-align: center;
+            font-weight: bold;
+            border-bottom: 2px solid #fecaca;
+            font-size: 1rem;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+        }
+        .answer-cell {
+            background-color: #f0fdf4 !important;
+        }
+    </style>
+</head>
+<body class="lesson-page">
+
+    <div class="teacher-banner">
+        Только для преподавателя · Не распространять среди обучающихся
+    </div>
+
+    <div class="lesson-topbar">
+        <div class="container lt-inner">
+            <a href="../Lessons/tema2_2_pz20.html" class="back-link">← Версия для студентов</a>
+            <span class="meta-tag">Ключ · ПЗ 26</span>
+        </div>
+    </div>
+
+    <div class="container lesson-layout">
+
+        <aside class="lesson-aside">
+            <nav class="toc">
+                <div class="toc-title">Содержание</div>
+                <a href="#opros">Опрос</a>
+                <a href="#organizatsiya">Организация занятия</a>
+                <a href="#checklist">Чек-лист проверки</a>
+                <a href="#errors">Типичные ошибки</a>
+                <a href="#kriterii">Критерии оценки</a>
+                <a href="#metod">Методические указания</a>
+            </nav>
+        </aside>
+
+        <main class="lesson-main">
+
+            <div class="lesson-bcr">
+                Раздел 2 <span class="sep">/</span> Тема 2.2 <span class="sep">/</span> ПЗ 26 <span class="sep">/</span> Ключ
+            </div>
+
+            <h1>Материалы для проверки и проведения занятия</h1>
+
+            <div class="lesson-meta">
+                <span class="meta-tag">Для служебного пользования</span>
+            </div>
+
+            <section class="lsec" id="opros">
+                <h2>Опрос в начале занятия</h2>
+
+                <ol>
+                    <li>Зачем нужна форма ввода данных?</li>
+                    <li>Что такое справочник в базе данных?</li>
+                    <li>Какие виды проверки данных вы знаете?</li>
+                    <li>Зачем преобразовывать диапазон в таблицу?</li>
+                    <li>Что произойдёт, если не защитить лист формы?</li>
+                </ol>
+
+                <div class="info-box">
+                    <strong>Ожидаемые ответы</strong>
+                    <ul>
+                        <li>Форма ввода уменьшает ошибки и помогает заполнять записи по полям.</li>
+                        <li>Справочник хранит допустимые значения, чтобы данные были единообразными.</li>
+                        <li>Список, целое число, дата, условие, пользовательская формула.</li>
+                        <li>Таблица даёт автоматические фильтры, единое форматирование, расширяемые диапазоны и удобное имя для формул и макросов.</li>
+                        <li>Пользователь может случайно изменить надписи, формулы или служебные ячейки.</li>
+                    </ul>
+                </div>
+            </section>
+
+            <section class="lsec" id="organizatsiya">
+                <h2>Организация занятия</h2>
+
+                <ul>
+                    <li>Студенты работают индивидуально за ПК.</li>
+                    <li>Заранее проверьте, что в Эксель доступна команда «Форма...». Если её нет, покажите добавление через параметры ленты.</li>
+                    <li>Если команда недоступна в конкретной версии, допускается заполнение реестра вручную, но карточка формы обязательна.</li>
+                    <li>Следите, чтобы студенты не путали листы «Реестр» и «Форма».</li>
+                    <li>На заполнение 10 записей отводится 10 минут. Если студент не успевает, можно сократить до 6 записей, но оценка тогда не выше «4».</li>
+                </ul>
+
+                <div class="warn-box">
+                    <strong>Контроль самостоятельности</strong>
+                    Проверьте имя файла, колонтитул или служебную ячейку с ФИО, если она добавлена. Также смотрите, чтобы 10 записей были введены, а не скопированы целиком из чужого файла.
+                </div>
+            </section>
+
+            <section class="lsec" id="checklist">
+                <h2>Чек-лист проверки</h2>
+
+                <div class="table-wrap">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Проверяемый элемент</th>
+                                <th>Да / Нет</th>
+                                <th>Комментарий</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Файл открывается</td>
+                                <td class="answer-cell"></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>Имя файла соответствует шаблону</td>
+                                <td class="answer-cell"></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>Есть лист «Справочники»</td>
+                                <td class="answer-cell"></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>Справочники заполнены в диапазонах A2:A6, B2:B5, D2:D7</td>
+                                <td class="answer-cell"></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>Есть лист «Реестр»</td>
+                                <td class="answer-cell"></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>Заголовки находятся в A1:J1</td>
+                                <td class="answer-cell"></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>Диапазон преобразован в таблицу</td>
+                                <td class="answer-cell"></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>Таблица названа tblРеестр</td>
+                                <td class="answer-cell"></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>Заполнено 10 записей в A2:J11</td>
+                                <td class="answer-cell"></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>Проверка данных для типа средства работает</td>
+                                <td class="answer-cell"></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>Проверка данных для состояния работает</td>
+                                <td class="answer-cell"></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>Проверка данных для ответственного работает</td>
+                                <td class="answer-cell"></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>Количество принимает только целое число не меньше 1</td>
+                                <td class="answer-cell"></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>Даты принимаются в корректном формате</td>
+                                <td class="answer-cell"></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>Есть лист «Форма»</td>
+                                <td class="answer-cell"></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>Поля ввода находятся в C3:C11</td>
+                                <td class="answer-cell"></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>В C2 есть формула проверки заполненности</td>
+                                <td class="answer-cell"></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>Лист «Форма» защищён</td>
+                                <td class="answer-cell"></td>
+                                <td></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <section class="lsec" id="errors">
+                <h2>Типичные ошибки</h2>
+
+                <ul>
+                    <li><strong>Неправильный диапазон таблицы.</strong> Студент выделяет только заголовки A1:J1 или весь столбец. Нужно A1:J2, затем заполнение через форму.</li>
+                    <li><strong>Таблица не названа.</strong> Без имени таблицы сложнее переходить к макросам.</li>
+                    <li><strong>Проверка данных настроена только на реестр, но не на форму.</strong> Карточка должна быть защищена так же, как таблица.</li>
+                    <li><strong>Путаница ячеек формы.</strong> Поля должны быть в C3:C11, а не в C2:C10. Это важно для следующего занятия с макросами.</li>
+                    <li><strong>Защита всего листа без снятия защиты с ячеек ввода.</strong> Тогда форма становится нерабочей.</li>
+                    <li><strong>Копирование чужого файла.</strong> Одинаковые ошибки, одинаковые примечания, одинаковое время сохранения.</li>
+                </ul>
+            </section>
+
+            <section class="lsec" id="kriterii">
+                <h2>Критерии выставления оценки</h2>
+
+                <div class="table-wrap">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Оценка</th>
+                                <th>Критерии</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>5</strong></td>
+                                <td>Все элементы чек-листа выполнены. Данные внесены корректно. Форма работает. Защита настроена.</td>
+                            </tr>
+                            <tr>
+                                <td><strong>4</strong></td>
+                                <td>Выполнено не менее 80 процентов требований. Есть 1–2 мелкие ошибки, не ломающие работу формы.</td>
+                            </tr>
+                            <tr>
+                                <td><strong>3</strong></td>
+                                <td>Реестр заполнен, но форма или проверка данных выполнены частично.</td>
+                            </tr>
+                            <tr>
+                                <td><strong>2</strong></td>
+                                <td>Работа не выполнена, файл не сдан, структура не соответствует заданию.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <section class="lsec" id="metod">
+                <h2>Методические указания</h2>
+
+                <ul>
+                    <li><strong>Подготовьте следующую тему.</strong> На этом занятии важно, чтобы ячейки формы находились именно в C3:C11. На следующем занятии макрос будет читать эти ячейки и переносить данные в реестр.</li>
+                    <li><strong>Не требуйте идеального дизайна.</strong> Главное — структура, проверка данных и защита.</li>
+                    <li><strong>Если группа слабая,</strong> разрешите заполнить 6 записей, но потребуйте корректную карточку формы.</li>
+                    <li><strong>Если группа сильная,</strong> добавьте условие: дата следующей проверки должна быть позже даты ввода. Это можно настроить через пользовательскую проверку данных.</li>
+                    <li><strong>Профессиональная связка.</strong> Покажите, что такой реестр может использоваться инспектором пожарной безопасности для контроля сроков проверки огнетушителей и гидрантов.</li>
+                </ul>
+            </section>
+
+            <div class="lesson-nav">
+                <a href="../Lessons/tema2_2_pz20.html" class="nav-btn prev">← Вернуться к занятию</a>
+                <a href="../index.html" class="nav-btn next">К программе дисциплины →</a>
+            </div>
+
+        </main>
+    </div>
+
+</body>
+</html>
