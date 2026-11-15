@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>КЛЮЧ · ПЗ 29 · Создание чертежа · ДУП.03</title>
+    <link rel="stylesheet" href="../styles.css">
+    <style>
+        .teacher-banner {
+            background: #fef2f2;
+            color: #991b1b;
+            padding: 12px 20px;
+            text-align: center;
+            font-weight: bold;
+            border-bottom: 2px solid #fecaca;
+            font-size: 1rem;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+        }
+        .answer-cell {
+            background-color: #f0fdf4 !important;
+        }
+    </style>
+</head>
+<body class="lesson-page">
+
+    <div class="teacher-banner">
+        Только для преподавателя · Не распространять среди обучающихся
+    </div>
+
+    <div class="lesson-topbar">
+        <div class="container lt-inner">
+            <a href="../Lessons/tema2_2_pz23.html" class="back-link">← Версия для студентов</a>
+            <span class="meta-tag">Ключ · ПЗ 29</span>
+        </div>
+    </div>
+
+    <div class="container lesson-layout">
+
+        <aside class="lesson-aside">
+            <nav class="toc">
+                <div class="toc-title">Содержание</div>
+                <a href="#opros">Опрос</a>
+                <a href="#podgotovka">Подготовка</a>
+                <a href="#etalon">Эталонные координаты</a>
+                <a href="#control">Контрольные суммы</a>
+                <a href="#checklist">Чек-лист проверки</a>
+                <a href="#errors">Типичные ошибки</a>
+                <a href="#kriterii">Критерии оценки</a>
+                <a href="#metod">Методические указания</a>
+            </nav>
+        </aside>
+
+        <main class="lesson-main">
+
+            <div class="lesson-bcr">
+                Раздел 2 <span class="sep">/</span> Тема 2.2 <span class="sep">/</span> ПЗ 29 <span class="sep">/</span> Ключ
+            </div>
+
+            <h1>Материалы для проверки и проведения занятия</h1>
+
+            <div class="lesson-meta">
+                <span class="meta-tag">Для служебного пользования</span>
+            </div>
+
+            <section class="lsec" id="opros">
+                <h2>Опрос в начале занятия</h2>
+
+                <ol>
+                    <li>Чем чертёж отличается от схемы?</li>
+                    <li>Что означает масштаб 1 к 100?</li>
+                    <li>Сколько единиц редактора соответствует 6 метрам?</li>
+                    <li>Какие линии применяют для наружных стен и для перегородок?</li>
+                    <li>В каких единицах указывают размеры на чертеже?</li>
+                    <li>Зачем чертёж делят на слои?</li>
+                </ol>
+
+                <div class="info-box">
+                    <strong>Ожидаемые ответы</strong>
+                    <ul>
+                        <li>Чертёж выполняется в масштабе, содержит размеры и оформляется рамкой и основной надписью.</li>
+                        <li>Один сантиметр на листе соответствует одному метру объекта.</li>
+                        <li>60 единиц.</li>
+                        <li>Наружные стены сплошной толстой, перегородки сплошной тонкой.</li>
+                        <li>В действительных единицах объекта, обычно в миллиметрах.</li>
+                        <li>Чтобы скрывать и защищать группы элементов, получать разные версии плана.</li>
+                    </ul>
+                </div>
+            </section>
+
+            <section class="lsec" id="podgotovka">
+                <h2>Подготовка к занятию</h2>
+
+                <ul>
+                    <li>Проверьте запуск редактора на всех рабочих местах.</li>
+                    <li>Убедитесь, что доступен экспорт в PDF, PNG и формат Visio.</li>
+                    <li>Покажите на проекторе три приёма: задание точных координат, отключение заливки, создание слоя.</li>
+                    <li>Заранее подготовьте образец готового чертежа, чтобы студенты видели цель работы.</li>
+                    <li>Проверьте, что студенты умеют включать сетку и привязку, иначе точность будет потеряна.</li>
+                </ul>
+
+                <div class="warn-box">
+                    <strong>Если группа не успевает</strong>
+                    Разрешите сократить работу до контура, перегородок, коридора, четырёх знаков оборудования и одной размерной цепочки. Оценка в этом случае не выше «4», так как не проверены слои и полная размерная цепочка.
+                </div>
+            </section>
+
+            <section class="lsec" id="etalon">
+                <h2>Эталонные координаты</h2>
+
+                <h3>Контур и перегородки</h3>
+
+                <div class="table-wrap">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Элемент</th>
+                                <th>Координаты</th>
+                                <th>Размер</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>Наружный контур</td><td class="answer-cell">X 100, Y 100</td><td class="answer-cell">240 на 120</td></tr>
+                            <tr><td>Северная граница коридора</td><td class="answer-cell">от 100;150 до 340;150</td><td class="answer-cell">длина 240</td></tr>
+                            <tr><td>Южная граница коридора</td><td class="answer-cell">от 100;170 до 340;170</td><td class="answer-cell">длина 240</td></tr>
+                            <tr><td>Перегородка северная первая</td><td class="answer-cell">от 160;100 до 160;150</td><td class="answer-cell">длина 50</td></tr>
+                            <tr><td>Перегородка северная вторая</td><td class="answer-cell">от 280;100 до 280;150</td><td class="answer-cell">длина 50</td></tr>
+                            <tr><td>Перегородка южная первая</td><td class="answer-cell">от 160;170 до 160;220</td><td class="answer-cell">длина 50</td></tr>
+                            <tr><td>Перегородка южная вторая</td><td class="answer-cell">от 220;170 до 220;220</td><td class="answer-cell">длина 50</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <h3>Помещения</h3>
+
+                <div class="table-wrap">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Помещение</th>
+                                <th>Границы X</th>
+                                <th>Границы Y</th>
+                                <th>Метры</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>Кабинет 101</td><td class="answer-cell">100–160</td><td class="answer-cell">100–150</td><td class="answer-cell">6 на 5</td></tr>
+                            <tr><td>Холл</td><td class="answer-cell">160–280</td><td class="answer-cell">100–150</td><td class="answer-cell">12 на 5</td></tr>
+                            <tr><td>Кабинет 102</td><td class="answer-cell">280–340</td><td class="answer-cell">100–150</td><td class="answer-cell">6 на 5</td></tr>
+                            <tr><td>Коридор</td><td class="answer-cell">100–340</td><td class="answer-cell">150–170</td><td class="answer-cell">24 на 2</td></tr>
+                            <tr><td>Склад</td><td class="answer-cell">100–160</td><td class="answer-cell">170–220</td><td class="answer-cell">6 на 5</td></tr>
+                            <tr><td>Электрощитовая</td><td class="answer-cell">160–220</td><td class="answer-cell">170–220</td><td class="answer-cell">6 на 5</td></tr>
+                            <tr><td>Серверная</td><td class="answer-cell">220–340</td><td class="answer-cell">170–220</td><td class="answer-cell">12 на 5</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <h3>Оборудование</h3>
+
+                <div class="table-wrap">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Обозначение</th>
+                                <th>Расположение</th>
+                                <th>X</th>
+                                <th>Y</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>ОГ-1</td><td class="answer-cell">Коридор, левая часть</td><td class="answer-cell">104</td><td class="answer-cell">152</td></tr>
+                            <tr><td>ОГ-2</td><td class="answer-cell">Коридор, правая часть</td><td class="answer-cell">324</td><td class="answer-cell">152</td></tr>
+                            <tr><td>ОГ-3</td><td class="answer-cell">Электрощитовая</td><td class="answer-cell">164</td><td class="answer-cell">200</td></tr>
+                            <tr><td>ОГ-4</td><td class="answer-cell">Серверная</td><td class="answer-cell">224</td><td class="answer-cell">200</td></tr>
+                            <tr><td>ОГ-5</td><td class="answer-cell">Склад</td><td class="answer-cell">104</td><td class="answer-cell">200</td></tr>
+                            <tr><td>ПК-1</td><td class="answer-cell">Коридор, середина</td><td class="answer-cell">196</td><td class="answer-cell">152</td></tr>
+                            <tr><td>ЩП-1</td><td class="answer-cell">Коридор, правее середины</td><td class="answer-cell">250</td><td class="answer-cell">152</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="info-box">
+                    <strong>Допустимые отклонения</strong>
+                    Положение знаков оборудования допускается с отклонением до 10 единиц, если знак остаётся внутри своего помещения и не перекрывает проём. Координаты контура и перегородок отклонений не допускают, иначе рушится масштаб.
+                </div>
+            </section>
+
+            <section class="lsec" id="control">
+                <h2>Контрольные суммы для быстрой проверки</h2>
+
+                <div class="table-wrap">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Проверка</th>
+                                <th>Расчёт</th>
+                                <th>Результат</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>Горизонтальная цепочка</td><td class="answer-cell">6000 + 12000 + 6000</td><td class="answer-cell">24000</td></tr>
+                            <tr><td>Вертикальная цепочка</td><td class="answer-cell">5000 + 2000 + 5000</td><td class="answer-cell">12000</td></tr>
+                            <tr><td>Длина контура в единицах</td><td class="answer-cell">60 + 120 + 60</td><td class="answer-cell">240</td></tr>
+                            <tr><td>Высота контура в единицах</td><td class="answer-cell">50 + 20 + 50</td><td class="answer-cell">120</td></tr>
+                            <tr><td>Количество помещений</td><td class="answer-cell">3 северных + 3 южных + коридор</td><td class="answer-cell">7</td></tr>
+                            <tr><td>Количество знаков оборудования</td><td class="answer-cell">5 огнетушителей + 1 кран + 1 щит</td><td class="answer-cell">7</td></tr>
+                            <tr><td>Количество проёмов</td><td class="answer-cell">6 внутренних + 2 наружных</td><td class="answer-cell">8</td></tr>
+                            <tr><td>Количество слоёв</td><td class="answer-cell">конструкции, проёмы, оборудование, оформление</td><td class="answer-cell">4</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="warn-box">
+                    <strong>Самая быстрая проверка масштаба</strong>
+                    Выделите наружный контур и посмотрите вкладку расположения. Если ширина не 240 или высота не 120, масштаб нарушен, и работа не может быть оценена на «5».
+                </div>
+            </section>
+
+            <section class="lsec" id="checklist">
+                <h2>Чек-лист проверки</h2>
+
+                <div class="table-wrap">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Проверяемый элемент</th>
+                                <th>Да / Нет</th>
+                                <th>Комментарий</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>Сдан исходный файл чертежа</td><td class="answer-cell"></td><td></td></tr>
+                            <tr><td>Сдан PDF</td><td class="answer-cell"></td><td></td></tr>
+                            <tr><td>Сдан PNG</td><td class="answer-cell"></td><td></td></tr>
+                            <tr><td>Сдан файл формата Visio</td><td class="answer-cell"></td><td></td></tr>
+                            <tr><td>Контур 240 на 120 единиц</td><td class="answer-cell"></td><td></td></tr>
+                            <tr><td>Контур без заливки, линия толстая</td><td class="answer-cell"></td><td></td></tr>
+                            <tr><td>Коридор шириной ровно 20 единиц</td><td class="answer-cell"></td><td></td></tr>
+                            <tr><td>Все шесть перегородок на месте</td><td class="answer-cell"></td><td></td></tr>
+                            <tr><td>Перегородки тоньше наружных стен</td><td class="answer-cell"></td><td></td></tr>
+                            <tr><td>Восемь проёмов выполнены</td><td class="answer-cell"></td><td></td></tr>
+                            <tr><td>Стрелки направления эвакуации есть</td><td class="answer-cell"></td><td></td></tr>
+                            <tr><td>Названия всех семи помещений указаны</td><td class="answer-cell"></td><td></td></tr>
+                            <tr><td>Семь знаков оборудования размещены</td><td class="answer-cell"></td><td></td></tr>
+                            <tr><td>Подписи к знакам есть</td><td class="answer-cell"></td><td></td></tr>
+                            <tr><td>Горизонтальная размерная цепочка нанесена</td><td class="answer-cell"></td><td></td></tr>
+                            <tr><td>Вертикальная размерная цепочка нанесена</td><td class="answer-cell"></td><td></td></tr>
+                            <tr><td>Общие размеры 24000 и 12000 указаны</td><td class="answer-cell"></td><td></td></tr>
+                            <tr><td>Суммы размеров сходятся</td><td class="answer-cell"></td><td></td></tr>
+                            <tr><td>Единицы измерения пояснены</td><td class="answer-cell"></td><td></td></tr>
+                            <tr><td>Блок условных обозначений есть</td><td class="answer-cell"></td><td></td></tr>
+                            <tr><td>Рамка листа выполнена</td><td class="answer-cell"></td><td></td></tr>
+                            <tr><td>Основная надпись заполнена полностью</td><td class="answer-cell"></td><td></td></tr>
+                            <tr><td>Созданы четыре слоя</td><td class="answer-cell"></td><td></td></tr>
+                            <tr><td>Скрытие слоя оборудования даёт чистый план</td><td class="answer-cell"></td><td></td></tr>
+                            <tr><td>Текст не перекрывает линии</td><td class="answer-cell"></td><td></td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <section class="lsec" id="errors">
+                <h2>Типичные ошибки</h2>
+
+                <ul>
+                    <li><strong>Заливка контура.</strong> Студент оставляет белую или цветную заливку, из-за чего перегородки и оборудование оказываются скрыты. Нужно отключить заливку.</li>
+                    <li><strong>Перегородки не доходят до стен.</strong> Между концом линии и стеной остаётся зазор. Проверяется увеличением масштаба.</li>
+                    <li><strong>Коридор произвольной ширины.</strong> Студент рисует «на глаз», получает 30 или 40 единиц вместо 20. Масштаб нарушен.</li>
+                    <li><strong>Размеры в сантиметрах листа.</strong> Пишут 24 вместо 24000. Это грубая ошибка.</li>
+                    <li><strong>Размерная цепочка не сходится.</strong> Например, 6000 плюс 12000 плюс 6000, а общий размер указан 22000.</li>
+                    <li><strong>Оборудование вне помещений.</strong> Знак оказывается на стене или за контуром здания.</li>
+                    <li><strong>Все элементы на одном слое.</strong> Тогда скрытие оборудования невозможно, требование не выполнено.</li>
+                    <li><strong>Проёмы нарисованы поверх заливки.</strong> Разрыв не виден, потому что стена перекрыта фигурой с заливкой.</li>
+                    <li><strong>Основная надпись без исполнителя.</strong> Работу нельзя идентифицировать.</li>
+                    <li><strong>Экспорт с обрезкой.</strong> Рамка или размеры не попали в PDF.</li>
+                </ul>
+            </section>
+
+            <section class="lsec" id="kriterii">
+                <h2>Критерии выставления оценки</h2>
+
+                <div class="table-wrap">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Оценка</th>
+                                <th>Критерии</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>5</strong></td>
+                                <td>Выполнены все пункты чек-листа. Масштаб соблюдён, размеры сходятся, слои работают, оформление полное, сданы все файлы.</td>
+                            </tr>
+                            <tr>
+                                <td><strong>4</strong></td>
+                                <td>Чертёж верен по геометрии, но есть 1–2 недоработки в оформлении или комплектности файлов.</td>
+                            </tr>
+                            <tr>
+                                <td><strong>3</strong></td>
+                                <td>План построен, но масштаб или размеры нарушены, отсутствуют слои или размерные линии.</td>
+                            </tr>
+                            <tr>
+                                <td><strong>2</strong></td>
+                                <td>Чертёж не выполнен, вместо него схема без масштаба, работа не сдана или скопирована.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <section class="lsec" id="metod">
+                <h2>Методические указания</h2>
+
+                <ul>
+                    <li><strong>Главный навык занятия</strong> — работа с точными координатами и понимание масштаба. Это отличает чертёж от схемы предыдущего занятия.</li>
+                    <li><strong>Начните с показа ошибки.</strong> Нарисуйте контур с заливкой и покажите, что перегородки исчезли. Студенты сразу поймут, зачем отключать заливку.</li>
+                    <li><strong>Требуйте контрольные суммы.</strong> Пусть студент вслух сложит размерную цепочку. Это формирует привычку самопроверки.</li>
+                    <li><strong>Слои проверяйте действием.</strong> Попросите скрыть слой оборудования при вас. Если план не изменился, слои не использовались.</li>
+                    <li><strong>Не требуйте нормативного оформления.</strong> Это учебный чертёж. Полное соответствие государственным стандартам отрабатывается в чертёжной системе на последующих занятиях.</li>
+                    <li><strong>Для слабой группы</strong> выдайте готовый файл с контуром и перегородками, чтобы студенты отрабатывали оборудование, размеры и оформление.</li>
+                    <li><strong>Для сильной группы</strong> обязательны размеры проёмов, зона обслуживания штриховой линией и вторая страница документа.</li>
+                    <li><strong>Профессиональная связка.</strong> Такой план является основой для последующих занятий: план здания, план-схема объекта на местности и план эвакуации.</li>
+                </ul>
+            </section>
+
+            <div class="lesson-nav">
+                <a href="../Lessons/tema2_2_pz23.html" class="nav-btn prev">← Вернуться к занятию</a>
+                <a href="../index.html" class="nav-btn next">К программе дисциплины →</a>
+            </div>
+
+        </main>
+    </div>
+
+</body>
+</html>
