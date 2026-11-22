@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>КЛЮЧ · ПЗ 32 · Создание плана эвакуации · ДУП.03</title>
+    <link rel="stylesheet" href="../styles.css">
+    <style>
+        .teacher-banner {
+            background: #fef2f2;
+            color: #991b1b;
+            padding: 12px 20px;
+            text-align: center;
+            font-weight: bold;
+            border-bottom: 2px solid #fecaca;
+            font-size: 1rem;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+        }
+        .answer-cell { background-color: #f0fdf4 !important; }
+    </style>
+</head>
+<body class="lesson-page">
+
+    <div class="teacher-banner">
+        Только для преподавателя · Не распространять среди обучающихся
+    </div>
+
+    <div class="lesson-topbar">
+        <div class="container lt-inner">
+            <a href="../Lessons/tema2_2_pz26.html" class="back-link">← Версия для студентов</a>
+            <span class="meta-tag">Ключ · ПЗ 32</span>
+        </div>
+    </div>
+
+    <div class="container lesson-layout">
+
+        <aside class="lesson-aside">
+            <nav class="toc">
+                <div class="toc-title">Содержание</div>
+                <a href="#opros">Опрос</a>
+                <a href="#podgotovka">Подготовка</a>
+                <a href="#etalon">Эталонные координаты</a>
+                <a href="#normcheck">Нормативная проверка</a>
+                <a href="#control">Контрольные суммы</a>
+                <a href="#checklist">Чек-лист проверки</a>
+                <a href="#errors">Типичные ошибки</a>
+                <a href="#kriterii">Критерии оценки</a>
+                <a href="#metod">Методические указания</a>
+            </nav>
+        </aside>
+
+        <main class="lesson-main">
+
+            <div class="lesson-bcr">
+                Раздел 2 <span class="sep">/</span> Тема 2.2 <span class="sep">/</span> ПЗ 32 <span class="sep">/</span> Ключ
+            </div>
+
+            <h1>Материалы для проверки и проведения занятия</h1>
+
+            <div class="lesson-meta">
+                <span class="meta-tag">Для служебного пользования</span>
+            </div>
+
+            <section class="lsec" id="opros">
+                <h2>Опрос в начале занятия</h2>
+
+                <ol>
+                    <li>Кому адресован план эвакуации?</li>
+                    <li>Чем он отличается от плана-схемы объекта, которую делали на прошлом занятии?</li>
+                    <li>Каков минимальный размер этажного плана?</li>
+                    <li>Каким цветом обозначают пути эвакуации?</li>
+                    <li>Чем отличается обозначение аварийного выхода?</li>
+                    <li>Зачем нужна отметка «Вы находитесь здесь»?</li>
+                    <li>Что произойдёт, если план перевёрнут относительно реального вида?</li>
+                </ol>
+
+                <div class="info-box">
+                    <strong>Ожидаемые ответы</strong>
+                    <ul>
+                        <li>Человеку, находящемуся в здании, в том числе впервые, и персоналу объекта.</li>
+                        <li>План-схема нужна пожарным для тушения, план эвакуации нужен людям для выхода из здания.</li>
+                        <li>600 на 400 миллиметров.</li>
+                        <li>Зелёным.</li>
+                        <li>Путь к аварийному выходу обозначают штриховой линией, к эвакуационному — сплошной.</li>
+                        <li>Чтобы человек сопоставил план со своим реальным положением и понял направление движения.</li>
+                        <li>Стрелки будут указывать в противоположную сторону, люди пойдут в тупик.</li>
+                    </ul>
+                </div>
+            </section>
+
+            <section class="lsec" id="podgotovka">
+                <h2>Подготовка к занятию</h2>
+
+                <ul>
+                    <li>Проверьте запуск редактора на всех рабочих местах.</li>
+                    <li>Обязательно покажите задание размера страницы 1701 на 1134 пункта.</li>
+                    <li>Подготовьте образец реального плана эвакуации, желательно с фотографией размещения на стене.</li>
+                    <li>Если есть возможность, принесите распечатанный план эвакуации формата 600 на 400 и покажите физический размер.</li>
+                    <li>Заранее подготовьте набор знаков безопасности: зелёные и красные квадраты с символами.</li>
+                    <li>Проверьте доступность экспорта в PDF и PNG.</li>
+                </ul>
+
+                <div class="warn-box">
+                    <strong>Сильный мотивационный приём</strong>
+                    Покажите два варианта одного плана: правильный и перевёрнутый. Попросите студента, не глядя на подсказки, указать пальцем направление к выходу на перевёрнутом варианте. Большинство укажет неверно. Это наглядно объясняет требование к ориентации.
+                </div>
+            </section>
+
+            <section class="lsec" id="etalon">
+                <h2>Эталонные координаты</h2>
+
+                <h3>Страница, рамка, контур</h3>
+
+                <div class="table-wrap">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Элемент</th>
+                                <th>X</th>
+                                <th>Y</th>
+                                <th>Ширина</th>
+                                <th>Высота</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>Размер страницы</td><td class="answer-cell">—</td><td class="answer-cell">—</td><td class="answer-cell">1701</td><td class="answer-cell">1134</td></tr>
+                            <tr><td>Рамка плана</td><td class="answer-cell">28</td><td class="answer-cell">28</td><td class="answer-cell">1644</td><td class="answer-cell">1077</td></tr>
+                            <tr><td>Наружный контур</td><td class="answer-cell">60</td><td class="answer-cell">180</td><td class="answer-cell">960</td><td class="answer-cell">480</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <h3>Перегородки</h3>
+
+                <div class="table-wrap">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Элемент</th>
+                                <th>Координаты</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>Северная граница коридора</td><td class="answer-cell">от 60;380 до 1020;380</td></tr>
+                            <tr><td>Южная граница коридора</td><td class="answer-cell">от 60;460 до 1020;460</td></tr>
+                            <tr><td>Перегородка 101 и 102</td><td class="answer-cell">от 300;180 до 300;380</td></tr>
+                            <tr><td>Перегородка 102 и 103</td><td class="answer-cell">от 780;180 до 780;380</td></tr>
+                            <tr><td>Перегородка 105 и 106</td><td class="answer-cell">от 300;460 до 300;660</td></tr>
+                            <tr><td>Перегородка 106 и 107</td><td class="answer-cell">от 540;460 до 540;660</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <h3>Пути эвакуации</h3>
+
+                <div class="table-wrap">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Номер</th>
+                                <th>Координаты</th>
+                                <th>Стиль</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>1</td><td class="answer-cell">от 160;340 до 160;420</td><td class="answer-cell">сплошная зелёная</td></tr>
+                            <tr><td>2</td><td class="answer-cell">от 540;340 до 540;420</td><td class="answer-cell">сплошная зелёная</td></tr>
+                            <tr><td>3</td><td class="answer-cell">от 880;340 до 880;420</td><td class="answer-cell">сплошная зелёная</td></tr>
+                            <tr><td>4</td><td class="answer-cell">от 160;500 до 160;420</td><td class="answer-cell">сплошная зелёная</td></tr>
+                            <tr><td>5</td><td class="answer-cell">от 400;500 до 400;420</td><td class="answer-cell">сплошная зелёная</td></tr>
+                            <tr><td>6</td><td class="answer-cell">от 720;500 до 720;420</td><td class="answer-cell">сплошная зелёная</td></tr>
+                            <tr><td>7</td><td class="answer-cell">от 480;420 до 80;420</td><td class="answer-cell">сплошная зелёная</td></tr>
+                            <tr><td>8</td><td class="answer-cell">от 600;420 до 1000;420</td><td class="answer-cell">сплошная зелёная</td></tr>
+                            <tr><td>9</td><td class="answer-cell">от 630;300 до 630;160</td><td class="answer-cell">штриховая зелёная</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <h3>Знаки безопасности</h3>
+
+                <div class="table-wrap">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Обозначение</th>
+                                <th>X</th>
+                                <th>Y</th>
+                                <th>Цвет</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>Выход западный</td><td class="answer-cell">66</td><td class="answer-cell">340</td><td class="answer-cell">зелёный</td></tr>
+                            <tr><td>Выход восточный</td><td class="answer-cell">986</td><td class="answer-cell">340</td><td class="answer-cell">зелёный</td></tr>
+                            <tr><td>Выход аварийный</td><td class="answer-cell">666</td><td class="answer-cell">190</td><td class="answer-cell">зелёный</td></tr>
+                            <tr><td>ОГ-1</td><td class="answer-cell">100</td><td class="answer-cell">390</td><td class="answer-cell">красный</td></tr>
+                            <tr><td>ОГ-2</td><td class="answer-cell">950</td><td class="answer-cell">390</td><td class="answer-cell">красный</td></tr>
+                            <tr><td>ОГ-3</td><td class="answer-cell">100</td><td class="answer-cell">600</td><td class="answer-cell">красный</td></tr>
+                            <tr><td>ОГ-4</td><td class="answer-cell">340</td><td class="answer-cell">600</td><td class="answer-cell">красный</td></tr>
+                            <tr><td>ОГ-5</td><td class="answer-cell">580</td><td class="answer-cell">600</td><td class="answer-cell">красный</td></tr>
+                            <tr><td>ПК-1</td><td class="answer-cell">420</td><td class="answer-cell">390</td><td class="answer-cell">красный</td></tr>
+                            <tr><td>ИП-1</td><td class="answer-cell">200</td><td class="answer-cell">390</td><td class="answer-cell">красный</td></tr>
+                            <tr><td>ИП-2</td><td class="answer-cell">860</td><td class="answer-cell">390</td><td class="answer-cell">красный</td></tr>
+                            <tr><td>АП-1</td><td class="answer-cell">300</td><td class="answer-cell">390</td><td class="answer-cell">зелёный</td></tr>
+                            <tr><td>ЭС-1</td><td class="answer-cell">340</td><td class="answer-cell">540</td><td class="answer-cell">красный</td></tr>
+                            <tr><td>Отметка места</td><td class="answer-cell">150</td><td class="answer-cell">432</td><td class="answer-cell">синий круг 26</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="info-box">
+                    <strong>Допустимые отклонения</strong>
+                    Положение знаков допускается с отклонением до 20 пунктов при сохранении логики размещения: огнетушители и извещатели у выходов, аптечка в коридоре, знак отключения в электрощитовой. Координаты страницы, контура и перегородок отклонений не допускают.
+                </div>
+            </section>
+
+            <section class="lsec" id="normcheck">
+                <h2>Нормативная проверка работы</h2>
+
+                <p>Эта таблица позволяет быстро проверить соответствие нормативным требованиям без измерения линейкой.</p>
+
+                <div class="table-wrap">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Требование</th>
+                                <th>Норматив</th>
+                                <th>Значение в пунктах</th>
+                                <th>Как проверить</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Размер плана</td>
+                                <td>600 на 400 мм</td>
+                                <td class="answer-cell">1701 на 1134</td>
+                                <td>Вкладка «Диаграмма», параметры страницы</td>
+                            </tr>
+                            <tr>
+                                <td>Наружные стены</td>
+                                <td>не менее 3 мм</td>
+                                <td class="answer-cell">9</td>
+                                <td>Выделить контур, вкладка «Стиль», толщина линии</td>
+                            </tr>
+                            <tr>
+                                <td>Внутренние стены</td>
+                                <td>не менее 1,5 мм</td>
+                                <td class="answer-cell">5</td>
+                                <td>Выделить перегородку, толщина линии</td>
+                            </tr>
+                            <tr>
+                                <td>Знаки безопасности</td>
+                                <td>от 8 до 15 мм</td>
+                                <td class="answer-cell">28</td>
+                                <td>Выделить знак, вкладка «Расположить», размер</td>
+                            </tr>
+                            <tr>
+                                <td>Отметка места</td>
+                                <td>от 8 до 10 мм</td>
+                                <td class="answer-cell">26</td>
+                                <td>Выделить круг, размер и цвет заливки</td>
+                            </tr>
+                            <tr>
+                                <td>Высота шрифта</td>
+                                <td>не менее 5 мм</td>
+                                <td class="answer-cell">кегль 16</td>
+                                <td>Выделить текст, посмотреть кегль</td>
+                            </tr>
+                            <tr>
+                                <td>Цвет путей</td>
+                                <td>зелёный</td>
+                                <td class="answer-cell">—</td>
+                                <td>Выделить линию, вкладка «Стиль», цвет линии</td>
+                            </tr>
+                            <tr>
+                                <td>Стиль аварийного пути</td>
+                                <td>штриховая</td>
+                                <td class="answer-cell">—</td>
+                                <td>Выделить линию, шаблон линии</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="warn-box">
+                    <strong>Пересчёт для запоминания</strong>
+                    Один миллиметр равен 2,835 пункта. Соответственно 3 мм это 8,5 пункта, 5 мм это 14,2 пункта, 8 мм это 22,7 пункта, 10 мм это 28,3 пункта, 15 мм это 42,5 пункта. Кегль шрифта в пунктах приблизительно равен высоте в пунктах, поэтому кегль 16 даёт около 5,6 мм.
+                </div>
+            </section>
+
+            <section class="lsec" id="control">
+                <h2>Контрольные суммы для быстрой проверки</h2>
+
+                <div class="table-wrap">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Проверка</th>
+                                <th>Расчёт</th>
+                                <th>Результат</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>Размер страницы</td><td class="answer-cell">600 на 2,835 и 400 на 2,835</td><td class="answer-cell">1701 на 1134</td></tr>
+                            <tr><td>Длина контура</td><td class="answer-cell">240 + 480 + 240</td><td class="answer-cell">960</td></tr>
+                            <tr><td>Высота контура</td><td class="answer-cell">200 + 80 + 200</td><td class="answer-cell">480</td></tr>
+                            <tr><td>Пересчёт длины в метры</td><td class="answer-cell">960 разделить на 40</td><td class="answer-cell">24</td></tr>
+                            <tr><td>Пересчёт высоты в метры</td><td class="answer-cell">480 разделить на 40</td><td class="answer-cell">12</td></tr>
+                            <tr><td>Количество помещений</td><td class="answer-cell">3 северных + коридор + 3 южных</td><td class="answer-cell">7</td></tr>
+                            <tr><td>Количество проёмов</td><td class="answer-cell">6 дверей + 2 эвакуационных + 1 аварийный</td><td class="answer-cell">9</td></tr>
+                            <tr><td>Количество путей эвакуации</td><td class="answer-cell">8 основных + 1 аварийный</td><td class="answer-cell">9</td></tr>
+                            <tr><td>Количество знаков</td><td class="answer-cell">3 выхода + 5 огнетушителей + кран + 2 извещателя + аптечка + отключение</td><td class="answer-cell">13</td></tr>
+                            <tr><td>Пунктов текстовой части</td><td class="answer-cell">инструкция о действиях</td><td class="answer-cell">7</td></tr>
+                            <tr><td>Строк условных обозначений</td><td class="answer-cell">6 знаков + 2 линии + отметка</td><td class="answer-cell">9</td></tr>
+                            <tr><td>Количество слоёв</td><td class="answer-cell">рамка, планировка, проёмы, пути, знаки, текст</td><td class="answer-cell">6</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="warn-box">
+                    <strong>Самая быстрая проверка</strong>
+                    Посмотрите на цвет линий путей эвакуации. Если они не зелёные, работа сразу возвращается на доработку. Затем найдите синий круг отметки места. Если его нет, оценка не выше «3».
+                </div>
+            </section>
+
+            <section class="lsec" id="checklist">
+                <h2>Чек-лист проверки</h2>
+
+                <div class="table-wrap">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Проверяемый элемент</th>
+                                <th>Да / Нет</th>
+                                <th>Комментарий</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>Сдан исходный файл</td><td class="answer-cell"></td><td></td></tr>
+                            <tr><td>Сдан PDF</td><td class="answer-cell"></td><td></td></tr>
+                            <tr><td>Сдан PNG</td><td class="answer-cell"></td><td></td></tr>
+                            <tr><td>Размер страницы 1701 на 1134</td><td class="answer-cell"></td><td></td></tr>
+                            <tr><td>Фон белый</td><td class="answer-cell"></td><td></td></tr>
+                            <tr><td>Рамка нанесена</td><td class="answer-cell"></td><td></td></tr>
+                            <tr><td>Заголовок содержит слова «План эвакуации»</td><td class="answer-cell"></td><td></td></tr>
+                            <tr><td>Указан номер этажа</td><td class="answer-cell"></td><td></td></tr>
+                            <tr><td>Контур 960 на 480</td><td class="answer-cell"></td><td></td></tr>
+                            <tr><td>Наружные стены толщиной 9</td><td class="answer-cell"></td><td></td></tr>
+                            <tr><td>Внутренние перегородки толщиной 5</td><td class="answer-cell"></td><td></td></tr>
+                            <tr><td>Семь помещений подписаны</td><td class="answer-cell"></td><td></td></tr>
+                            <tr><td>Девять проёмов выполнены</td><td class="answer-cell"></td><td></td></tr>
+                            <tr><td>Два эвакуационных выхода на противоположных торцах</td><td class="answer-cell"></td><td></td></tr>
+                            <tr><td>Аварийный выход обозначен</td><td class="answer-cell"></td><td></td></tr>
+                            <tr><td>Восемь основных путей сплошной зелёной линией</td><td class="answer-cell"></td><td></td></tr>
+                            <tr><td>Аварийный путь штриховой зелёной линией</td><td class="answer-cell"></td><td></td></tr>
+                            <tr><td>У всех путей есть стрелки направления</td><td class="answer-cell"></td><td></td></tr>
+                            <tr><td>Тринадцать знаков размещены</td><td class="answer-cell"></td><td></td></tr>
+                            <tr><td>Все знаки размером 28 на 28</td><td class="answer-cell"></td><td></td></tr>
+                            <tr><td>Знаки выходов зелёные, пожарные красные</td><td class="answer-cell"></td><td></td></tr>
+                            <tr><td>Отметка места синий круг 26</td><td class="answer-cell"></td><td></td></tr>
+                            <tr><td>Надпись «Вы находитесь здесь» есть</td><td class="answer-cell"></td><td></td></tr>
+                            <tr><td>Ориентация плана совпадает с реальным видом</td><td class="answer-cell"></td><td></td></tr>
+                            <tr><td>Текстовая часть содержит семь пунктов</td><td class="answer-cell"></td><td></td></tr>
+                            <tr><td>Указаны телефоны 101 или 112</td><td class="answer-cell"></td><td></td></tr>
+                            <tr><td>Кегль текста не менее 16</td><td class="answer-cell"></td><td></td></tr>
+                            <tr><td>Все надписи чёрного цвета</td><td class="answer-cell"></td><td></td></tr>
+                            <tr><td>Условные обозначения расшифрованы</td><td class="answer-cell"></td><td></td></tr>
+                            <tr><td>Знаки в блоке обозначений того же размера</td><td class="answer-cell"></td><td></td></tr>
+                            <tr><td>Указан разработчик в левом нижнем углу</td><td class="answer-cell"></td><td></td></tr>
+                            <tr><td>Есть пометка об учебной работе</td><td class="answer-cell"></td><td></td></tr>
+                            <tr><td>Посторонняя информация отсутствует</td><td class="answer-cell"></td><td></td></tr>
+                            <tr><td>Шесть слоёв созданы</td><td class="answer-cell"></td><td></td></tr>
+                            <tr><td>Скрытие слоя знаков работает</td><td class="answer-cell"></td><td></td></tr>
+                            <tr><td>Скрытие слоя путей работает</td><td class="answer-cell"></td><td></td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <section class="lsec" id="errors">
+                <h2>Типичные ошибки</h2>
+
+                <ul>
+                    <li><strong>Неверный размер страницы.</strong> Студент задаёт 600 на 400 вместо 1701 на 1134 и получает план размером 212 на 141 миллиметр.</li>
+                    <li><strong>Пути эвакуации не зелёные.</strong> Самая грубая ошибка. Часто рисуют красным по ассоциации с пожарной тематикой.</li>
+                    <li><strong>Аварийный путь сплошной.</strong> Студент не различает基本要求 к эвакуационным и аварийным выходам.</li>
+                    <li><strong>Нет стрелок направления.</strong> Линия есть, но непонятно, куда идти.</li>
+                    <li><strong>Нет отметки места размещения.</strong> Человек не может сопоставить план с реальностью.</li>
+                    <li><strong>Отметка есть, но без надписи.</strong> Синий круг без пояснения непонятен неподготовленному человеку.</li>
+                    <li><strong>План перевёрнут.</strong> Отметка стоит справа, а выходы обозначены наоборот.</li>
+                    <li><strong>Знаки разного размера.</strong> Огнетушитель крупный, извещатель мелкий.</li>
+                    <li><strong>Тонкие стены.</strong> Толщина 2 пункта вместо 9, при печати стены сливаются.</li>
+                    <li><strong>Мелкий шрифт.</strong> Кегль 10 вместо 16, текст не читается с расстояния.</li>
+                    <li><strong>Текстовая часть отсутствует или формальна.</strong> Написано «Действуйте согласно инструкции» без самой инструкции.</li>
+                    <li><strong>Нет телефонов вызова.</strong> Человек не знает, куда звонить.</li>
+                    <li><strong>Обозначения не расшифрованы.</strong> Символы есть, пояснений нет.</li>
+                    <li><strong>Нет пометки об учебной работе.</strong> Формально документ можно принять за реальный.</li>
+                    <li><strong>Посторонняя информация.</strong> Студент добавил логотип колледжа крупным размером или расписание занятий.</li>
+                    <li><strong>Все элементы на одном слое.</strong> Скрытие не работает.</li>
+                </ul>
+            </section>
+
+            <section class="lsec" id="kriterii">
+                <h2>Критерии выставления оценки</h2>
+
+                <div class="table-wrap">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Оценка</th>
+                                <th>Критерии</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>5</strong></td>
+                                <td>Все пункты чек-листа выполнены. Нормативные требования соблюдены, план понятен без пояснений, слои работают, сданы все файлы.</td>
+                            </tr>
+                            <tr>
+                                <td><strong>4</strong></td>
+                                <td>План верен, но есть одна или две мелкие недоработки в оформлении или комплектности файлов.</td>
+                            </tr>
+                            <tr>
+                                <td><strong>3</strong></td>
+                                <td>Планировка построена, но отсутствует текстовая часть или обозначения, знаки разного размера, нет отметки места.</td>
+                            </tr>
+                            <tr>
+                                <td><strong>2</strong></td>
+                                <td>Пути не зелёные, аварийный путь сплошной, план перевёрнут, размер листа неверный, работа не сдана или скопирована.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="info-box">
+                    <strong>Быстрая балльная схема</strong>
+                    Размер страницы и рамка 2 балла, планировка и толщина стен 3, проёмы и выходы 2, цвет и стиль путей 4, стрелки направления 2, знаки единого размера 3, отметка места и ориентация 3, текстовая часть 3, обозначения 2, сведения о разработчике 1, слои 1, комплектность файлов 1. Максимум 27 баллов. Оценка «5» от 25, «4» от 20, «3» от 14.
+                </div>
+            </section>
+
+            <section class="lsec" id="metod">
+                <h2>Методические указания</h2>
+
+                <ul>
+                    <li><strong>Это занятие о ценности человеческой жизни.</strong> Свяжите его с личностным результатом ЛР.07. План эвакуации — единственный документ курса, который напрямую адресован человеку в опасности.</li>
+                    <li><strong>Начните с проверки понимания.</strong> Покажите план без отметки места и спросите, куда идти. Студенты не смогут ответить. Это лучше любой лекции объясняет требование.</li>
+                    <li><strong>Требуйте цвет строго.</strong> Зелёный для путей — не рекомендация, а норматив. Работа с красными путями возвращается на переделку независимо от качества остального.</li>
+                    <li><strong>Проверяйте ориентацию действием.</strong> Попросите студента встать и показать рукой, где западный выход относительно плана. Если он путается, план перевёрнут.</li>
+                    <li><strong>Единый размер знаков проверяйте выборочно.</strong> Выделите три случайных знака и сравните размеры на вкладке расположения.</li>
+                    <li><strong>Текстовая часть — не формальность.</strong> Прочитайте вслух пункт инструкции. Если он звучит как канцелярский оборот, требуйте переписать проще.</li>
+                    <li><strong>Обязательна пометка об учебной работе.</strong> Объясните, что реальные планы разрабатывает организация со специальным разрешением и утверждает руководитель объекта.</li>
+                    <li><strong>Для слабой группы</strong> выдайте готовый файл с планировкой и проёмами. Студенты отрабатывают пути, знаки, отметку и текстовую часть.</li>
+                    <li><strong>Для сильной группы</strong> обязателен локальный план на второй странице и расчёт протяжённости путей.</li>
+                    <li><strong>Переход к следующему занятию.</strong> На ПЗ 33 начинается работа в отечественной системе автоматизированного проектирования «Компас-график». Подчеркните: draw.io мы использовали для схем, а для чертежей по государственным стандартам нужен специализированный инструмент.</li>
+                </ul>
+            </section>
+
+            <div class="lesson-nav">
+                <a href="../Lessons/tema2_2_pz26.html" class="nav-btn prev">← Вернуться к занятию</a>
+                <a href="../index.html" class="nav-btn next">К программе дисциплины →</a>
+            </div>
+
+        </main>
+    </div>
+
+</body>
+</html>
