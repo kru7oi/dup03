@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>КЛЮЧ · ПЗ 34 · Настройка и создание чертежа · ДУП.03</title>
+    <link rel="stylesheet" href="../styles.css">
+    <style>
+        .teacher-banner{background:#fef2f2;color:#991b1b;padding:12px 20px;text-align:center;font-weight:bold;border-bottom:2px solid #fecaca;font-size:1rem;letter-spacing:.05em;text-transform:uppercase}
+        .answer-cell{background-color:#f0fdf4 !important}
+    </style>
+</head>
+<body class="lesson-page">
+    <div class="teacher-banner">Только для преподавателя · Не распространять среди обучающихся</div>
+    <div class="lesson-topbar"><div class="container lt-inner"><a href="../Lessons/tema2_2_pz28.html" class="back-link">← Версия для студентов</a><span class="meta-tag">Ключ · ПЗ 34</span></div></div>
+    <div class="container lesson-layout">
+        <aside class="lesson-aside"><nav class="toc"><div class="toc-title">Содержание</div><a href="#opros">Опрос</a><a href="#etalon">Эталонные координаты</a><a href="#checklist">Чек-лист</a><a href="#errors">Типичные ошибки</a><a href="#metod">Методические указания</a></nav></aside>
+        <main class="lesson-main">
+            <div class="lesson-bcr">Раздел 2 <span class="sep">/</span> Тема 2.2 <span class="sep">/</span> ПЗ 34 <span class="sep">/</span> Ключ</div>
+            <h1>Материалы для проверки и проведения занятия</h1>
+            <div class="lesson-meta"><span class="meta-tag">Для служебного пользования</span></div>
+
+            <section class="lsec" id="opros">
+                <h2>Опрос в начале занятия</h2>
+                <ol>
+                    <li>Какие типы документов создаёт КОМПАС-График?</li>
+                    <li>Чем чертёж отличается от фрагмента?</li>
+                    <li>В каких единицах ведётся построение в КОМПАС?</li>
+                    <li>Как открыть стартовую страницу, если уже открыт документ?</li>
+                    <li>Что происходит с документом при аварийном завершении работы?</li>
+                </ol>
+                <div class="info-box">
+                    <strong>Ожидаемые ответы</strong>
+                    <ul>
+                        <li>Чертёж, Фрагмент, Спецификация, Текстовый документ.</li>
+                        <li>Чертёж имеет листы, рамку, основную надпись, виды с масштабом. Фрагмент — нет.</li>
+                        <li>В миллиметрах.</li>
+                        <li>Кнопка в начале строки вкладок документов.</li>
+                        <li>Автовосстановление из файла автосохранения при следующем обычном запуске.</li>
+                    </ul>
+                </div>
+            </section>
+
+            <section class="lsec" id="etalon">
+                <h2>Эталонные координаты</h2>
+                <div class="table-wrap">
+                    <table>
+                        <thead><tr><th>Элемент</th><th>X</th><th>Y</th><th>Ширина</th><th>Высота</th></tr></thead>
+                        <tbody>
+                            <tr><td>Страница (А3 альбомный)</td><td class="answer-cell">—</td><td class="answer-cell">—</td><td class="answer-cell">1190</td><td class="answer-cell">842</td></tr>
+                            <tr><td>Рамка листа</td><td class="answer-cell">28</td><td class="answer-cell">28</td><td class="answer-cell">1134</td><td class="answer-cell">786</td></tr>
+                            <tr><td>Основная надпись</td><td class="answer-cell">776</td><td class="answer-cell">673</td><td class="answer-cell">384</td><td class="answer-cell">139</td></tr>
+                            <tr><td>Корпус детали</td><td class="answer-cell">315</td><td class="answer-cell">253</td><td class="answer-cell">560</td><td class="answer-cell">336</td></tr>
+                            <tr><td>Отверстие лев. ниж.</td><td class="answer-cell">371</td><td class="answer-cell">309</td><td class="answer-cell">28</td><td class="answer-cell">28</td></tr>
+                            <tr><td>Отверстие прав. ниж.</td><td class="answer-cell">819</td><td class="answer-cell">309</td><td class="answer-cell">28</td><td class="answer-cell">28</td></tr>
+                            <tr><td>Отверстие лев. верх.</td><td class="answer-cell">371</td><td class="answer-cell">533</td><td class="answer-cell">28</td><td class="answer-cell">28</td></tr>
+                            <tr><td>Отверстие прав. верх.</td><td class="answer-cell">819</td><td class="answer-cell">533</td><td class="answer-cell">28</td><td class="answer-cell">28</td></tr>
+                            <tr><td>Центральное окно</td><td class="answer-cell">483</td><td class="answer-cell">365</td><td class="answer-cell">224</td><td class="answer-cell">112</td></tr>
+                            <tr><td>Ось горизонтальная</td><td class="answer-cell">от 315</td><td class="answer-cell">421</td><td class="answer-cell">до 875</td><td class="answer-cell">толщина 1</td></tr>
+                            <tr><td>Ось вертикальная</td><td class="answer-cell">595</td><td class="answer-cell">от 253</td><td class="answer-cell">до 589</td><td class="answer-cell">толщина 1</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="info-box">
+                    <strong>Допустимые отклонения:</strong> ±2 пункта для всех элементов. Если отклонение больше — координаты введены неверно или объект перетащен мышью.
+                </div>
+            </section>
+
+            <section class="lsec" id="checklist">
+                <h2>Чек-лист проверки</h2>
+                <div class="table-wrap">
+                    <table>
+                        <thead><tr><th>Элемент</th><th>Да/Нет</th><th>Комментарий</th></tr></thead>
+                        <tbody>
+                            <tr><td>Размер страницы 1190×842</td><td class="answer-cell"></td><td></td></tr>
+                            <tr><td>Рамка построена</td><td class="answer-cell"></td><td></td></tr>
+                            <tr><td>Основная надпись построена и заполнена</td><td class="answer-cell"></td><td></td></tr>
+                            <tr><td>Корпус детали 560×336</td><td class="answer-cell"></td><td></td></tr>
+                            <tr><td>4 отверстия диаметром 28</td><td class="answer-cell"></td><td></td></tr>
+                            <tr><td>Центральное окно 224×112</td><td class="answer-cell"></td><td></td></tr>
+                            <tr><td>Осевые линии штрихпунктиром</td><td class="answer-cell"></td><td></td></tr>
+                            <tr><td>Координаты введены численно</td><td class="answer-cell"></td><td>Проверить выборочно через вкладку «Расположить»</td></tr>
+                            <tr><td>Пояснение о коэффициенте пересчёта есть</td><td class="answer-cell"></td><td></td></tr>
+                            <tr><td>Сданы .drawio, .pdf, .png</td><td class="answer-cell"></td><td></td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <section class="lsec" id="errors">
+                <h2>Типичные ошибки</h2>
+                <ul>
+                    <li><strong>Размер страницы задан как 420×297</strong> вместо 1190×842. Лист получается втрое меньше А3.</li>
+                    <li><strong>Объекты перетаскиваются мышью</strong> вместо числового ввода. Координаты «плывут».</li>
+                    <li><strong>Основная надпись не заполнена</strong> или заполнена частично.</li>
+                    <li><strong>Отверстия не симметричны</strong> относительно осей. Признак: координаты не рассчитаны, а подобраны на глаз.</li>
+                    <li><strong>Осевые линии сплошные</strong> вместо штрихпунктира.</li>
+                    <li><strong>Нет пояснения о коэффициенте пересчёта.</strong> Без него чертёж невозможно интерпретировать.</li>
+                    <li><strong>Файл сохранён под неверным именем</strong> или не экспортирован в PDF.</li>
+                </ul>
+            </section>
+
+            <section class="lsec" id="metod">
+                <h2>Методические указания</h2>
+                <ul>
+                    <li><strong>Акцент на числовом вводе.</strong> Это главный навык, переносящийся из draw.io в КОМПАС. Требуйте, чтобы студенты вводили координаты через вкладку «Расположить», а не таскали мышью.</li>
+                    <li><strong>Покажите пересчёт явно.</strong> Напишите на доске: 200 мм × 2,8 = 560 пт. Пусть студенты сами посчитают хотя бы один размер перед построением.</li>
+                    <li><strong>Проверяйте координаты выборочно.</strong> Выделите случайный объект у студента и посмотрите координаты на вкладке «Расположить». Если они круглые (315, 253) — ввод был числовой. Если дробные (314.7, 253.3) — перетаскивание.</li>
+                    <li><strong>Свяжите с КОМПАС.</strong> Постоянно напоминайте: «В КОМПАС вы бы ввели 200 мм напрямую, здесь мы умножаем на 2,8. Логика та же — точный числовой ввод.»</li>
+                    <li><strong>Для слабой группы:</strong> выдайте готовый файл с рамкой и основной надписью, студенты строят только деталь.</li>
+                    <li><strong>Для сильной группы:</strong> добавьте простановку размеров вручную (линиями и текстом) и построение второго вида (сечения).</li>
+                </ul>
+            </section>
+
+            <div class="lesson-nav">
+                <a href="../Lessons/tema2_2_pz28.html" class="nav-btn prev">← Вернуться к занятию</a>
+                <a href="../index.html" class="nav-btn next">К программе дисциплины →</a>
+            </div>
+        </main>
+    </div>
+</body>
+</html>

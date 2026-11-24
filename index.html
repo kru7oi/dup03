@@ -1,551 +1,353 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ДУП.03 · Информационные системы управления в ЧС</title>
-    <link rel="stylesheet" href="styles.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ДУП.03 · Информационные системы управления в чрезвычайных ситуациях</title>
+<link rel="stylesheet" href="styles.css">
+<style>
+.idx-head{display:flex;gap:18px;align-items:flex-start;background:#fff;border:1px solid #e2e8f0;border-radius:16px;padding:22px 24px;box-shadow:0 4px 12px -2px rgba(0,0,0,.08);margin:20px 0 16px}
+.idx-emblem{font-size:2.2rem;line-height:1}
+.idx-head h1{font-size:1.3rem;font-weight:800;letter-spacing:-.02em;margin-bottom:6px}
+.idx-head p{color:#52525b;font-size:.92rem}
+.idx-meta{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:16px}
+.idx-sem{font-size:1.1rem;font-weight:800;margin:26px 0 12px;padding-bottom:8px;border-bottom:2px solid #c8102e;color:#8b0a1f}
+.idx-section{background:#fff;border:1px solid #e2e8f0;border-radius:14px;padding:18px 20px;margin-bottom:14px;box-shadow:0 1px 2px rgba(0,0,0,.05)}
+.idx-section-title{font-size:1rem;font-weight:700;margin-bottom:12px;display:flex;justify-content:space-between;gap:12px;align-items:baseline}
+.idx-hours{font-size:.76rem;font-weight:700;color:#52525b;background:#f4f4f5;border-radius:999px;padding:3px 10px;white-space:nowrap}
+.idx-theme{margin-top:14px;padding-top:12px;border-top:1px solid #f4f4f5}
+.idx-theme h4{font-size:.9rem;font-weight:700;color:#8b0a1f;margin-bottom:8px;display:flex;justify-content:space-between;gap:12px;align-items:baseline}
+ol.lessons{list-style:none;margin:0;padding:0}
+ol.lessons li{border-bottom:1px solid #f4f4f5}
+ol.lessons li:last-child{border-bottom:none}
+ol.lessons li a{display:flex;gap:10px;align-items:baseline;padding:8px 6px;text-decoration:none;color:#0a0a0a;font-size:.9rem;border-radius:8px;transition:.15s}
+ol.lessons li a:hover{background:#fee2e2;color:#8b0a1f}
+ol.lessons li a.todo{color:#71717a}
+ol.lessons li a.todo .ln{opacity:.55}
+ol.lessons li a.todo:hover{background:#f4f4f5;color:#3f3f46}
+.ln{flex:0 0 auto;min-width:40px;text-align:center;font-weight:800;font-size:.78rem;border-radius:6px;padding:2px 6px;background:#f4f4f5;color:#52525b}
+.ln.pz{background:#fee2e2;color:#8b0a1f}
+.ln.uz{background:#dbeafe;color:#1e3a8a}
+.lkind{flex:0 0 auto;font-size:.7rem;font-weight:700;color:#52525b;font-family:Consolas,Monaco,monospace}
+.lt{flex:1 1 auto}
+li.has-tool{display:flex;align-items:center;gap:10px;flex-wrap:wrap}
+li.has-tool>a:first-child{flex:1 1 auto;min-width:0}
+.tool-link{flex:0 0 auto;display:inline-flex;align-items:center;gap:6px;padding:5px 12px;border-radius:999px;background:#fee2e2;color:#8b0a1f;font-size:.78rem;font-weight:700;text-decoration:none;border:1px solid #fecaca;white-space:nowrap;transition:.15s}
+.tool-link:hover{background:#fecaca;transform:translateY(-1px)}
+.idx-footer{margin:30px 0 40px;padding-top:16px;border-top:1px solid #e2e8f0;color:#52525b;font-size:.85rem}
+.idx-footer p{margin-bottom:4px}
+</style>
 </head>
-<body>
-    <!-- TOPBAR -->
-    <div class="topbar">
-        <div class="container topbar-inner">
-            <a href="index.html" class="topbar-logo">
-                <span class="logo-mchs">🔥</span>
-                ДУП<span class="dot">·</span>03<span class="dot">·</span>Информационные системы управления в ЧС
-            </a>
-        </div>
-    </div>
+<body class="index-page">
+<div class="container">
 
-<!-- HERO -->
-<section class="hero">
-    <div class="container hero-inner">
-        <!-- Левая часть: Текст -->
-        <div class="hero-content">
-            <span class="hero-badge">Учебная дисциплина · 144 часа · 2026</span>
-            <h1>Информационные системы<br><strong>управления в ЧС</strong></h1>
-            <p>Изучаем <strong>автоматизированные системы</strong>, которые спасают жизни. От АРМ диспетчера до космического мониторинга пожаров.</p>
-            
-            <!-- Опционально: кнопки действий, если они есть -->
-            <!-- 
-            <div class="hero-actions">
-                <a href="#modules" class="btn btn-primary">Начать обучение</a>
-                <a href="#results" class="btn btn-secondary">Компетенции</a>
-            </div> 
-            -->
-        </div>
-
-        <!-- Правая часть: QR-код -->
-        <div class="hero-visual">
-            <figure class="qr-card">
-                <img src="qr-code.gif" alt="QR-код для быстрого доступа к материалам ДУП.03" loading="lazy">
-                <figcaption>Наведите камеру телефона,<br>чтобы открыть сайт</figcaption>
-            </figure>
-        </div>
+<header class="idx-head">
+    <div class="idx-emblem">🔥</div>
+    <div>
+        <h1>ДУП.03 · Информационные системы управления в чрезвычайных ситуациях</h1>
+        <p>ГБПОУ ТПСК им. В.М. Максимчука · специальность 20.02.04 Пожарная безопасность · курс 1</p>
     </div>
+</header>
+
+<section class="idx-meta">
+    <span class="meta-tag">144 часа</span>
+    <span class="meta-tag">Теория 4 ч</span>
+    <span class="meta-tag">Практика 140 ч</span>
+    <span class="meta-tag">Семестр 1 — 68 ч</span>
+    <span class="meta-tag">Семестр 2 — 76 ч</span>
+    <span class="meta-tag">Дифференцированный зачёт</span>
 </section>
 
-    <!-- MAIN -->
-    <main>
-        <div class="container">
-            <!-- ПРОГРАММА -->
-            <section id="program">
-                <h2 class="section-title">Программа дисциплины</h2>
-                <p class="lead"><strong>10 разделов</strong>, каждый — со своей тематикой. Начинаем с базовых АРМ и заканчиваем разработкой собственного решения для управления ЧС. Каждое занятие — <strong>45 минут</strong> с теорией и практикой.</p>
+<div class="info-box">
+    <strong>О нумерации.</strong>
+    Занятия пронумерованы сквозным порядком с 1 до 143 строго по тематическому плану рабочей программы.
+    Номер не зависит от раздела и темы и не начинается заново в каждом разделе.
+    УЗ — учебное занятие, ПЗ — практическое занятие. Дифференцированный зачёт проводится после занятия 143.
+    Серым отмечены занятия, материал которых ещё не разработан.
+</div>
 
-    <section id="search">
+<h2 class="idx-sem">Семестр 1</h2>
 
-    <div class="search-box">
-        <div class="search-field">
-            <input
-                id="topic-search"
-                class="search-input"
-                type="search"
-                placeholder="Например: модернизация, Excel, план эвакуации, сеть, ЧС"
-                autocomplete="off"
-                aria-label="Поиск по темам занятий">
-            <button id="search-clear" class="search-clear" type="button" hidden aria-label="Очистить поиск">×</button>
-        </div>
-        <div id="search-status" class="search-status" role="status" aria-live="polite"></div>
-    </div>
+<section class="idx-section" id="section1">
+<h3 class="idx-section-title"><span>Раздел 1. Автоматизированные рабочие места для решения профессиональных задач</span><span class="idx-hours">13 ч</span></h3>
 
-    <div id="search-empty" class="search-empty" hidden>
-        <p><strong>Ничего не найдено.</strong></p>
-        <p class="search-empty-hint">Попробуйте другое слово: например, «Word», «Excel», «сканер», «безопасность», «мониторинг».</p>
-    </div>
+<div class="idx-theme"><h4><span>Тема 1.1. Информационные и автоматизированные системы</span><span class="idx-hours">5 ч</span></h4>
+<ol class="lessons">
+<li><a href="Lessons/tema1_1_uz1.html" class="ready"><span class="ln uz">1</span><span class="lkind">УЗ</span> <span class="lt">Профессиональные автоматизированные системы</span></a></li>
+<li><a href="Lessons/tema1_1_uz2.html" class="ready"><span class="ln uz">2</span><span class="lkind">УЗ</span> <span class="lt">Виды профессиональных автоматизированных систем. Классификация информационных систем</span></a></li>
+<li><a href="Lessons/tema1_1_pz3.html" class="ready"><span class="ln pz">3</span><span class="lkind">ПЗ</span> <span class="lt">Проведение анализа АСУ различного назначения. Варианты использования АСУ различного назначения</span></a></li>
+<li><a href="Lessons/tema1_1_pz4.html" class="ready"><span class="ln pz">4</span><span class="lkind">ПЗ</span> <span class="lt">Использование информационных ресурсов для поиска информации</span></a></li>
+<li><a href="Lessons/tema1_1_pz5.html" class="ready"><span class="ln pz">5</span><span class="lkind">ПЗ</span> <span class="lt">Использование информационных ресурсов для хранения информации</span></a></li>
+</ol></div>
+
+<div class="idx-theme"><h4><span>Тема 1.2. Технические средства реализации информационных систем</span><span class="idx-hours">8 ч</span></h4>
+<ol class="lessons">
+<li><a href="Lessons/tema1_2_pz6.html" class="ready"><span class="ln pz">6</span><span class="lkind">ПЗ</span> <span class="lt">Проведение анализа аппаратного обеспечения информационных систем</span></a></li>
+<li><a href="Lessons/tema1_2_pz7.html" class="ready"><span class="ln pz">7</span><span class="lkind">ПЗ</span> <span class="lt">Проведение анализа комплектации компьютерного рабочего места в соответствии с целями его использования для различных направлений деятельности</span></a></li>
+<li><a href="Lessons/tema1_2_pz8.html" class="ready"><span class="ln pz">8</span><span class="lkind">ПЗ</span> <span class="lt">Проведение оценки технических характеристик материнской платы ПК</span></a></li>
+<li><a href="Lessons/tema1_2_pz9.html" class="ready"><span class="ln pz">9</span><span class="lkind">ПЗ</span> <span class="lt">Проведение оценки технических характеристик постоянного запоминающего устройства ПК</span></a></li>
+<li><a href="Lessons/tema1_2_pz10.html" class="ready"><span class="ln pz">10</span><span class="lkind">ПЗ</span> <span class="lt">Проведение оценки технических характеристик процессора ПК</span></a></li>
+<li><a href="Lessons/tema1_2_pz11.html" class="todo"><span class="ln pz">11</span><span class="lkind">ПЗ</span> <span class="lt">Проведение оценки возможностей внешней памяти ПК</span></a></li>
+<li><a href="Lessons/tema1_2_pz12.html" class="todo"><span class="ln pz">12</span><span class="lkind">ПЗ</span> <span class="lt">Проведение оценки устройств ввода информации</span></a></li>
+<li><a href="Lessons/tema1_2_pz13.html" class="todo"><span class="ln pz">13</span><span class="lkind">ПЗ</span> <span class="lt">Проведение оценки устройства вывода информации</span></a></li>
+</ol></div>
 </section>
 
-                <div class="modules">
-                    <!-- РАЗДЕЛ 1 -->
-                    <div class="module">
-                        <div class="module-header">
-                            <div class="mod-num">01</div>
-                            <div class="mod-info">
-                                <h3>Автоматизированные рабочие места для решения профессиональных задач</h3>
-                                <span>13 часов · 2 УЗ + 11 ПЗ · 🖥️ АРМ и железо</span>
-                            </div>
-                            <div class="mod-icon">▼</div>
-                        </div>
-                        <div class="module-body">
-                            <div class="mod-desc">
-                                <p><strong>Результат:</strong> умеешь анализировать АС различного назначения, подбирать комплектацию АРМ под профессиональные задачи, оценивать технические характеристики компонентов ПК. Знаешь реальные системы МЧС: АИС «Электронный инспектор», АС ОКСИОН, Система-112.</p>
-                            </div>
-                            <ul class="lessons">
-                                <li><a href="Lessons/tema1_1_zanyatie1.html"><span class="ln">УЗ</span>Профессиональные автоматизированные системы</a></li>
-                                <li><a href="Lessons/tema1_1_zanyatie2.html"><span class="ln">УЗ</span>Виды АС. Классификация ИС</a></li>
-                                <li><a href="Lessons/tema1_1_pz1.html"><span class="ln">1</span>Анализ АСУ различного назначения</a></li>
-                                <li><a href="Lessons/tema1_1_pz2.html"><span class="ln">2</span>Использование ИР для поиска информации</a></li>
-                                <li><a href="Lessons/tema1_1_pz3.html"><span class="ln">3</span>Использование ИР для хранения информации</a></li>
-                                <li><a href="Lessons/tema1_2_pz1.html"><span class="ln">4</span>Анализ аппаратного обеспечения ИС</a></li>
-                                <li><a href="Lessons/tema1_2_pz2.html"><span class="ln">5</span>Анализ комплектации компьютерного рабочего места</a></li>
-                                <li><a href="Lessons/tema1_2_pz3.html"><span class="ln">6</span>Оценка характеристик материнской платы</a></li>
-                                <li><a href="Lessons/tema1_2_pz4.html"><span class="ln">7</span>Оценка характеристик ПЗУ</a></li>
-                                <li><a href="Lessons/tema1_2_pz5.html"><span class="ln">8</span>Оценка характеристик процессора</a></li>
-                                <li><a href="Lessons/tema1_2_pz6.html"><span class="ln">9</span>Оценка возможностей внешней памяти ПК</a></li>
-                                <li><a href="Lessons/tema1_2_pz7.html"><span class="ln">10</span>Оценка устройств ввода информации</a></li>
-                                <li><a href="Lessons/tema1_2_pz8.html"><span class="ln">11</span>Оценка устройства вывода информации</a></li>
-                            </ul>
-                        </div>
-                    </div>
+<section class="idx-section" id="section2">
+<h3 class="idx-section-title"><span>Раздел 2. Базовые системные программные продукты и пакеты прикладных программ в области профессиональной деятельности</span><span class="idx-hours">35 ч</span></h3>
 
-                    <!-- РАЗДЕЛ 2 -->
-                    <div class="module">
-                        <div class="module-header">
-                            <div class="mod-num">02</div>
-                            <div class="mod-info">
-                                <h3>Базовые системные программные продукты и пакеты прикладных программ</h3>
-                                <span>35 часов · 35 ПЗ · 📝 Word, Excel, Visio, Компас</span>
-                            </div>
-                            <div class="mod-icon">▼</div>
-                        </div>
-                        <div class="module-body">
-                            <div class="mod-desc">
-                                <p><strong>Результат:</strong> свободно работаешь в MS Word, Excel, Visio, Компас-график. Создаёшь документы, таблицы, чертежи, планы эвакуации. Осваиваешь слепой метод печати.</p>
-                            </div>
-                            <ul class="lessons">
-                                <li><a href="Lessons/tema2_1_pz1.html"><span class="ln">1</span>Анализ базового программного обеспечения</a></li>
-                                <li><a href="Lessons/tema2_1_pz2.html"><span class="ln">2</span>Анализ прикладного программного обеспечения</a></li>
-                                <li><a href="Lessons/tema2_1_pz3.html"><span class="ln">3</span>Анализ базового программного обеспечения ПК</a></li>
-                                <li><a href="Lessons/tema2_1_pz4.html"><span class="ln">4</span>Освоение программ организации конференцсвязи</a></li>
-                                <li><a href="Lessons/tema2_1_pz5.html"><span class="ln">5</span>Освоение программ почтовых сервисов</a></li>
-                                <li><a href="Lessons/tema2_1_pz6.html"><span class="ln">6</span>Разработка плана модернизации пакетов прикладных программ</a></li>
-                                <li><a href="Lessons/tema2_2_pz1.html"><span class="ln">7</span>Анализ технологии обработки текстовой и числовой информации</a></li>
-                                <li><a href="Lessons/tema2_2_pz2.html"><span class="ln">8</span>Выполнение работ с помощью мультимедийных технологий</a></li>
-                                <li><a href="Lessons/tema2_2_pz3.html"><span class="ln">9</span>Выполнение работ с помощью технологий обработки графической информации</a></li>
-                                <li><a href="Lessons/tema2_2_pz4.html"><span class="ln">10</span>Возможности системы автоматизированного проектирования «Компас-график», MS Visio</a></li>
-                                <li><a href="Lessons/tema2_2_pz5.html"><span class="ln">11</span>Основные возможности Microsoft 365</a></li>
-                                <li><a href="Lessons/tema2_2_pz6.html"><span class="ln">12</span>Отработка навыка набора текста в MS Word</a></li>
-                                <li style="display:flex; align-items:center; gap:10px; flex-wrap:wrap;">
-    <a href="Lessons/tema2_2_pz7.html" style="flex:1 1 auto; min-width:0;">
-        <span class="ln">13</span>
-        Отработка навыка скоропечатания
-    </a>
+<div class="idx-theme"><h4><span>Тема 2.1. Программное обеспечение современного ПК</span><span class="idx-hours">6 ч</span></h4>
+<ol class="lessons">
+<li><a href="Lessons/tema2_1_pz14.html" class="todo"><span class="ln pz">14</span><span class="lkind">ПЗ</span> <span class="lt">Проведение анализа базового программного обеспечения</span></a></li>
+<li><a href="Lessons/tema2_1_pz15.html" class="todo"><span class="ln pz">15</span><span class="lkind">ПЗ</span> <span class="lt">Проведение анализа прикладного программного обеспечения</span></a></li>
+<li><a href="Lessons/tema2_1_pz16.html" class="todo"><span class="ln pz">16</span><span class="lkind">ПЗ</span> <span class="lt">Проведение анализа базового программного обеспечения ПК</span></a></li>
+<li><a href="Lessons/tema2_1_pz17.html" class="todo"><span class="ln pz">17</span><span class="lkind">ПЗ</span> <span class="lt">Освоение программ организации конференцсвязи</span></a></li>
+<li><a href="Lessons/tema2_1_pz18.html" class="todo"><span class="ln pz">18</span><span class="lkind">ПЗ</span> <span class="lt">Освоение программ почтовых сервисов</span></a></li>
+<li><a href="Lessons/tema2_1_pz19.html" class="todo"><span class="ln pz">19</span><span class="lkind">ПЗ</span> <span class="lt">Разработка плана модернизации пакетов прикладных программ на ПК для различных видов деятельности</span></a></li>
+</ol></div>
 
-    <a
-        href="Lessons/keyboard-trainer.html"
-        target="_blank"
-        rel="noopener"
-        style="
-            flex:0 0 auto;
-            display:inline-flex;
-            align-items:center;
-            gap:6px;
-            padding:6px 12px;
-            border-radius:999px;
-            background:#fee2e2;
-            color:#9b0a23;
-            font-size:.82rem;
-            font-weight:700;
-            text-decoration:none;
-            border:1px solid #fecaca;
-            white-space:nowrap;
-        "
-    >
-        ⌨ Тренажёр
-    </a>
-</li>
-                                <li><a href="Lessons/tema2_2_pz8.html"><span class="ln">14</span>Отработка навыка набора текста «вслепую»</a></li>
-                                <li><a href="Lessons/tema2_2_pz9.html"><span class="ln">15</span>Отработка навыка редактирования текста в MS Word</a></li>
-                                <li><a href="Lessons/tema2_2_pz10.html"><span class="ln">16</span>Отработка навыка форматирования текста в MS Word</a></li>
-                                <li><a href="Lessons/tema2_2_pz11.html"><span class="ln">17</span>Отработка навыка создания таблиц в MS Word</a></li>
-                                <li><a href="Lessons/tema2_2_pz12.html"><span class="ln">18</span>Создание документа с указанной структурой в MS Word</a></li>
-                                <li><a href="Lessons/tema2_2_pz13.html"><span class="ln">19</span>Создание автоматического оглавления в MS Word</a></li>
-                                <li><a href="Lessons/tema2_2_pz14.html"><span class="ln">20</span>Создание гиперссылок в MS Word</a></li>
-                                <li><a href="Lessons/tema2_2_pz15.html"><span class="ln">21</span>Основные возможности MS Excel</a></li>
-                                <li><a href="Lessons/tema2_2_pz16.html"><span class="ln">22</span>Применение формул в MS Excel</a></li>
-                                <li><a href="Lessons/tema2_2_pz17.html"><span class="ln">23</span>Составление отчёта в MS Excel</a></li>
-                                <li><a href="Lessons/tema2_2_pz18.html"><span class="ln">24</span>Построение графиков и диаграмм в MS Excel</a></li>
-                                <li><a href="Lessons/tema2_2_pz19.html"><span class="ln">25</span>Сбор исходных данных для создания базы данных в MS Excel</a></li>
-                                <li><a href="Lessons/tema2_2_pz20.html"><span class="ln">26</span>Создание формы для ввода данных в MS Excel</a></li>
-                                <li><a href="Lessons/tema2_2_pz21.html"><span class="ln">27</span>Добавление макросов в базу данных</a></li>
-                                <li><a href="Lessons/tema2_2_pz22.html"><span class="ln">28</span>Возможности программы MS Visio</a></li>
-                                <li><a href="Lessons/tema2_2_pz23.html"><span class="ln">29</span>Создание чертежа с использованием MS Visio</a></li>
-                                <li><a href="Lessons/tema2_2_pz24.html"><span class="ln">30</span>Создание плана здания с помощью MS Visio</a></li>
-                                <li><a href="Lessons/tema2_2_pz25.html"><span class="ln">31</span>Создание план-схемы объекта на местности с помощью MS Visio</a></li>
-                                <li><a href="Lessons/tema2_2_pz26.html"><span class="ln">32</span>Создание плана эвакуации с использованием MS Visio</a></li>
-                                <li><a href="Lessons/tema2_2_pz27.html"><span class="ln">33</span>Интерфейс «Компас-график» и основные команды</a></li>
-                                <li><a href="Lessons/tema2_2_pz28.html"><span class="ln">34</span>Настройка системы, создание и сохранение чертежа в «Компас-график»</a></li>
-                                <li><a href="Lessons/tema2_2_pz29.html"><span class="ln">35</span>Работа с менеджером документа и настройки чертежа в «Компас-график»</a></li>
-                                <li><a href="Lessons/tema2_3_pz1.html"><span class="ln">36</span>Ввод информации с бумажных носителей с помощью сканера</a></li>
-                            </ul>
-                        </div>
-                    </div>
+<div class="idx-theme"><h4><span>Тема 2.2. Технология обработки информации</span><span class="idx-hours">29 ч</span></h4>
+<ol class="lessons">
+<li><a href="Lessons/tema2_2_pz20.html" class="todo"><span class="ln pz">20</span><span class="lkind">ПЗ</span> <span class="lt">Проведение анализа технологии обработки текстовой и числовой информации</span></a></li>
+<li><a href="Lessons/tema2_2_pz21.html" class="todo"><span class="ln pz">21</span><span class="lkind">ПЗ</span> <span class="lt">Проведение анализа выполнения работ с помощью мультимедийных технологий</span></a></li>
+<li><a href="Lessons/tema2_2_pz22.html" class="todo"><span class="ln pz">22</span><span class="lkind">ПЗ</span> <span class="lt">Проведение анализа выполнения работ с помощью технологий обработки графической информации</span></a></li>
+<li><a href="Lessons/tema2_2_pz23.html" class="ready"><span class="ln pz">23</span><span class="lkind">ПЗ</span> <span class="lt">Проведение анализа возможностей системы автоматизированного проектирования «Компас-график», MS Visio</span></a></li>
+<li><a href="Lessons/tema2_2_pz24.html" class="ready"><span class="ln pz">24</span><span class="lkind">ПЗ</span> <span class="lt">Проведение анализа основных возможностей Microsoft 365</span></a></li>
+<li><a href="Lessons/tema2_2_pz25.html" class="ready"><span class="ln pz">25</span><span class="lkind">ПЗ</span> <span class="lt">Отработка навыка набора текста в MS Word</span></a></li>
+<li class="has-tool"><a href="Lessons/tema2_2_pz26.html" class="ready"><span class="ln pz">26</span><span class="lkind">ПЗ</span> <span class="lt">Отработка навыка скоропечатания</span></a> <a href="Lessons/keyboard-trainer.html" class="tool-link" target="_blank" rel="noopener">⌨ Тренажёр</a></li>
+<li><a href="Lessons/tema2_2_pz27.html" class="ready"><span class="ln pz">27</span><span class="lkind">ПЗ</span> <span class="lt">Отработка навыка набора текста «вслепую»</span></a></li>
+<li><a href="Lessons/tema2_2_pz28.html" class="ready"><span class="ln pz">28</span><span class="lkind">ПЗ</span> <span class="lt">Отработка навыка редактирования текста в MS Word</span></a></li>
+<li><a href="Lessons/tema2_2_pz29.html" class="ready"><span class="ln pz">29</span><span class="lkind">ПЗ</span> <span class="lt">Отработка навыка форматирования текста в MS Word</span></a></li>
+<li><a href="Lessons/tema2_2_pz30.html" class="ready"><span class="ln pz">30</span><span class="lkind">ПЗ</span> <span class="lt">Отработка навыка создания таблиц в MS Word</span></a></li>
+<li><a href="Lessons/tema2_2_pz31.html" class="ready"><span class="ln pz">31</span><span class="lkind">ПЗ</span> <span class="lt">Создание документа с указанной структурой в MS Word</span></a></li>
+<li><a href="Lessons/tema2_2_pz32.html" class="ready"><span class="ln pz">32</span><span class="lkind">ПЗ</span> <span class="lt">Создание автоматического оглавления в MS Word</span></a></li>
+<li><a href="Lessons/tema2_2_pz33.html" class="ready"><span class="ln pz">33</span><span class="lkind">ПЗ</span> <span class="lt">Создание гиперссылок в MS Word</span></a></li>
+<li><a href="Lessons/tema2_2_pz34.html" class="ready"><span class="ln pz">34</span><span class="lkind">ПЗ</span> <span class="lt">Проведение анализа основных возможностей MS Excel</span></a></li>
+<li><a href="Lessons/tema2_2_pz35.html" class="ready"><span class="ln pz">35</span><span class="lkind">ПЗ</span> <span class="lt">Отработка навыков применения формул в MS Excel</span></a></li>
+<li><a href="Lessons/tema2_2_pz36.html" class="ready"><span class="ln pz">36</span><span class="lkind">ПЗ</span> <span class="lt">Составление отчета в MS Excel</span></a></li>
+<li><a href="Lessons/tema2_2_pz37.html" class="ready"><span class="ln pz">37</span><span class="lkind">ПЗ</span> <span class="lt">Построение графиков и диаграмм в MS Excel</span></a></li>
+<li><a href="Lessons/tema2_2_pz38.html" class="ready"><span class="ln pz">38</span><span class="lkind">ПЗ</span> <span class="lt">Проведение сбора исходных данных для создания базы данных в MS Excel</span></a></li>
+<li><a href="Lessons/tema2_2_pz39.html" class="ready"><span class="ln pz">39</span><span class="lkind">ПЗ</span> <span class="lt">Создание формы для ввода данных в MS Excel</span></a></li>
+<li><a href="Lessons/tema2_2_pz40.html" class="ready"><span class="ln pz">40</span><span class="lkind">ПЗ</span> <span class="lt">Добавление макросов в базу данных</span></a></li>
+<li><a href="Lessons/tema2_2_pz41.html" class="ready"><span class="ln pz">41</span><span class="lkind">ПЗ</span> <span class="lt">Проведение анализа возможностей программы MS Visio</span></a></li>
+<li><a href="Lessons/tema2_2_pz42.html" class="ready"><span class="ln pz">42</span><span class="lkind">ПЗ</span> <span class="lt">Создание чертежа с использованием MS Visio</span></a></li>
+<li><a href="Lessons/tema2_2_pz43.html" class="ready"><span class="ln pz">43</span><span class="lkind">ПЗ</span> <span class="lt">Создание плана здания с помощью MS Visio</span></a></li>
+<li><a href="Lessons/tema2_2_pz44.html" class="ready"><span class="ln pz">44</span><span class="lkind">ПЗ</span> <span class="lt">Создание план-схемы объекта на местности с помощью MS Visio</span></a></li>
+<li><a href="Lessons/tema2_2_pz45.html" class="ready"><span class="ln pz">45</span><span class="lkind">ПЗ</span> <span class="lt">Создание плана эвакуации с использованием MS Visio</span></a></li>
+<li><a href="Lessons/tema2_2_pz46.html" class="ready"><span class="ln pz">46</span><span class="lkind">ПЗ</span> <span class="lt">Ознакомление с интерфейсом приложения и основными командами по выполнению чертежа в «Компас-график»</span></a></li>
+<li><a href="Lessons/tema2_2_pz47.html" class="todo"><span class="ln pz">47</span><span class="lkind">ПЗ</span> <span class="lt">Отработка навыка настройки системы, создания и сохранения чертежа в «Компас-график»</span></a></li>
+<li><a href="Lessons/tema2_2_pz48.html" class="todo"><span class="ln pz">48</span><span class="lkind">ПЗ</span> <span class="lt">Отработка навыка работы с менеджером документа и выполнения настроек чертежа в «Компас-график»</span></a></li>
+</ol></div>
 
-                    <!-- РАЗДЕЛ 3 -->
-                    <div class="module">
-                        <div class="module-header">
-                            <div class="mod-num">03</div>
-                            <div class="mod-info">
-                                <h3>Телекоммуникационные технологии в профессиональной деятельности</h3>
-                                <span>15 часов · 15 ПЗ · 🌐 Сети, Интернет, Access</span>
-                            </div>
-                            <div class="mod-icon">▼</div>
-                        </div>
-                        <div class="module-body">
-                            <div class="mod-desc">
-                                <p><strong>Результат:</strong> понимаешь устройство компьютерных сетей, работаешь в локальной сети, создаёшь базы данных в MS Access, выполняешь запросы, фильтрацию и сортировку.</p>
-                            </div>
-                            <ul class="lessons">
-                                <li><a href="Lessons/tema3_1_pz1.html"><span class="ln">1</span>Анализ компонентов вычислительной сети</a></li>
-                                <li><a href="Lessons/tema3_1_pz2.html"><span class="ln">2</span>Классификация сетей по масштабам, топологии, архитектуре и стандартам</a></li>
-                                <li><a href="Lessons/tema3_1_pz3.html"><span class="ln">3</span>Основные службы Интернета</a></li>
-                                <li><a href="Lessons/tema3_1_pz4.html"><span class="ln">4</span>Работа в локальной вычислительной сети</a></li>
-                                <li><a href="Lessons/tema3_2_pz1.html"><span class="ln">5</span>Анализ работы поисковых служб и серверов. СУБД. Банки данных</a></li>
-                                <li><a href="Lessons/tema3_2_pz2.html"><span class="ln">6</span>Возможности СУБД «Access»</a></li>
-                                <li><a href="Lessons/tema3_2_pz3.html"><span class="ln">7</span>Поиск информации в автоматизированных поисковых системах</a></li>
-                                <li><a href="Lessons/tema3_2_pz4.html"><span class="ln">8</span>Составление базы данных в СУБД «Access»</a></li>
-                                <li><a href="Lessons/tema3_2_pz5.html"><span class="ln">9</span>Определение структуры и типа данных</a></li>
-                                <li><a href="Lessons/tema3_2_pz6.html"><span class="ln">10</span>Поиск и фильтрация информации в СУБД «Access»</a></li>
-                                <li><a href="Lessons/tema3_2_pz7.html"><span class="ln">11</span>Сортировка информации в СУБД «Access»</a></li>
-                                <li><a href="Lessons/tema3_2_pz8.html"><span class="ln">12</span>Вычисления в СУБД «Access»</a></li>
-                                <li><a href="Lessons/tema3_2_pz9.html"><span class="ln">13</span>Работа в СУБД «Access» в режиме запуска</a></li>
-                                <li><a href="Lessons/tema3_2_pz10.html"><span class="ln">14</span>Работа в СУБД «Access» в режиме конструктора</a></li>
-                                <li><a href="Lessons/tema3_2_pz11.html"><span class="ln">15</span>Работа в СУБД «Access» в режиме выполнения</a></li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <!-- РАЗДЕЛ 4 -->
-                    <div class="module">
-                        <div class="module-header">
-                            <div class="mod-num">04</div>
-                            <div class="mod-info">
-                                <h3>Основные методы и приёмы обеспечения информационной безопасности</h3>
-                                <span>4 часа · 2 УЗ + 2 ПЗ · 🔒 ИБ, УК РФ</span>
-                            </div>
-                            <div class="mod-icon">▼</div>
-                        </div>
-                        <div class="module-body">
-                            <div class="mod-desc">
-                                <p><strong>Результат:</strong> знаешь виды компьютерных преступлений по УК РФ, умеешь организовывать безопасную работу с компьютерной техникой. <strong>Зачёт по разделу.</strong></p>
-                            </div>
-                            <ul class="lessons">
-                                <li><a href="Lessons/tema4_1_zanyatie1.html"><span class="ln">УЗ</span>Проблемы защиты информации в информационном обществе</a></li>
-                                <li><a href="Lessons/tema4_1_pz1.html"><span class="ln">1</span>Анализ типов компьютерных преступлений (УК РФ)</a></li>
-                                <li><a href="Lessons/tema4_1_pz2.html"><span class="ln">2</span>Организация безопасной работы с компьютерной техникой</a></li>
-                                <li><a href="Lessons/tema4_1_zachet.html"><span class="ln">✓</span>Зачёт по разделу 4</a></li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <!-- РАЗДЕЛ 5 -->
-                    <div class="module">
-                        <div class="module-header">
-                            <div class="mod-num">05</div>
-                            <div class="mod-info">
-                                <h3>Введение в информационные технологии управления в ЧС</h3>
-                                <span>10 часов · 10 ПЗ · 🚨 Основы ЧС, ИС</span>
-                            </div>
-                            <div class="mod-icon">▼</div>
-                        </div>
-                        <div class="module-body">
-                            <div class="mod-desc">
-                                <p><strong>Результат:</strong> классифицируешь ЧС, знаешь нормативно-правовую базу, понимаешь жизненный цикл ИС и применяешь современные технологии в управлении ЧС.</p>
-                            </div>
-                            <ul class="lessons">
-                                <li><a href="Lessons/tema5_1_pz1.html"><span class="ln">1</span>Понятие чрезвычайной ситуации. Классификация ЧС</a></li>
-                                <li><a href="Lessons/tema5_1_pz2.html"><span class="ln">2</span>Нормативно-правовая база в области информатизации управления ЧС</a></li>
-                                <li><a href="Lessons/tema5_1_pz3.html"><span class="ln">3</span>Изучение документов, регулирующих использование ИТ в ЧС</a></li>
-                                <li><a href="Lessons/tema5_1_pz4.html"><span class="ln">4</span>Разбор примеров ЧС и их категоризация</a></li>
-                                <li><a href="Lessons/tema5_2_pz1.html"><span class="ln">5</span>Понятие информационной системы (ИС)</a></li>
-                                <li><a href="Lessons/tema5_2_pz2.html"><span class="ln">6</span>Классификации ИС, применяемых в управлении ЧС</a></li>
-                                <li><a href="Lessons/tema5_2_pz3.html"><span class="ln">7</span>Жизненный цикл информационных систем</a></li>
-                                <li><a href="Lessons/tema5_2_pz4.html"><span class="ln">8</span>Существующие ИС, применяемые в управлении ЧС</a></li>
-                                <li><a href="Lessons/tema5_2_pz5.html"><span class="ln">9</span>Разработка этапов жизненного цикла для гипотетической ИС</a></li>
-                                <li><a href="Lessons/tema5_2_pz6.html"><span class="ln">10</span>Применение современных технологий в управлении ЧС</a></li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <!-- РАЗДЕЛ 6 -->
-                    <div class="module">
-                        <div class="module-header">
-                            <div class="mod-num">06</div>
-                            <div class="mod-info">
-                                <h3>Информационные системы для управления ЧС</h3>
-                                <span>14 часов · 14 ПЗ · 🗺️ ГИС, мониторинг, СППР</span>
-                            </div>
-                            <div class="mod-icon">▼</div>
-                        </div>
-                        <div class="module-body">
-                            <div class="mod-desc">
-                                <p><strong>Результат:</strong> работаешь с ГИС-технологиями, создаёшь карты зон ЧС, настраиваешь системы мониторинга, разрабатываешь прототипы СППР.</p>
-                            </div>
-                            <ul class="lessons">
-                                <li><a href="Lessons/tema6_1_pz1.html"><span class="ln">1</span>Анализ ГИС-технологий</a></li>
-                                <li><a href="Lessons/tema6_1_pz2.html"><span class="ln">2</span>Применение ГИС для мониторинга и прогнозирования</a></li>
-                                <li><a href="Lessons/tema6_1_pz3.html"><span class="ln">3</span>Создание карты зоны ЧС с использованием ГИС-инструментов</a></li>
-                                <li><a href="Lessons/tema6_2_pz1.html"><span class="ln">4</span>Анализ технологии сбора и обработки данных</a></li>
-                                <li><a href="Lessons/tema6_2_pz2.html"><span class="ln">5</span>Прогнозирование природных и техногенных катастроф</a></li>
-                                <li><a href="Lessons/tema6_2_pz3.html"><span class="ln">6</span>Применение системы раннего предупреждения ЧС</a></li>
-                                <li><a href="Lessons/tema6_2_pz4.html"><span class="ln">7</span>Оценка рисков на основе геоданных</a></li>
-                                <li><a href="Lessons/tema6_2_pz5.html"><span class="ln">8</span>Настройка системы мониторинга для условной ЧС</a></li>
-                                <li><a href="Lessons/tema6_2_pz6.html"><span class="ln">9</span>Использование данных для прогнозирования природных катастроф</a></li>
-                                <li><a href="Lessons/tema6_3_pz1.html"><span class="ln">10</span>Анализ архитектуры и функций СППР</a></li>
-                                <li><a href="Lessons/tema6_3_pz2.html"><span class="ln">11</span>Использование СППР в управлении ЧС</a></li>
-                                <li><a href="Lessons/tema6_3_pz3.html"><span class="ln">12</span>Разработка прототипа системы поддержки принятия решений</a></li>
-                                <li><a href="Lessons/tema6_3_pz4.html"><span class="ln">13</span>Использование СППР для оценки рисков</a></li>
-                                <li><a href="Lessons/tema6_3_pz5.html"><span class="ln">14</span>Моделирование ЧС и анализ данных в реальном времени</a></li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <!-- РАЗДЕЛ 7 -->
-                    <div class="module">
-                        <div class="module-header">
-                            <div class="mod-num">07</div>
-                            <div class="mod-info">
-                                <h3>Технологии обработки и анализа данных в ЧС</h3>
-                                <span>15 часов · 15 ПЗ · 📊 Big Data, ИИ, IoT</span>
-                            </div>
-                            <div class="mod-icon">▼</div>
-                        </div>
-                        <div class="module-body">
-                            <div class="mod-desc">
-                                <p><strong>Результат:</strong> понимаешь большие данные, используешь ИИ для прогнозирования ЧС, работаешь с IoT-сенсорами и сенсорными сетями.</p>
-                            </div>
-                            <ul class="lessons">
-                                <li><a href="Lessons/tema7_1_pz1.html"><span class="ln">1</span>Понятие больших данных</a></li>
-                                <li><a href="Lessons/tema7_1_pz2.html"><span class="ln">2</span>Методы анализа больших данных для прогнозирования ЧС</a></li>
-                                <li><a href="Lessons/tema7_1_pz3.html"><span class="ln">3</span>Примеры использования Big Data в управлении ЧС</a></li>
-                                <li><a href="Lessons/tema7_1_pz4.html"><span class="ln">4</span>Разработка методики сбора данных для анализа ЧС</a></li>
-                                <li><a href="Lessons/tema7_1_pz5.html"><span class="ln">5</span>Использование инструментов для анализа данных о ЧС</a></li>
-                                <li><a href="Lessons/tema7_1_pz6.html"><span class="ln">6</span>Создание графиков и диаграмм для представления данных о ЧС</a></li>
-                                <li><a href="Lessons/tema7_2_pz1.html"><span class="ln">7</span>Основы ИИ и машинного обучения</a></li>
-                                <li><a href="Lessons/tema7_2_pz2.html"><span class="ln">8</span>Применение ИИ для анализа рисков и управления ресурсами</a></li>
-                                <li><a href="Lessons/tema7_2_pz3.html"><span class="ln">9</span>Примеры использования ИИ в ликвидации последствий ЧС</a></li>
-                                <li><a href="Lessons/tema7_2_pz4.html"><span class="ln">10</span>Разработка модели для прогнозирования ЧС</a></li>
-                                <li><a href="Lessons/tema7_3_pz1.html"><span class="ln">11</span>Применение IoT и сенсорных технологий</a></li>
-                                <li><a href="Lessons/tema7_3_pz2.html"><span class="ln">12</span>Использование IoT для мониторинга и управления в ЧС</a></li>
-                                <li><a href="Lessons/tema7_3_pz3.html"><span class="ln">13</span>Отработка данных с сенсоров для мониторинга ЧС</a></li>
-                                <li><a href="Lessons/tema7_3_pz4.html"><span class="ln">14</span>Использование ИИ для распределения ресурсов в ЧС</a></li>
-                                <li><a href="Lessons/tema7_3_pz5.html"><span class="ln">15</span>Разбор реальных примеров использования больших данных в ЧС</a></li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <!-- РАЗДЕЛ 8 -->
-                    <div class="module">
-                        <div class="module-header">
-                            <div class="mod-num">08</div>
-                            <div class="mod-info">
-                                <h3>Коммуникационные технологии в управлении ЧС</h3>
-                                <span>12 часов · 12 ПЗ · 📡 Связь, соцсети, мобильные</span>
-                            </div>
-                            <div class="mod-icon">▼</div>
-                        </div>
-                        <div class="module-body">
-                            <div class="mod-desc">
-                                <p><strong>Результат:</strong> организуешь устойчивую связь в условиях ЧС, анализируешь спутниковую и мобильную связь, разрабатываешь стратегию информирования населения через соцсети.</p>
-                            </div>
-                            <ul class="lessons">
-                                <li><a href="Lessons/tema8_1_pz1.html"><span class="ln">1</span>Анализ технологии связи в условиях ЧС</a></li>
-                                <li><a href="Lessons/tema8_1_pz2.html"><span class="ln">2</span>Организация устойчивой связи в чрезвычайных ситуациях</a></li>
-                                <li><a href="Lessons/tema8_1_pz3.html"><span class="ln">3</span>Анализ спутниковой системы связи</a></li>
-                                <li><a href="Lessons/tema8_1_pz4.html"><span class="ln">4</span>Анализ мобильной системы связи. Радиосвязь</a></li>
-                                <li><a href="Lessons/tema8_1_pz5.html"><span class="ln">5</span>Организация системы связи для условной ЧС</a></li>
-                                <li><a href="Lessons/tema8_1_pz6.html"><span class="ln">6</span>Анализ устойчивости связи в различных условиях</a></li>
-                                <li><a href="Lessons/tema8_2_pz1.html"><span class="ln">7</span>Роль социальных сетей в информировании населения</a></li>
-                                <li><a href="Lessons/tema8_2_pz2.html"><span class="ln">8</span>Анализ мобильных приложений для управления ЧС</a></li>
-                                <li><a href="Lessons/tema8_2_pz3.html"><span class="ln">9</span>Анализ данных из социальных сетей для информирования о ЧС</a></li>
-                                <li><a href="Lessons/tema8_2_pz4.html"><span class="ln">10</span>Создание прототипа мобильного приложения для управления ЧС</a></li>
-                                <li><a href="Lessons/tema8_2_pz5.html"><span class="ln">11</span>Разработка стратегии информирования населения</a></li>
-                                <li><a href="Lessons/tema8_2_pz6.html"><span class="ln">12</span>Моделирование работы связи в условиях ЧС</a></li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <!-- РАЗДЕЛ 9 -->
-                    <div class="module">
-                        <div class="module-header">
-                            <div class="mod-num">09</div>
-                            <div class="mod-info">
-                                <h3>Управление информационной безопасностью в ЧС</h3>
-                                <span>9 часов · 9 ПЗ · 🔐 Криптография, защита данных</span>
-                            </div>
-                            <div class="mod-icon">▼</div>
-                        </div>
-                        <div class="module-body">
-                            <div class="mod-desc">
-                                <p><strong>Результат:</strong> идентифицируешь угрозы ИБ в условиях ЧС, применяешь криптографические методы, обеспечиваешь отказоустойчивость ИС, разрабатываешь планы восстановления данных.</p>
-                            </div>
-                            <ul class="lessons">
-                                <li><a href="Lessons/tema9_1_pz1.html"><span class="ln">1</span>Возможные угрозы информационной безопасности в условиях ЧС</a></li>
-                                <li><a href="Lessons/tema9_1_pz2.html"><span class="ln">2</span>Идентификация угроз информационной безопасности в ЧС</a></li>
-                                <li><a href="Lessons/tema9_1_pz3.html"><span class="ln">3</span>Разработка плана защиты данных для ИС</a></li>
-                                <li><a href="Lessons/tema9_2_pz1.html"><span class="ln">4</span>Методы защиты информации. Криптографические методы</a></li>
-                                <li><a href="Lessons/tema9_2_pz2.html"><span class="ln">5</span>Обеспечение отказоустойчивости ИС</a></li>
-                                <li><a href="Lessons/tema9_2_pz3.html"><span class="ln">6</span>Шифрование данных для защиты информации</a></li>
-                                <li><a href="Lessons/tema9_2_pz4.html"><span class="ln">7</span>Проверка уязвимостей в условной ИС</a></li>
-                                <li><a href="Lessons/tema9_2_pz5.html"><span class="ln">8</span>Разработка плана восстановления данных</a></li>
-                                <li><a href="Lessons/tema9_2_pz6.html"><span class="ln">9</span>Анализ примеров утечек данных в ЧС</a></li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <!-- РАЗДЕЛ 10 -->
-                    <div class="module">
-                        <div class="module-header">
-                            <div class="mod-num">10</div>
-                            <div class="mod-info">
-                                <h3>Практические аспекты использования ИТ в управлении ЧС</h3>
-                                <span>15 часов · 15 ПЗ · 🎯 Финальный проект</span>
-                            </div>
-                            <div class="mod-icon">▼</div>
-                        </div>
-                        <div class="module-body">
-                            <div class="mod-desc">
-                                <p><strong>Результат:</strong> создаёшь карты зон ЧС, обрабатываешь данные, разрабатываешь собственное решение для управления ЧС с помощью ИТ. <strong>Готовишься к дифференцированному зачёту.</strong></p>
-                            </div>
-                            <ul class="lessons">
-                                <li><a href="Lessons/tema10_1_pz1.html"><span class="ln">1</span>Создание карт зон чрезвычайной ситуации</a></li>
-                                <li><a href="Lessons/tema10_1_pz2.html"><span class="ln">2</span>Обработка данных о ЧС с использованием аналитических инструментов</a></li>
-                                <li><a href="Lessons/tema10_1_pz3.html"><span class="ln">3</span>Создание алгоритма для автоматизации процессов в ЧС</a></li>
-                                <li><a href="Lessons/tema10_1_pz4.html"><span class="ln">4</span>Проведение учения с использованием ИС</a></li>
-                                <li><a href="Lessons/tema10_1_pz5.html"><span class="ln">5</span>Разбор реальных примеров использования ИТ в ЧС</a></li>
-                                <li><a href="Lessons/tema10_1_pz6.html"><span class="ln">6</span>Распределение ресурсов с использованием ИС</a></li>
-                                <li><a href="Lessons/tema10_1_pz7.html"><span class="ln">7</span>Создание базы данных для управления ресурсами в ЧС</a></li>
-                                <li><a href="Lessons/tema10_1_pz8.html"><span class="ln">8</span>Оценивание эффективности применения ИС в ЧС</a></li>
-                                <li><a href="Lessons/tema10_1_pz9.html"><span class="ln">9</span>Разработка пользовательского интерфейса для ИС</a></li>
-                                <li><a href="Lessons/tema10_1_pz10.html"><span class="ln">10</span>Проведение тестов для проверки работоспособности ИС</a></li>
-                                <li><a href="Lessons/tema10_1_pz11.html"><span class="ln">11</span>Создание сценариев для моделирования ЧС</a></li>
-                                <li><a href="Lessons/tema10_1_pz12.html"><span class="ln">12</span>Обработка данных с датчиков для мониторинга ЧС</a></li>
-                                <li><a href="Lessons/tema10_1_pz13.html"><span class="ln">13</span>Подготовка отчётов на основе данных о ЧС</a></li>
-                                <li><a href="Lessons/tema10_1_pz14.html"><span class="ln">14</span>Разработка программы обучения для работы с ИС</a></li>
-                                <li><a href="Lessons/tema10_1_pz15.html"><span class="ln">15</span>Разработка собственного решения для управления ЧС с помощью ИТ</a></li>
-                                <li><a href="Lessons/differentiated_zachet.html"><span class="ln">✓</span>Дифференцированный зачёт</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <section id="history-it">
-    <h2 class="section-title">Эволюция информационных технологий в системе МЧС</h2>
-    <p class="lead">Понимание истории развития ИТ помогает осознать масштаб современных возможностей управления кризисными ситуациями. От ручного учета до искусственного интеллекта — путь длиной в несколько десятилетий.</p>
-
-    <div class="timeline-horizontal" style="display:flex; flex-direction:column; gap:24px;">
-        
-        <!-- Эпоха 1 -->
-        <div class="feature" style="border-left:4px solid var(--c-mut); padding-left:20px;">
-            <span class="meta-tag" style="background:#e2e8f0; color:#475569;">1970–1990-е гг.</span>
-            <h3>«Бумажная эпоха» и первые ЭВМ</h3>
-            <p>Управление пожарной охраной велось преимущественно на бумаге: карточные индексы объектов, телефонные справочники, журналы регистрации вызовов. Первые вычислительные машины (ЕС ЭВМ) использовались только для статистики и расчета сил средств по жестким нормативам. Скорость принятия решений зависела от человека и качества связи.</p>
-        </div>
-
-        <!-- Эпоха 2 -->
-        <div class="feature" style="border-left:4px solid #fbbf24; padding-left:20px;">
-            <span class="meta-tag" style="background:#fef3c7; color:#b45309;">2000-е гг.</span>
-            <h3>Компьютеризация диспетчерских служб</h3>
-            <p>Массовое внедрение персональных компьютеров в подразделениях. Появление первых автоматизированных рабочих мест (АРМ) диспетчера. Внедрение электронных карт городов, баз данных гидрантов и водоисточников. Начало создания Единой системы 112. Информационные потоки стали быстрее, но оставались разрозненными между ведомствами.</p>
-        </div>
-
-        <!-- Эпоха 3 -->
-        <div class="feature" style="border-left:4px solid var(--c-pri); padding-left:20px;">
-            <span class="meta-tag" style="background:var(--c-pri-l); color:var(--c-pri-d);">2010-е гг.</span>
-            <h3>Интеграция и ГИС</h3>
-            <p>Создание Государственной информационной системы (ГИС) МЧС. Интеграция данных Росгидромета, МВД, Минздрава. Запуск АС ОКСИОН для оповещения населения. Широкое использование спутникового мониторинга лесных пожаров («Космос-МЧС»). Переход к риск-ориентированному подходу в надзорной деятельности (АИС «Электронный инспектор»).</p>
-        </div>
-
-        <!-- Эпоха 4 -->
-        <div class="feature" style="border-left:4px solid #10b981; padding-left:20px;">
-            <span class="meta-tag" style="background:#d1fae5; color:#047857;">2020-е гг. и будущее</span>
-            <h3>Цифровая трансформация и ИИ</h3>
-            <p>Внедрение больших данных (Big Data) для прогнозирования ЧС. Использование беспилотников (БПЛА) для разведки. Развитие систем видеонаблюдения с элементами искусственного интеллекта (автоматическое обнаружение дыма/огня). Импортонезамещение программного обеспечения (Astra Linux, МойОфис, TrueConf). Создание единого цифрового контура безопасности государства.</p>
-        </div>
-
-    </div>
+<div class="idx-theme"><h4><span>Тема 2.3. Ввод информации с бумажных носителей с помощью сканера</span><span class="idx-hours">1 ч</span></h4>
+<ol class="lessons">
+<li><a href="Lessons/tema2_3_pz49.html" class="todo"><span class="ln pz">49</span><span class="lkind">ПЗ</span> <span class="lt">Отработка навыков ввода информации с бумажных носителей с помощью сканера</span></a></li>
+</ol></div>
 </section>
 
-<section id="career-path">
-    <h2 class="section-title">Профессиональные перспективы: Где применяются навыки ДУП.03?</h2>
-    <p class="lead">Знания об аппаратном обеспечении, сетях, базах данных и информационно-аналитических системах открывают двери не только в рядовые подразделения, но и в центры управления, IT-департаменты и научные институты системы МЧС России.</p>
+<section class="idx-section" id="section3">
+<h3 class="idx-section-title"><span>Раздел 3. Телекоммуникационные технологии в профессиональной деятельности</span><span class="idx-hours">15 ч</span></h3>
 
-    <div class="features">
-        
-        <!-- Роль 1 -->
-        <div class="feature">
-            <h4>Диспетчер ЕДДС / Службы 112</h4>
-            <p><strong>Что делает:</strong> Принимает экстренные вызовы, определяет категорию сложности, маршрутизирует силы и средства, координирует взаимодействие ведомств.</p>
-            <p><strong>Где пригодится:</strong> Навыки работы с ГИС-картами, базами данных объектов, системами аудио-/видеозаписи переговоров, понимание приоритетов обработки информации.</p>
-        </div>
+<div class="idx-theme"><h4><span>Тема 3.1. Компьютерные сети</span><span class="idx-hours">4 ч</span></h4>
+<ol class="lessons">
+<li><a href="Lessons/tema3_1_pz50.html" class="todo"><span class="ln pz">50</span><span class="lkind">ПЗ</span> <span class="lt">Проведение анализа компонентов вычислительной сети. Вычислительные сети</span></a></li>
+<li><a href="Lessons/tema3_1_pz51.html" class="todo"><span class="ln pz">51</span><span class="lkind">ПЗ</span> <span class="lt">Проведение анализа классификации сетей по масштабам, топологии, архитектуре и стандартам</span></a></li>
+<li><a href="Lessons/tema3_1_pz52.html" class="todo"><span class="ln pz">52</span><span class="lkind">ПЗ</span> <span class="lt">Проведение анализа основных служб Интернета</span></a></li>
+<li><a href="Lessons/tema3_1_pz53.html" class="todo"><span class="ln pz">53</span><span class="lkind">ПЗ</span> <span class="lt">Проведение работ в локальной вычислительной сети</span></a></li>
+</ol></div>
 
-        <!-- Роль 2 -->
-        <div class="feature">
-            <h4>Оператор ситуационного центра ЦУКС</h4>
-            <p><strong>Что делает:</strong> Мониторит обстановку в регионе в реальном времени, готовит справки для руководства, обеспечивает связь с полевыми командами.</p>
-            <p><strong>Где пригодится:</strong> Умение работать с большими массивами данных, визуализация информации (графики, диаграммы), знание протоколов передачи данных, работа с защищенными каналами связи.</p>
-        </div>
-
-        <!-- Роль 3 -->
-        <div class="feature">
-            <h4>Инспектор государственного пожарного надзора (ГПН)</h4>
-            <p><strong>Что делает:</strong> Проводит проверки объектов, фиксирует нарушения, рассчитывает риски, формирует предписания.</p>
-            <p><strong>Где пригодится:</strong> Владение АИС «Электронный инспектор», умение вести электронный документооборот, обработка фото-/видеофиксации нарушений, работа с нормативной базой в правовых системах.</p>
-        </div>
-
-        <!-- Роль 4 -->
-        <div class="feature">
-            <h4>Специалист отдела информационных технологий (ОИТ)</h4>
-            <p><strong>Что делает:</strong> Обслуживает парк компьютерной техники, администрирует локальные сети, внедряет новое ПО, обеспечивает информационную безопасность.</p>
-            <p><strong>Где пригодится:</strong> Глубокое знание аппаратного обеспечения (сборка/ремонт ПК), настройка ОС и драйверов, принципы построения сетей, требования ФСТЭК и ФЗ-152, импортозамещение ПО.</p>
-        </div>
-
-        <!-- Роль 5 -->
-        <div class="feature">
-            <h4>Аналитик / Специалист по прогнозированию ЧС</h4>
-            <p><strong>Что делает:</strong> Обрабатывает статистику происшествий, строит модели рисков, участвует в разработке превентивных мер.</p>
-            <p><strong>Где пригодится:</strong> Работа с электронными таблицами (Excel), базами данных (SQL), элементы программирования (Python/R), понимание принципов Big Data и машинного обучения.</p>
-        </div>
-
-        <!-- Роль 6 -->
-        <div class="feature">
-            <h4>Руководитель тушения пожара (РТП) с цифровой поддержкой</h4>
-            <p><strong>Что делает:</strong> Управляет силами на месте ЧС, используя планшетные устройства и тактические карты.</p>
-            <p><strong>Где пригодится:</strong> Уверенное пользование мобильными АРМ, работа офлайн с картографическими данными, передача видео/фото с места событий через защищенные каналы.</p>
-        </div>
-
-    </div>
+<div class="idx-theme"><h4><span>Тема 3.2. Информационные-поисковые и автоматизированные системы обработки данных</span><span class="idx-hours">11 ч</span></h4>
+<ol class="lessons">
+<li><a href="Lessons/tema3_2_pz54.html" class="todo"><span class="ln pz">54</span><span class="lkind">ПЗ</span> <span class="lt">Проведение анализа работы поисковых служб и серверов. Системы управления базами данных. Банки данных</span></a></li>
+<li><a href="Lessons/tema3_2_pz55.html" class="todo"><span class="ln pz">55</span><span class="lkind">ПЗ</span> <span class="lt">Проведение анализа возможностей СУБД «Access»</span></a></li>
+<li><a href="Lessons/tema3_2_pz56.html" class="todo"><span class="ln pz">56</span><span class="lkind">ПЗ</span> <span class="lt">Отработка навыка поиска информации в автоматизированных поисковых системах</span></a></li>
+<li><a href="Lessons/tema3_2_pz57.html" class="todo"><span class="ln pz">57</span><span class="lkind">ПЗ</span> <span class="lt">Составление базы данных в СУБД «Access»</span></a></li>
+<li><a href="Lessons/tema3_2_pz58.html" class="todo"><span class="ln pz">58</span><span class="lkind">ПЗ</span> <span class="lt">Проведение определения структуры и типа данных</span></a></li>
+<li><a href="Lessons/tema3_2_pz59.html" class="todo"><span class="ln pz">59</span><span class="lkind">ПЗ</span> <span class="lt">Отработка навыков поиска и фильтрации информации в СУБД «Access»</span></a></li>
+<li><a href="Lessons/tema3_2_pz60.html" class="todo"><span class="ln pz">60</span><span class="lkind">ПЗ</span> <span class="lt">Отработка навыков сортировки информации в СУБД «Access»</span></a></li>
+<li><a href="Lessons/tema3_2_pz61.html" class="todo"><span class="ln pz">61</span><span class="lkind">ПЗ</span> <span class="lt">Отработка навыков вычисления в СУБД «Access»</span></a></li>
+<li><a href="Lessons/tema3_2_pz62.html" class="todo"><span class="ln pz">62</span><span class="lkind">ПЗ</span> <span class="lt">Проведение работы в СУБД «Access» в режиме запуска</span></a></li>
+<li><a href="Lessons/tema3_2_pz63.html" class="todo"><span class="ln pz">63</span><span class="lkind">ПЗ</span> <span class="lt">Проведение работы в СУБД «Access» в режиме конструктора</span></a></li>
+<li><a href="Lessons/tema3_2_pz64.html" class="todo"><span class="ln pz">64</span><span class="lkind">ПЗ</span> <span class="lt">Проведение работы в СУБД «Access» в режиме выполнения</span></a></li>
+</ol></div>
 </section>
-        </div>
-    </main>
 
-    <!-- FOOTER -->
-    <footer class="footer">
-        <div class="container">
-            © 2026 · <strong>ГБПОУ ТПСК им. В.М. Максимчука</strong> · ДУП.03 Информационные системы управления в ЧС
-        </div>
-    </footer>
+<section class="idx-section" id="section4">
+<h3 class="idx-section-title"><span>Раздел 4. Основные методы и приемы обеспечения информационной безопасности</span><span class="idx-hours">4 ч</span></h3>
 
-    <script src="search.js"></script>
+<div class="idx-theme"><h4><span>Тема 4.1. Основы информационной компьютерной безопасности</span><span class="idx-hours">4 ч</span></h4>
+<ol class="lessons">
+<li><a href="Lessons/tema4_1_uz65.html" class="todo"><span class="ln uz">65</span><span class="lkind">УЗ</span> <span class="lt">Проблемы защиты информации в информационном обществе</span></a></li>
+<li><a href="Lessons/tema4_1_pz66.html" class="todo"><span class="ln pz">66</span><span class="lkind">ПЗ</span> <span class="lt">Проведение анализа типов компьютерных преступлений, предусмотренные уголовным кодексом РФ</span></a></li>
+<li><a href="Lessons/tema4_1_pz67.html" class="todo"><span class="ln pz">67</span><span class="lkind">ПЗ</span> <span class="lt">Осуществление организации безопасной работы с компьютерной техникой</span></a></li>
+<li><a href="Lessons/tema4_1_uz68.html" class="todo"><span class="ln uz">68</span><span class="lkind">УЗ</span> <span class="lt">Зачет</span></a></li>
+</ol></div>
+</section>
 
-    <script>
-        // Раскрытие модулей
-        document.querySelectorAll('.module-header').forEach(h => {
-            h.addEventListener('click', () => {
-                h.parentElement.classList.toggle('open');
-            });
-        });
-    </script>
+<h2 class="idx-sem">Семестр 2</h2>
+
+<section class="idx-section" id="section5">
+<h3 class="idx-section-title"><span>Раздел 5. Введение в информационные технологии управления в ЧС</span><span class="idx-hours">10 ч</span></h3>
+
+<div class="idx-theme"><h4><span>Тема 5.1. Основы управления в чрезвычайных ситуациях</span><span class="idx-hours">4 ч</span></h4>
+<ol class="lessons">
+<li><a href="Lessons/tema5_1_pz69.html" class="todo"><span class="ln pz">69</span><span class="lkind">ПЗ</span> <span class="lt">Проведение анализа понятия чрезвычайной ситуации. Классификация чрезвычайных ситуаций</span></a></li>
+<li><a href="Lessons/tema5_1_pz70.html" class="todo"><span class="ln pz">70</span><span class="lkind">ПЗ</span> <span class="lt">Проведение анализа нормативно-правовой базы в области информатизации управления ЧС</span></a></li>
+<li><a href="Lessons/tema5_1_pz71.html" class="todo"><span class="ln pz">71</span><span class="lkind">ПЗ</span> <span class="lt">Изучение документов, регулирующих использование ИТ в ЧС</span></a></li>
+<li><a href="Lessons/tema5_1_pz72.html" class="todo"><span class="ln pz">72</span><span class="lkind">ПЗ</span> <span class="lt">Проведение разбора примеров ЧС и их категоризация</span></a></li>
+</ol></div>
+
+<div class="idx-theme"><h4><span>Тема 5.2. Информационные системы и технологии</span><span class="idx-hours">6 ч</span></h4>
+<ol class="lessons">
+<li><a href="Lessons/tema5_2_pz73.html" class="todo"><span class="ln pz">73</span><span class="lkind">ПЗ</span> <span class="lt">Проведение анализа понятия информационной системы (ИС)</span></a></li>
+<li><a href="Lessons/tema5_2_pz74.html" class="todo"><span class="ln pz">74</span><span class="lkind">ПЗ</span> <span class="lt">Проведение анализа классификаций ИС, применяемых в управлении ЧС</span></a></li>
+<li><a href="Lessons/tema5_2_pz75.html" class="todo"><span class="ln pz">75</span><span class="lkind">ПЗ</span> <span class="lt">Проведение анализа жизненного цикла информационных систем</span></a></li>
+<li><a href="Lessons/tema5_2_pz76.html" class="todo"><span class="ln pz">76</span><span class="lkind">ПЗ</span> <span class="lt">Проведение анализа существующих информационных систем, применяемых в управлении ЧС</span></a></li>
+<li><a href="Lessons/tema5_2_pz77.html" class="todo"><span class="ln pz">77</span><span class="lkind">ПЗ</span> <span class="lt">Разработка этапов жизненного цикла для гипотетической ИС</span></a></li>
+<li><a href="Lessons/tema5_2_pz78.html" class="todo"><span class="ln pz">78</span><span class="lkind">ПЗ</span> <span class="lt">Проведение анализа возможности применения современных технологий в управлении ЧС</span></a></li>
+</ol></div>
+</section>
+
+<section class="idx-section" id="section6">
+<h3 class="idx-section-title"><span>Раздел 6. Информационные системы для управления ЧС</span><span class="idx-hours">14 ч</span></h3>
+
+<div class="idx-theme"><h4><span>Тема 6.1. Геоинформационные системы (ГИС) в управлении ЧС</span><span class="idx-hours">3 ч</span></h4>
+<ol class="lessons">
+<li><a href="Lessons/tema6_1_pz79.html" class="todo"><span class="ln pz">79</span><span class="lkind">ПЗ</span> <span class="lt">Проведение анализа ГИС-технологий</span></a></li>
+<li><a href="Lessons/tema6_1_pz80.html" class="todo"><span class="ln pz">80</span><span class="lkind">ПЗ</span> <span class="lt">Применение ГИС для мониторинга и прогнозирования</span></a></li>
+<li><a href="Lessons/tema6_1_pz81.html" class="todo"><span class="ln pz">81</span><span class="lkind">ПЗ</span> <span class="lt">Создание карты зоны ЧС с использованием ГОС-инструментов</span></a></li>
+</ol></div>
+
+<div class="idx-theme"><h4><span>Тема 6.2. Системы мониторинга и прогнозирования ЧС</span><span class="idx-hours">6 ч</span></h4>
+<ol class="lessons">
+<li><a href="Lessons/tema6_2_pz82.html" class="todo"><span class="ln pz">82</span><span class="lkind">ПЗ</span> <span class="lt">Проведение анализа технологии сбора и обработки данных</span></a></li>
+<li><a href="Lessons/tema6_2_pz83.html" class="todo"><span class="ln pz">83</span><span class="lkind">ПЗ</span> <span class="lt">Проведение анализа возможности прогнозирования природных и техногенных катастроф</span></a></li>
+<li><a href="Lessons/tema6_2_pz84.html" class="todo"><span class="ln pz">84</span><span class="lkind">ПЗ</span> <span class="lt">Проведение анализа применения системы раннего предупреждения ЧС</span></a></li>
+<li><a href="Lessons/tema6_2_pz85.html" class="todo"><span class="ln pz">85</span><span class="lkind">ПЗ</span> <span class="lt">Проведение оценки рисков на основе геоданных</span></a></li>
+<li><a href="Lessons/tema6_2_pz86.html" class="todo"><span class="ln pz">86</span><span class="lkind">ПЗ</span> <span class="lt">Осуществление настройки системы мониторинга для условной ЧС</span></a></li>
+<li><a href="Lessons/tema6_2_pz87.html" class="todo"><span class="ln pz">87</span><span class="lkind">ПЗ</span> <span class="lt">Использование данных для прогнозирования природных катастроф</span></a></li>
+</ol></div>
+
+<div class="idx-theme"><h4><span>Тема 6.3. Системы поддержания принятия решений (СППР)</span><span class="idx-hours">5 ч</span></h4>
+<ol class="lessons">
+<li><a href="Lessons/tema6_3_pz88.html" class="todo"><span class="ln pz">88</span><span class="lkind">ПЗ</span> <span class="lt">Проведение анализа архитектуры и функции СППР</span></a></li>
+<li><a href="Lessons/tema6_3_pz89.html" class="todo"><span class="ln pz">89</span><span class="lkind">ПЗ</span> <span class="lt">Использование СППР в управлении ЧС</span></a></li>
+<li><a href="Lessons/tema6_3_pz90.html" class="todo"><span class="ln pz">90</span><span class="lkind">ПЗ</span> <span class="lt">Разработка прототипа системы поддержки принятия решений</span></a></li>
+<li><a href="Lessons/tema6_3_pz91.html" class="todo"><span class="ln pz">91</span><span class="lkind">ПЗ</span> <span class="lt">Использование СППР для оценки рисков</span></a></li>
+<li><a href="Lessons/tema6_3_pz92.html" class="todo"><span class="ln pz">92</span><span class="lkind">ПЗ</span> <span class="lt">Моделирование ЧС и проведение анализа данных в реальном времени</span></a></li>
+</ol></div>
+</section>
+
+<section class="idx-section" id="section7">
+<h3 class="idx-section-title"><span>Раздел 7. Технологии обработки и анализа данных в ЧС</span><span class="idx-hours">15 ч</span></h3>
+
+<div class="idx-theme"><h4><span>Тема 7.1. Большие данные и аналитика в управлении ЧС</span><span class="idx-hours">6 ч</span></h4>
+<ol class="lessons">
+<li><a href="Lessons/tema7_1_pz93.html" class="todo"><span class="ln pz">93</span><span class="lkind">ПЗ</span> <span class="lt">Проведение анализа понятия больших данных</span></a></li>
+<li><a href="Lessons/tema7_1_pz94.html" class="todo"><span class="ln pz">94</span><span class="lkind">ПЗ</span> <span class="lt">Проведение анализа методов анализа больших данных для прогнозирования ЧС</span></a></li>
+<li><a href="Lessons/tema7_1_pz95.html" class="todo"><span class="ln pz">95</span><span class="lkind">ПЗ</span> <span class="lt">Проведение анализа примеров использования big data в управлении ЧС</span></a></li>
+<li><a href="Lessons/tema7_1_pz96.html" class="todo"><span class="ln pz">96</span><span class="lkind">ПЗ</span> <span class="lt">Разработка методики сбора данных для анализа ЧС</span></a></li>
+<li><a href="Lessons/tema7_1_pz97.html" class="todo"><span class="ln pz">97</span><span class="lkind">ПЗ</span> <span class="lt">Использование инструментов для анализа данных о ЧС</span></a></li>
+<li><a href="Lessons/tema7_1_pz98.html" class="todo"><span class="ln pz">98</span><span class="lkind">ПЗ</span> <span class="lt">Создание графиков и диаграмм для представления данных о ЧС</span></a></li>
+</ol></div>
+
+<div class="idx-theme"><h4><span>Тема 7.2. Искусственный интеллект и машинное обучение в ЧС</span><span class="idx-hours">4 ч</span></h4>
+<ol class="lessons">
+<li><a href="Lessons/tema7_2_pz99.html" class="todo"><span class="ln pz">99</span><span class="lkind">ПЗ</span> <span class="lt">Проведение анализа основ ИИ и машинного обучения</span></a></li>
+<li><a href="Lessons/tema7_2_pz100.html" class="todo"><span class="ln pz">100</span><span class="lkind">ПЗ</span> <span class="lt">Применение ИИ для анализа рисков и управления ресурсами</span></a></li>
+<li><a href="Lessons/tema7_2_pz101.html" class="todo"><span class="ln pz">101</span><span class="lkind">ПЗ</span> <span class="lt">Проведение анализа примеров использования ИИ в ликвидации последствий ЧС</span></a></li>
+<li><a href="Lessons/tema7_2_pz102.html" class="todo"><span class="ln pz">102</span><span class="lkind">ПЗ</span> <span class="lt">Разработка модели для прогнозирования ЧС</span></a></li>
+</ol></div>
+
+<div class="idx-theme"><h4><span>Тема 7.3. Интернет вещей (IoT) и сенсорные сети в ЧС</span><span class="idx-hours">5 ч</span></h4>
+<ol class="lessons">
+<li><a href="Lessons/tema7_3_pz103.html" class="todo"><span class="ln pz">103</span><span class="lkind">ПЗ</span> <span class="lt">Проведение анализа применения IoT и сенсорных технологий</span></a></li>
+<li><a href="Lessons/tema7_3_pz104.html" class="todo"><span class="ln pz">104</span><span class="lkind">ПЗ</span> <span class="lt">Использование IoT для мониторинга и управления в ЧС</span></a></li>
+<li><a href="Lessons/tema7_3_pz105.html" class="todo"><span class="ln pz">105</span><span class="lkind">ПЗ</span> <span class="lt">Отработка данных с сенсоров для мониторинга ЧС</span></a></li>
+<li><a href="Lessons/tema7_3_pz106.html" class="todo"><span class="ln pz">106</span><span class="lkind">ПЗ</span> <span class="lt">Освоение использования ИИ для распределения ресурсов в ЧС</span></a></li>
+<li><a href="Lessons/tema7_3_pz107.html" class="todo"><span class="ln pz">107</span><span class="lkind">ПЗ</span> <span class="lt">Проведение разбора реальных примеров использования больших данных в ЧС</span></a></li>
+</ol></div>
+</section>
+
+<section class="idx-section" id="section8">
+<h3 class="idx-section-title"><span>Раздел 8. Коммуникационные технологии в управлении ЧС</span><span class="idx-hours">12 ч</span></h3>
+
+<div class="idx-theme"><h4><span>Тема 8.1. Системы связи и передачи данных в ЧС</span><span class="idx-hours">6 ч</span></h4>
+<ol class="lessons">
+<li><a href="Lessons/tema8_1_pz108.html" class="todo"><span class="ln pz">108</span><span class="lkind">ПЗ</span> <span class="lt">Проведение анализа технологии связи в условиях ЧС</span></a></li>
+<li><a href="Lessons/tema8_1_pz109.html" class="todo"><span class="ln pz">109</span><span class="lkind">ПЗ</span> <span class="lt">Организация устойчивой связи в чрезвычайных ситуациях</span></a></li>
+<li><a href="Lessons/tema8_1_pz110.html" class="todo"><span class="ln pz">110</span><span class="lkind">ПЗ</span> <span class="lt">Проведение анализа спутниковой системы связи</span></a></li>
+<li><a href="Lessons/tema8_1_pz111.html" class="todo"><span class="ln pz">111</span><span class="lkind">ПЗ</span> <span class="lt">Проведение анализа мобильной системы связи. Радиосвязь</span></a></li>
+<li><a href="Lessons/tema8_1_pz112.html" class="todo"><span class="ln pz">112</span><span class="lkind">ПЗ</span> <span class="lt">Организация системы связи для условной ЧС</span></a></li>
+<li><a href="Lessons/tema8_1_pz113.html" class="todo"><span class="ln pz">113</span><span class="lkind">ПЗ</span> <span class="lt">Проведение анализа устойчивости связи в различных условиях</span></a></li>
+</ol></div>
+
+<div class="idx-theme"><h4><span>Тема 8.2. Социальные сети и мобильные технологии в управлении ЧС</span><span class="idx-hours">6 ч</span></h4>
+<ol class="lessons">
+<li><a href="Lessons/tema8_2_pz114.html" class="todo"><span class="ln pz">114</span><span class="lkind">ПЗ</span> <span class="lt">Проведение анализа роли социальных сетей в информировании населения</span></a></li>
+<li><a href="Lessons/tema8_2_pz115.html" class="todo"><span class="ln pz">115</span><span class="lkind">ПЗ</span> <span class="lt">Проведение анализа мобильных приложений для управления ЧС</span></a></li>
+<li><a href="Lessons/tema8_2_pz116.html" class="todo"><span class="ln pz">116</span><span class="lkind">ПЗ</span> <span class="lt">Проведение анализа данных из социальных сетей для информирования о ЧС</span></a></li>
+<li><a href="Lessons/tema8_2_pz117.html" class="todo"><span class="ln pz">117</span><span class="lkind">ПЗ</span> <span class="lt">Создание прототипа мобильного приложения для управления ЧВ</span></a></li>
+<li><a href="Lessons/tema8_2_pz118.html" class="todo"><span class="ln pz">118</span><span class="lkind">ПЗ</span> <span class="lt">Разработка стратегии информирования населения</span></a></li>
+<li><a href="Lessons/tema8_2_pz119.html" class="todo"><span class="ln pz">119</span><span class="lkind">ПЗ</span> <span class="lt">Моделирование работы связи в условиях ЧС</span></a></li>
+</ol></div>
+</section>
+
+<section class="idx-section" id="section9">
+<h3 class="idx-section-title"><span>Раздел 9. Управление информационной безопасностью в ЧС</span><span class="idx-hours">9 ч</span></h3>
+
+<div class="idx-theme"><h4><span>Тема 9.1. Основы информационной безопасности в ЧС</span><span class="idx-hours">3 ч</span></h4>
+<ol class="lessons">
+<li><a href="Lessons/tema9_1_pz120.html" class="todo"><span class="ln pz">120</span><span class="lkind">ПЗ</span> <span class="lt">Проведение анализа возможных угроз информационной безопасности в условиях ЧС</span></a></li>
+<li><a href="Lessons/tema9_1_pz121.html" class="todo"><span class="ln pz">121</span><span class="lkind">ПЗ</span> <span class="lt">Идентификация угроз информационной безопасности в ЧС</span></a></li>
+<li><a href="Lessons/tema9_1_pz122.html" class="todo"><span class="ln pz">122</span><span class="lkind">ПЗ</span> <span class="lt">Разработка плана защиты данных для ИС</span></a></li>
+</ol></div>
+
+<div class="idx-theme"><h4><span>Тема 9.2. Организация защиты данных в информационных системах</span><span class="idx-hours">6 ч</span></h4>
+<ol class="lessons">
+<li><a href="Lessons/tema9_2_pz123.html" class="todo"><span class="ln pz">123</span><span class="lkind">ПЗ</span> <span class="lt">Проведение анализа методов защиты информации. Криптографические методы защиты</span></a></li>
+<li><a href="Lessons/tema9_2_pz124.html" class="todo"><span class="ln pz">124</span><span class="lkind">ПЗ</span> <span class="lt">Обеспечение отказоустойчивости ИС</span></a></li>
+<li><a href="Lessons/tema9_2_pz125.html" class="todo"><span class="ln pz">125</span><span class="lkind">ПЗ</span> <span class="lt">Проведение шифрования данных для защиты информации</span></a></li>
+<li><a href="Lessons/tema9_2_pz126.html" class="todo"><span class="ln pz">126</span><span class="lkind">ПЗ</span> <span class="lt">Проведение проверки уязвимостей в условной ИС</span></a></li>
+<li><a href="Lessons/tema9_2_pz127.html" class="todo"><span class="ln pz">127</span><span class="lkind">ПЗ</span> <span class="lt">Разработка плана восстановления данных</span></a></li>
+<li><a href="Lessons/tema9_2_pz128.html" class="todo"><span class="ln pz">128</span><span class="lkind">ПЗ</span> <span class="lt">Проведение анализа примеров утечек данных в ЧС</span></a></li>
+</ol></div>
+</section>
+
+<section class="idx-section" id="section10">
+<h3 class="idx-section-title"><span>Раздел 10. Практические аспекты использования ИТ в управлении ЧС</span><span class="idx-hours">15 ч</span></h3>
+
+<div class="idx-theme"><h4><span>Тема 10.1. Работа с информационными системами управления в ЧС</span><span class="idx-hours">15 ч</span></h4>
+<ol class="lessons">
+<li><a href="Lessons/tema10_1_pz129.html" class="todo"><span class="ln pz">129</span><span class="lkind">ПЗ</span> <span class="lt">Создание карт зон чрезвычайной ситуации</span></a></li>
+<li><a href="Lessons/tema10_1_pz130.html" class="todo"><span class="ln pz">130</span><span class="lkind">ПЗ</span> <span class="lt">Обработка данных о ЧС с использованием аналитических инструментов</span></a></li>
+<li><a href="Lessons/tema10_1_pz131.html" class="todo"><span class="ln pz">131</span><span class="lkind">ПЗ</span> <span class="lt">Создание алгоритма для автоматизации процессов в ЧС</span></a></li>
+<li><a href="Lessons/tema10_1_pz132.html" class="todo"><span class="ln pz">132</span><span class="lkind">ПЗ</span> <span class="lt">Проведение учения с использованием ИС</span></a></li>
+<li><a href="Lessons/tema10_1_pz133.html" class="todo"><span class="ln pz">133</span><span class="lkind">ПЗ</span> <span class="lt">Разбор реальных примеров использования информационных технологий в ЧС</span></a></li>
+<li><a href="Lessons/tema10_1_pz134.html" class="todo"><span class="ln pz">134</span><span class="lkind">ПЗ</span> <span class="lt">Распределение ресурсов с использованием ИС</span></a></li>
+<li><a href="Lessons/tema10_1_pz135.html" class="todo"><span class="ln pz">135</span><span class="lkind">ПЗ</span> <span class="lt">Создание базы данных для управления ресурсами в ЧС</span></a></li>
+<li><a href="Lessons/tema10_1_pz136.html" class="todo"><span class="ln pz">136</span><span class="lkind">ПЗ</span> <span class="lt">Проведение оценивания эффективности применения информационных систем в ЧС</span></a></li>
+<li><a href="Lessons/tema10_1_pz137.html" class="todo"><span class="ln pz">137</span><span class="lkind">ПЗ</span> <span class="lt">Разработка пользовательского интерфейса для ИС</span></a></li>
+<li><a href="Lessons/tema10_1_pz138.html" class="todo"><span class="ln pz">138</span><span class="lkind">ПЗ</span> <span class="lt">Проведение тестов для проверки работоспособности ИС</span></a></li>
+<li><a href="Lessons/tema10_1_pz139.html" class="todo"><span class="ln pz">139</span><span class="lkind">ПЗ</span> <span class="lt">Создание сценариев для моделирования ЧС</span></a></li>
+<li><a href="Lessons/tema10_1_pz140.html" class="todo"><span class="ln pz">140</span><span class="lkind">ПЗ</span> <span class="lt">Обработка данных с датчиков для мониторинга ЧС</span></a></li>
+<li><a href="Lessons/tema10_1_pz141.html" class="todo"><span class="ln pz">141</span><span class="lkind">ПЗ</span> <span class="lt">Подготовка отчетов на основе данных о ЧС</span></a></li>
+<li><a href="Lessons/tema10_1_pz142.html" class="todo"><span class="ln pz">142</span><span class="lkind">ПЗ</span> <span class="lt">Разработка программы обучения для работы с ИС</span></a></li>
+<li><a href="Lessons/tema10_1_pz143.html" class="todo"><span class="ln pz">143</span><span class="lkind">ПЗ</span> <span class="lt">Разработка собственного решения для управления ЧС с помощью информационных технологий</span></a></li>
+</ol></div>
+</section>
+
+<section class="idx-section">
+<h3 class="idx-section-title"><span>Промежуточная аттестация</span><span class="idx-hours">1 ч</span></h3>
+<div class="idx-theme"><ol class="lessons">
+<li><a href="Lessons/zachet.html" class="todo"><span class="ln uz">144</span><span class="lkind">Зачёт</span> <span class="lt">Дифференцированный зачёт</span></a></li>
+</ol></div>
+</section>
+
+<footer class="idx-footer">
+<p>© ГБПОУ ТПСК им. В.М. Максимчука · Департамент образования и науки города Москвы</p>
+<p>Рабочая программа ДУП.03, 2025 г.</p>
+</footer>
+</div>
 </body>
 </html>

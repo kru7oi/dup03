@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>КЛЮЧ · ПЗ 35 · Менеджер документа и настройки чертежа · ДУП.03</title>
+    <link rel="stylesheet" href="../styles.css">
+    <style>
+        .teacher-banner{background:#fef2f2;color:#991b1b;padding:12px 20px;text-align:center;font-weight:bold;border-bottom:2px solid #fecaca;font-size:1rem;letter-spacing:.05em;text-transform:uppercase}
+        .answer-cell{background-color:#f0fdf4 !important}
+    </style>
+</head>
+<body class="lesson-page">
+    <div class="teacher-banner">Только для преподавателя · Не распространять среди обучающихся</div>
+    <div class="lesson-topbar"><div class="container lt-inner"><a href="../Lessons/tema2_2_pz29.html" class="back-link">← Версия для студентов</a><span class="meta-tag">Ключ · ПЗ 35</span></div></div>
+    <div class="container lesson-layout">
+        <aside class="lesson-aside"><nav class="toc"><div class="toc-title">Содержание</div><a href="#opros">Опрос</a><a href="#etalon-layers">Эталон структуры слоёв</a><a href="#etalon-sheet2">Эталон листа 2</a><a href="#checklist">Чек-лист</a><a href="#errors">Типичные ошибки</a><a href="#metod">Методические указания</a></nav></aside>
+        <main class="lesson-main">
+            <div class="lesson-bcr">Раздел 2 <span class="sep">/</span> Тема 2.2 <span class="sep">/</span> ПЗ 35 <span class="sep">/</span> Ключ</div>
+            <h1>Материалы для проверки и проведения занятия</h1>
+            <div class="lesson-meta"><span class="meta-tag">Для служебного пользования</span></div>
+
+            <section class="lsec" id="opros">
+                <h2>Опрос в начале занятия</h2>
+                <ol>
+                    <li>Что показывает дерево чертежа в КОМПАС?</li>
+                    <li>Зачем нужны слои?</li>
+                    <li>Какие стили линий определены ГОСТ?</li>
+                    <li>Как изменить видимость слоя?</li>
+                    <li>Чем изменение формата листа в КОМПАС отличается от draw.io?</li>
+                </ol>
+                <div class="info-box">
+                    <strong>Ожидаемые ответы</strong>
+                    <ul>
+                        <li>Иерархическую структуру: документ → листы → виды → слои → объекты.</li>
+                        <li>Для логического разделения объектов, управления видимостью, печати отдельных групп.</li>
+                        <li>Основная, Тонкая, Штриховая, Штрихпунктирная, Утолщённая.</li>
+                        <li>Переключатель-лампочка рядом со слоем в дереве (КОМПАС) или в окне слоёв (draw.io).</li>
+                        <li>В КОМПАС рамка и основная надпись перестраиваются автоматически. В draw.io всё остаётся на месте, нужно перестраивать вручную.</li>
+                    </ul>
+                </div>
+            </section>
+
+            <section class="lsec" id="etalon-layers">
+                <h2>Эталон структуры слоёв</h2>
+                <div class="table-wrap">
+                    <table>
+                        <thead><tr><th>Слой</th><th>Содержание</th><th>Стиль линии</th><th>Толщина</th></tr></thead>
+                        <tbody>
+                            <tr><td>Оформление</td><td class="answer-cell">Рамка, основная надпись</td><td class="answer-cell">Сплошная</td><td class="answer-cell">Рамка: 2, ОН: 1</td></tr>
+                            <tr><td>Конструкции</td><td class="answer-cell">Корпус, отверстия, окно</td><td class="answer-cell">Сплошная (Основная)</td><td class="answer-cell">3</td></tr>
+                            <tr><td>Оси</td><td class="answer-cell">Осевые линии</td><td class="answer-cell">Штрихпунктир</td><td class="answer-cell">1, цвет красный</td></tr>
+                            <tr><td>Размеры</td><td class="answer-cell">(пустой, для будущего)</td><td class="answer-cell">—</td><td class="answer-cell">—</td></tr>
+                            <tr><td>Текст</td><td class="answer-cell">Надписи, примечания</td><td class="answer-cell">—</td><td class="answer-cell">—</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <section class="lsec" id="etalon-sheet2">
+                <h2>Эталон листа 2 (Вид сверху)</h2>
+                <div class="table-wrap">
+                    <table>
+                        <thead><tr><th>Элемент</th><th>X</th><th>Y</th><th>Ширина</th><th>Высота</th></tr></thead>
+                        <tbody>
+                            <tr><td>Рамка</td><td class="answer-cell">57</td><td class="answer-cell">28</td><td class="answer-cell">1134</td><td class="answer-cell">786</td></tr>
+                            <tr><td>Основная надпись</td><td class="answer-cell">776</td><td class="answer-cell">673</td><td class="answer-cell">384</td><td class="answer-cell">139</td></tr>
+                            <tr><td>Корпус (вид сверху)</td><td class="answer-cell">315</td><td class="answer-cell">309</td><td class="answer-cell">560</td><td class="answer-cell">224</td></tr>
+                            <tr><td>Отверстие левое</td><td class="answer-cell">371</td><td class="answer-cell">421</td><td class="answer-cell">28</td><td class="answer-cell">28</td></tr>
+                            <tr><td>Отверстие правое</td><td class="answer-cell">819</td><td class="answer-cell">421</td><td class="answer-cell">28</td><td class="answer-cell">28</td></tr>
+                            <tr><td>Ось горизонтальная</td><td class="answer-cell">от 315</td><td class="answer-cell">421</td><td class="answer-cell">до 875</td><td class="answer-cell">толщина 1</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="info-box">
+                    <strong>Примечание:</strong> Вид сверху показывает деталь «сверху вниз». Ширина 200 мм (560 пт) сохраняется, глубина 80 мм (224 пт) — это расстояние между передней и задней гранями. Центральное окно на виде сверху не видно (оно сквозное, но перекрывается верхней гранью). Если студент показал окно на виде сверху — это ошибка понимания проекций, но не критичная для данного занятия.
+                </div>
+            </section>
+
+            <section class="lsec" id="checklist">
+                <h2>Чек-лист проверки</h2>
+                <div class="table-wrap">
+                    <table>
+                        <thead><tr><th>Элемент</th><th>Да/Нет</th><th>Комментарий</th></tr></thead>
+                        <tbody>
+                            <tr><td>5 слоёв созданы на листе 1</td><td class="answer-cell"></td><td></td></tr>
+                            <tr><td>Объекты распределены по слоям верно</td><td class="answer-cell"></td><td>Проверить скрытием каждого слоя</td></tr>
+                            <tr><td>Стили линий настроены (конструкции=3, оси=штрихпунктир)</td><td class="answer-cell"></td><td></td></tr>
+                            <tr><td>Лист 2 создан</td><td class="answer-cell"></td><td></td></tr>
+                            <tr><td>Лист 2 имеет размер 1190×842</td><td class="answer-cell"></td><td></td></tr>
+                            <tr><td>Вид сверху построен на листе 2</td><td class="answer-cell"></td><td></td></tr>
+                            <tr><td>Основная надпись на листе 2 содержит «Лист 2»</td><td class="answer-cell"></td><td></td></tr>
+                            <tr><td>Слои созданы и на листе 2</td><td class="answer-cell"></td><td></td></tr>
+                            <tr><td>Сданы .drawio, .pdf, 2 × .png</td><td class="answer-cell"></td><td></td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <section class="lsec" id="errors">
+                <h2>Типичные ошибки</h2>
+                <ul>
+                    <li><strong>Слои созданы, но объекты не перенесены.</strong> Все объекты остались на слое по умолчанию. Проверка: скрыть любой слой — ничего не исчезает.</li>
+                    <li><strong>Стили линий не настроены.</strong> Все линии одной толщины и одного типа.</li>
+                    <li><strong>Второй лист не создан</strong> или создан с неверным размером.</li>
+                    <li><strong>Вид сверху не соответствует проекции.</strong> Нарисован тот же вид спереди или произвольная фигура.</li>
+                    <li><strong>Номер листа не указан</strong> в основной надписи второго листа.</li>
+                    <li><strong>Объекты на втором листе не распределены по слоям.</strong></li>
+                    <li><strong>Файл сохранён под именем ПЗ 34</strong> вместо ПЗ 35.</li>
+                </ul>
+            </section>
+
+            <section class="lsec" id="metod">
+                <h2>Методические указания</h2>
+                <ul>
+                    <li><strong>Главный навык — работа со структурой.</strong> Не красота чертежа, а умение организовать объекты по слоям и понимать иерархию документа.</li>
+                    <li><strong>Проверяйте слои действием.</strong> Попросите студента скрыть слой «Конструкции» при вас. Если ничего не исчезло — слои не использовались.</li>
+                    <li><strong>Подчёркивайте ограничения draw.io.</strong> Каждый раз, когда студент делает что-то вручную, спрашивайте: «А как это было бы в КОМПАС?» Ответ: «Автоматически». Это формирует понимание ценности САПР.</li>
+                    <li><strong>Вид сверху — проверка пространственного мышления.</strong> Если студент не понимает проекций, объясните на примере: «Смотришь на деталь сверху — что видишь? Прямоугольник 200×80, два круга по краям. Окно не видно, потому что оно закрыто верхней гранью.»</li>
+                    <li><strong>Для слабой группы:</strong> достаточно 3 слоёв (Оформление, Конструкции, Оси) и одного листа. Второй лист — дополнительное задание.</li>
+                    <li><strong>Для сильной группы:</strong> добавьте слой «Размеры» и проставьте 3–4 размера вручную линиями и текстом. Или создайте третий лист с видом слева.</li>
+                    <li><strong>Связь со следующим занятием.</strong> На ПЗ 36 будет продолжена работа с менеджером документа: настройка стилей оформления, работа с библиотечными элементами, подготовка к печати.</li>
+                </ul>
+            </section>
+
+            <div class="lesson-nav">
+                <a href="../Lessons/tema2_2_pz29.html" class="nav-btn prev">← Вернуться к занятию</a>
+                <a href="../index.html" class="nav-btn next">К программе дисциплины →</a>
+            </div>
+        </main>
+    </div>
+</body>
+</html>
